@@ -5,13 +5,14 @@ import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import IconCardsCarousel from '../../../containers/dashboards/IconCardsCarousel';
 import RecentOrders from '../../../containers/dashboards/RecentOrders';
-import Logs from '../../../containers/dashboards/Logs';
-import Tickets from '../../../containers/dashboards/Tickets';
+// import Logs from '../../../containers/dashboards/Logs';
+// import Tickets from '../../../containers/dashboards/Tickets';
 import Calendar from '../../../containers/dashboards/Calendar';
-import BestSellers from '../../../containers/dashboards/BestSellers';
+// import BestSellers from '../../../containers/dashboards/BestSellers';
+// eslint-disable-next-line no-unused-vars
 import ProfileStatuses from '../../../containers/dashboards/ProfileStatuses';
+// eslint-disable-next-line no-unused-vars
 import GradientCardContainer from '../../../containers/dashboards/GradientCardContainer';
-import Cakes from '../../../containers/dashboards/Cakes';
 import GradientWithRadialProgressCard from '../../../components/cards/GradientWithRadialProgressCard';
 import SortableStaticticsRow from '../../../containers/dashboards/SortableStaticticsRow';
 import AdvancedSearch from '../../../containers/dashboards/AdvancedSearch';
@@ -21,6 +22,10 @@ import ProductCategoriesPolarArea from '../../../containers/dashboards/ProductCa
 import WebsiteVisitsChartCard from '../../../containers/dashboards/WebsiteVisitsChartCard';
 import ConversionRatesChartCard from '../../../containers/dashboards/ConversionRatesChartCard';
 import TopRatedItems from '../../../containers/dashboards/TopRatedItems';
+import ProductListed from '../../../containers/dashboards/ProductListed';
+import InboundReservations from '../../../containers/dashboards/InboundReservations';
+import Customers from '../../../containers/dashboards/Customers';
+import BestProductLineSellers from '../../../containers/dashboards/BestProductLineSellers';
 
 const DefaultDashboard = ({ intl, match }) => {
   const { messages } = intl;
@@ -51,10 +56,12 @@ const DefaultDashboard = ({ intl, match }) => {
           <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" />
         </Colxx>
         <Colxx lg="4" md="6" className="mb-4">
-          <Logs />
+          {/* <Logs /> */}
+          <InboundReservations />
         </Colxx>
         <Colxx lg="4" md="6" className="mb-4">
-          <Tickets />
+          {/* <Tickets /> */}
+          <Customers />
         </Colxx>
       </Row>
       <Row>
@@ -62,18 +69,24 @@ const DefaultDashboard = ({ intl, match }) => {
           <Calendar />
         </Colxx>
         <Colxx xl="6" lg="12" className="mb-4">
-          <BestSellers />
+          {/* <BestSellers /> */}
+          <BestProductLineSellers />
         </Colxx>
       </Row>
       <Row>
-        <Colxx sm="12" lg="4" className="mb-4">
-          <ProfileStatuses />
-        </Colxx>
+        {/* <Colxx sm="12" lg="4" className="mb-4"> */}
+        {/*  <ProfileStatuses /> */}
+        {/* </Colxx> */}
+        {/* <Colxx md="6" lg="4" className="mb-4"> */}
+        {/*  <GradientCardContainer /> */}
+        {/* </Colxx><Colxx sm="12" lg="4" className="mb-4"> */}
+        {/*  <ProfileStatuses /> */}
+        {/* </Colxx> */}
+        {/* <Colxx md="6" lg="4" className="mb-4"> */}
+        {/*  <GradientCardContainer /> */}
+        {/* </Colxx> */}
         <Colxx md="6" lg="4" className="mb-4">
-          <GradientCardContainer />
-        </Colxx>
-        <Colxx md="6" lg="4" className="mb-4">
-          <Cakes />
+          <ProductListed />
         </Colxx>
       </Row>
       <SortableStaticticsRow messages={messages} />

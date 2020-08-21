@@ -3,6 +3,7 @@ import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import AppLayout from '../../layout/AppLayout';
+import Email from './email';
 
 const Dashboards = React.lazy(() =>
   import(/* webpackChunkName: "dashboards" */ './dashboards')
@@ -33,6 +34,10 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/dashboards`}
               render={(props) => <Dashboards {...props} />}
+            />
+            <Route
+              path={`${match.url}/email`}
+              render={(props) => <Email {...props} />}
             />
             <Route
               path={`${match.url}/applications`}

@@ -6,12 +6,12 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 import IntlMessages from '../../helpers/IntlMessages';
 import data from '../../data/cakes';
 
-const Cakes = () => {
+const ProductListed = () => {
   return (
     <Card className="dashboard-link-list">
       <CardBody>
         <CardTitle>
-          <IntlMessages id="dashboards.cakes" />
+          <IntlMessages id="dashboards.product-listed" />
         </CardTitle>
         <div className="d-flex flex-row">
           <div className="w-50">
@@ -43,4 +43,4 @@ const Cakes = () => {
   );
 };
 
-export default Cakes;
+export default ProductListed;

@@ -56,6 +56,12 @@ const data = [
     ],
   },
   {
+    id: 'email',
+    icon: 'iconsminds-mail',
+    label: 'menu.email',
+    to: '/app/email',
+  },
+  {
     id: 'pages',
     icon: 'iconsminds-digital-drawing',
     label: 'menu.pages',
@@ -402,12 +408,12 @@ const data = [
     label: 'menu.blank-page',
     to: '/app/blank-page',
   },
-  {
-    id: 'docs',
-    icon: 'iconsminds-library',
-    label: 'menu.docs',
-    to: 'https://gogo-react-docs.coloredstrategies.com/',
-    newWindow: true,
-  },
+  // {
+  //   id: 'docs',
+  //   icon: 'iconsminds-library',
+  //   label: 'menu.docs',
+  //   to: 'https://gogo-react-docs.coloredstrategies.com/',
+  //   newWindow: true,
+  // },
 ];
 export default data;

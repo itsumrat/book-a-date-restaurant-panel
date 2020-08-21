@@ -47,8 +47,19 @@ const RecentOrders = () => {
 
                   <div className="pl-3 pt-2 pr-2 pb-2">
                     <NavLink to="/app/pages/product/details">
-                      <p className="list-item-heading">{order.title}</p>
+                      <p
+                        style={{ marginBottom: 2 }}
+                        className="list-item-heading"
+                      >
+                        {order.title}
+                      </p>
                       <div className="pr-4">
+                        <span
+                          style={{ color: 'black !important' }}
+                          className="normal-text mb-1"
+                        >
+                          Product {order.productLine}
+                        </span>
                         <p className="text-muted mb-1 text-small">
                           {order.description}
                         </p>

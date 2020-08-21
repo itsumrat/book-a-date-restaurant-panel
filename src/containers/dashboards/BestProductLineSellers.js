@@ -38,45 +38,45 @@ function Table({ columns, data }) {
     <>
       <table {...getTableProps()} className="r-table table">
         <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column, columnIndex) => (
-                <th
-                  key={`th_${columnIndex}`}
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className={
-                    column.isSorted
-                      ? column.isSortedDesc
-                        ? 'sorted-desc'
-                        : 'sorted-asc'
-                      : ''
-                  }
-                >
-                  {column.render('Header')}
-                  <span />
-                </th>
-              ))}
-            </tr>
-          ))}
+        {headerGroups.map((headerGroup) => (
+          <tr {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column, columnIndex) => (
+              <th
+                key={`th_${columnIndex}`}
+                {...column.getHeaderProps(column.getSortByToggleProps())}
+                className={
+                  column.isSorted
+                    ? column.isSortedDesc
+                    ? 'sorted-desc'
+                    : 'sorted-asc'
+                    : ''
+                }
+              >
+                {column.render('Header')}
+                <span />
+              </th>
+            ))}
+          </tr>
+        ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {page.map((row) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell, cellIndex) => (
-                  <td
-                    key={`td_${cellIndex}`}
-                    {...cell.getCellProps({
-                      className: cell.column.cellClass,
-                    })}
-                  >
-                    {cell.render('Cell')}
-                  </td>
-                ))}
-              </tr>
-            );
-          })}
+        {page.map((row) => {
+          prepareRow(row);
+          return (
+            <tr {...row.getRowProps()}>
+              {row.cells.map((cell, cellIndex) => (
+                <td
+                  key={`td_${cellIndex}`}
+                  {...cell.getCellProps({
+                    className: cell.column.cellClass,
+                  })}
+                >
+                  {cell.render('Cell')}
+                </td>
+              ))}
+            </tr>
+          );
+        })}
         </tbody>
       </table>
 
@@ -97,7 +97,7 @@ function Table({ columns, data }) {
   );
 }
 
-const BestSellers = () => {
+const BestProductLineSellers = () => {
   const cols = React.useMemo(
     () => [
       {
@@ -129,7 +129,7 @@ const BestSellers = () => {
     <Card className="h-100">
       <CardBody>
         <CardTitle>
-          <IntlMessages id="dashboards.best-sellers" />
+          <IntlMessages id="dashboards.best-product-line-sellers" />
         </CardTitle>
         <Table columns={cols} data={products} />
       </CardBody>
@@ -137,4 +137,4 @@ const BestSellers = () => {
   );
 };
 
-export default BestSellers;
+export default BestProductLineSellers;

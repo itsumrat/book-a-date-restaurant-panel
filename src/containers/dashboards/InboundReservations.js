@@ -4,15 +4,15 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import IntlMessages from '../../helpers/IntlMessages';
-import data from '../../data/logs';
+import data from '../../data/products';
 
-const Logs = () => {
+const InboundReservations = () => {
   return (
     <div>
       <Card>
         <CardBody>
           <CardTitle>
-            <IntlMessages id="dashboards.logs" />
+            <IntlMessages id="dashboards.inbound-reservations" />
           </CardTitle>
           <div className="dashboard-logs">
             <PerfectScrollbar
@@ -20,22 +20,23 @@ const Logs = () => {
             >
               <table className="table table-sm table-borderless">
                 <tbody>
-                  {data.map((log, index) => {
+                  {data.map((product, index) => {
                     return (
                       <tr key={index}>
-                        <td>
-                          <span
-                            className={`log-indicator align-middle ${log.color}`}
-                          />
-                        </td>
+                        {/* <td> */}
+                        {/*  <span */}
+                        {/*    className="log-indicator align-middle" */}
+                        {/*    style={{ color: product.statusColor }} */}
+                        {/*  /> */}
+                        {/* </td> */}
                         <td>
                           <span className="font-weight-medium">
-                            {log.label}
+                            Product {product.productLine}
                           </span>
                         </td>
-                        <td className="text-right">
-                          <span className="text-muted">{log.time}</span>
-                        </td>
+                        {/* <td className="text-right"> */}
+                        {/*  <span className="text-muted">{log.time}</span> */}
+                        {/* </td> */}
                       </tr>
                     );
                   })}
@@ -48,4 +49,4 @@ const Logs = () => {
     </div>
   );
 };
-export default Logs;
+export default InboundReservations;

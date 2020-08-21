@@ -6,9 +6,9 @@ const data = [
     value: 32,
   },
   {
-    title: 'dashboards.refund-requests',
+    title: 'dashboards.rescheduled-orders',
     icon: 'iconsminds-arrow-refresh',
-    value: 74,
+    value: 5,
   },
   { title: 'dashboards.new-comments', icon: 'iconsminds-mail-read', value: 25 },
 ];

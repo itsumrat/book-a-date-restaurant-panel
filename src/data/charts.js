@@ -22,7 +22,7 @@ export const lineChartData = {
 };
 
 export const polarAreaChartData = {
-  labels: ['Sales', 'Orders', 'Stock'],
+  labels: ['Product Category 1', 'Product Category 2', 'Product Category 3'],
   datasets: [
     {
       data: [80, 90, 70],

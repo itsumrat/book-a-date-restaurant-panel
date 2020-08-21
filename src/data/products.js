@@ -2,6 +2,7 @@ const produtcs = [
   {
     id: 1,
     title: 'Marble Cake',
+    productLine: 1,
     img: '/assets/img/marble-cake-thumb.jpg',
     category: 'Cakes',
     createDate: '02.04.2018',
@@ -14,6 +15,7 @@ const produtcs = [
   {
     id: 2,
     title: 'Fat Rascal',
+    productLine: 12,
     category: 'Cupcakes',
     img: '/assets/img/fat-rascal-thumb.jpg',
     createDate: '01.04.2018',
@@ -26,6 +28,7 @@ const produtcs = [
   {
     id: 3,
     title: 'Chocolate Cake',
+    productLine: 4,
     img: '/assets/img/chocolate-cake-thumb.jpg',
     category: 'Cakes',
     createDate: '25.03.2018',
@@ -38,6 +41,7 @@ const produtcs = [
   {
     id: 4,
     title: 'Goose Breast',
+    productLine: 3,
     img: '/assets/img/goose-breast-thumb.jpg',
     category: 'Cakes',
     createDate: '21.03.2018',
@@ -50,6 +54,7 @@ const produtcs = [
   {
     id: 5,
     title: 'Petit Gâteau',
+    productLine: 11,
     category: 'Cupcakes',
     img: '/assets/img/petit-gateau-thumb.jpg',
     createDate: '02.06.2018',
@@ -62,6 +67,7 @@ const produtcs = [
   {
     id: 6,
     title: 'Salzburger Nockerl',
+    productLine: 122,
     img: '/assets/img/salzburger-nockerl-thumb.jpg',
     category: 'Desserts',
     createDate: '14.07.2018',
@@ -74,6 +80,7 @@ const produtcs = [
   {
     id: 7,
     title: 'Napoleonshat',
+    productLine: 9,
     img: '/assets/img/napoleonshat-thumb.jpg',
     category: 'Desserts',
     createDate: '05.02.2018',
@@ -86,6 +93,7 @@ const produtcs = [
   {
     id: 8,
     title: 'Cheesecake',
+    productLine: 15,
     img: '/assets/img/cheesecake-thumb.jpg',
     category: 'Cakes',
     createDate: '18.08.2018',
@@ -98,6 +106,7 @@ const produtcs = [
   {
     id: 9,
     title: 'Financier',
+    productLine: 16,
     img: '/assets/img/financier-thumb.jpg',
     category: 'Cakes',
     createDate: '15.03.2018',
@@ -111,6 +120,7 @@ const produtcs = [
   {
     id: 10,
     title: 'Genoise',
+    productLine: 19,
     img: '/assets/img/genoise-thumb.jpg',
     category: 'Cupcakes',
     createDate: '11.06.2018',
@@ -123,6 +133,7 @@ const produtcs = [
   {
     id: 11,
     title: 'Gingerbread',
+    productLine: 21,
     img: '/assets/img/gingerbread-thumb.jpg',
     category: 'Cakes',
     createDate: '10.04.2018',
@@ -135,6 +146,7 @@ const produtcs = [
   {
     id: 12,
     title: 'Magdalena',
+    productLine: 7,
     img: '/assets/img/magdalena-thumb.jpg',
     category: 'Cakes',
     createDate: '22.07.2018',
@@ -147,6 +159,7 @@ const produtcs = [
   {
     id: 13,
     title: 'Parkin',
+    productLine: 8,
     img: '/assets/img/parkin-thumb.jpg',
     category: 'Cakes',
     createDate: '22.08.2018',
@@ -160,6 +173,7 @@ const produtcs = [
   {
     id: 14,
     title: 'Streuselkuchen',
+    productLine: 23,
     img: '/assets/img/streuselkuchen-thumb.jpg',
     category: 'Cakes',
     createDate: '22.07.2018',
@@ -172,6 +186,7 @@ const produtcs = [
   {
     id: 15,
     title: 'Tea loaf',
+    productLine: 22,
     img: '/assets/img/tea-loaf-thumb.jpg',
     category: 'Cakes',
     createDate: '10.09.2018',
@@ -184,6 +199,7 @@ const produtcs = [
   {
     id: 16,
     title: 'Merveilleux',
+    productLine: 24,
     img: '/assets/img/merveilleux-thumb.jpg',
     category: 'Cakes',
     createDate: '18.02.2018',
@@ -196,6 +212,7 @@ const produtcs = [
   {
     id: 17,
     title: 'Fruitcake',
+    productLine: 25,
     img: '/assets/img/fruitcake-thumb.jpg',
     category: 'Cakes',
     createDate: '12.01.2019',
@@ -208,6 +225,7 @@ const produtcs = [
   {
     id: 18,
     title: 'Bebinca',
+    productLine: 26,
     img: '/assets/img/bebinca-thumb.jpg',
     category: 'Cakes',
     createDate: '04.02.2019',
@@ -220,6 +238,7 @@ const produtcs = [
   {
     id: 19,
     title: 'Cremeschnitte',
+    productLine: 29,
     img: '/assets/img/cremeschnitte-thumb.jpg',
     category: 'Desserts',
     createDate: '04.03.2018',
@@ -232,6 +251,7 @@ const produtcs = [
   {
     id: 20,
     title: 'Soufflé',
+    productLine: 30,
     img: '/assets/img/souffle-thumb.jpg',
     category: 'Cupcakes',
     createDate: '16.01.2018',

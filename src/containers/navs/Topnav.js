@@ -15,7 +15,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import IntlMessages from '../../helpers/IntlMessages';
+// import IntlMessages from '../../helpers/IntlMessages';
 import {
   setContainerClassnames,
   clickOnMobileMenu,
@@ -240,38 +240,40 @@ const TopNav = ({
         </div>
 
         <div className="d-inline-block">
-          <UncontrolledDropdown className="ml-2">
-            <DropdownToggle
-              caret
-              color="light"
-              size="sm"
-              className="language-button"
-            >
-              <span className="name">{locale.toUpperCase()}</span>
-            </DropdownToggle>
-            <DropdownMenu className="mt-3" right>
-              {localeOptions.map((l) => {
-                return (
-                  <DropdownItem
-                    onClick={() => handleChangeLocale(l.id, l.direction)}
-                    key={l.id}
-                  >
-                    {l.name}
-                  </DropdownItem>
-                );
-              })}
-            </DropdownMenu>
-          </UncontrolledDropdown>
+          <div style={{ display: 'none' }}>
+            <UncontrolledDropdown className="ml-2">
+              <DropdownToggle
+                caret
+                color="light"
+                size="sm"
+                className="language-button"
+              >
+                <span className="name">{locale.toUpperCase()}</span>
+              </DropdownToggle>
+              <DropdownMenu className="mt-3" right>
+                {localeOptions.map((l) => {
+                  return (
+                    <DropdownItem
+                      onClick={() => handleChangeLocale(l.id, l.direction)}
+                      key={l.id}
+                    >
+                      {l.name}
+                    </DropdownItem>
+                  );
+                })}
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </div>
         </div>
-        <div className="position-relative d-none d-none d-lg-inline-block">
-          <a
-            className="btn btn-outline-primary btn-sm ml-2"
-            target="_top"
-            href="https://themeforest.net/cart/configure_before_adding/22544383?license=regular&ref=ColoredStrategies&size=source"
-          >
-            <IntlMessages id="user.buy" />
-          </a>
-        </div>
+        {/* <div className="position-relative d-none d-none d-lg-inline-block"> */}
+        {/*  <a */}
+        {/*    className="btn btn-outline-primary btn-sm ml-2" */}
+        {/*    target="_top" */}
+        {/*    href="https://themeforest.net/cart/configure_before_adding/22544383?license=regular&ref=ColoredStrategies&size=source" */}
+        {/*  > */}
+        {/*    <IntlMessages id="user.buy" /> */}
+        {/*  </a> */}
+        {/* </div> */}
       </div>
       <a className="navbar-logo" href="/">
         <span className="logo d-none d-xs-block" />
