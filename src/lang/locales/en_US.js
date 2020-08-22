@@ -119,6 +119,15 @@ module.exports = {
   'menu.contact': 'Contact',
   'menu.docs': 'Docs',
   'menu.email': 'Email',
+  'menu.advance-search': 'Advance search',
+  'menu.products': 'Products',
+  'menu.drinks': 'Drinks',
+  'menu.mains': 'Mains',
+  'menu.starters': 'Starters',
+  'menu.desserts': 'Desserts',
+  'menu.reporting': 'Reporting',
+  'menu.billing': 'Billings',
+  'menu.guest-communication': 'Guest Communication',
   'menu.features': 'Features',
   'menu.prices': 'Prices',
   'menu.videos': 'Videos',
@@ -203,9 +212,23 @@ module.exports = {
   'dashboards.top-rated-items': 'Top Rated Items',
 
   // Email
+  'email.email': 'Email',
   'email.email-form': 'Email',
   'email.send': 'Send',
 
+  // Advance Search
+  'advance-search.advance-search': 'Advance Search',
+
+  // Products
+  'products.products': 'Products',
+  'products.product-list': 'Product Listing',
+
+  // Reporting
+  'reporting.reporting': 'Reporting',
+  // Billing
+  'billing.billing': 'Billing',
+  // Guest Communication
+  'guest-communication.guest-communication': 'Guest Communication',
   /* 05.Pages */
   'pages.add-new': 'ADD NEW',
   'pages.add-new-modal-title': 'Add New Item',

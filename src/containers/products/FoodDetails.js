@@ -23,29 +23,28 @@ import {
 import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
 import { injectIntl } from 'react-intl';
-import Breadcrumb from '../../../../containers/navs/Breadcrumb';
-import {
-  Separator,
-  Colxx,
-} from '../../../../components/common/CustomBootstrap';
-import IntlMessages from '../../../../helpers/IntlMessages';
-import GlideComponentThumbs from '../../../../components/carousel/GlideComponentThumbs';
-import { detailImages, detailThumbs } from '../../../../data/carouselItems';
-import { detailsQuestionsData } from '../../../../data/questions';
-import CommentWithLikes from '../../../../components/pages/CommentWithLikes';
-import { commentWithLikesData } from '../../../../data/comments';
-import QuestionAnswer from '../../../../components/pages/QuestionAnswer';
-import GalleryDetail from '../../../../containers/pages/GalleryDetail';
+import { Colxx, Separator } from '../../components/common/CustomBootstrap';
+import IntlMessages from '../../helpers/IntlMessages';
+import GlideComponentThumbs from '../../components/carousel/GlideComponentThumbs';
+import { detailImages, detailThumbs } from '../../data/carouselItems';
+import { commentWithLikesData } from '../../data/comments';
+import CommentWithLikes from '../../components/pages/CommentWithLikes';
+import QuestionAnswer from '../../components/pages/QuestionAnswer';
+import { detailsQuestionsData } from '../../data/questions';
+import GalleryDetail from '../pages/GalleryDetail';
+import Breadcrumb from '../navs/Breadcrumb';
+import produtcs from '../../data/products';
 
-const DetailsPages = ({ match, intl }) => {
+const FoodDetails = ({ match, intl }) => {
   const [activeTab, setActiveTab] = useState('details');
 
   const { messages } = intl;
+  const product = produtcs.find((prod, i) => prod.title === match.params.title);
   return (
     <>
       <Row>
         <Colxx xxs="12">
-          <h1>Magdalena Cake</h1>
+          <h1>{product.title}</h1>
           <div className="text-zero top-right-button-container">
             <UncontrolledDropdown>
               <DropdownToggle
@@ -373,4 +372,4 @@ const DetailsPages = ({ match, intl }) => {
     </>
   );
 };
-export default injectIntl(DetailsPages);
+export default injectIntl(FoodDetails);

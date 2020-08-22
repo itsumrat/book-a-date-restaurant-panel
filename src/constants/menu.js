@@ -58,8 +58,60 @@ const data = [
   {
     id: 'email',
     icon: 'iconsminds-mail',
-    label: 'menu.email',
+    label: 'email.email',
     to: '/app/email',
+  },
+  {
+    id: 'advance-search',
+    icon: 'iconsminds-magnifi-glass',
+    label: 'advance-search.advance-search',
+    to: '/app/advance-search',
+  },
+  {
+    id: 'products',
+    icon: 'iconsminds-safe-box',
+    label: 'products.products',
+    to: '/app/products',
+    subs: [
+      {
+        icon: 'simple-icon-briefcase',
+        label: 'menu.drinks',
+        to: '/app/products/drinks',
+      },
+      {
+        icon: 'simple-icon-pie-chart',
+        label: 'menu.starters',
+        to: '/app/products/starters',
+      },
+      {
+        icon: 'simple-icon-basket-loaded',
+        label: 'menu.mains',
+        to: '/app/products/mains',
+      },
+      {
+        icon: 'simple-icon-doc',
+        label: 'menu.desserts',
+        to: '/app/products/desserts',
+      },
+    ],
+  },
+  {
+    id: 'reporting',
+    icon: 'iconsminds-address-book-2',
+    label: 'reporting.reporting',
+    to: '/app/reporting',
+  },
+  {
+    id: 'billing',
+    icon: 'iconsminds-billing',
+    label: 'billing.billing',
+    to: '/app/billing',
+  },
+  {
+    id: 'guest-communication',
+    icon: 'iconsminds-communication-tower-2',
+    label: 'guest-communication.guest-communication',
+    to: '/app/guest-communication',
   },
   {
     id: 'pages',

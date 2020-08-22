@@ -3,7 +3,7 @@
   "version": "5.0.0",
   "description": "Gogo - React Bootstrap 4 Admin Dashboard Template",
   "private": true,
-  "homepage": "http://react.devcorn.xyz",
+  "homepage": "http://bookadate.uk",
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "availity-reactstrap-validation": "^2.6.1",

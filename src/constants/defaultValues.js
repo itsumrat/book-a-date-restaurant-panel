@@ -1,4 +1,4 @@
-/* 
+/*
 Menu Types:
 "menu-default", "menu-sub-hidden", "menu-hidden"
 */
@@ -28,10 +28,10 @@ export const servicePath = 'https://api.coloredstrategies.com';
 export const themeColorStorageKey = '__theme_selected_color';
 export const isMultiColorActive = true;
 export const defaultColor = 'light.purplemonster';
-export const isDarkSwitchActive = true;
+export const isDarkSwitchActive = false;
 export const defaultDirection = 'ltr';
 export const themeRadiusStorageKey = '__theme_radius';
-export const isDemo = true;
+export const isDemo = false;
 export const colors = [
   'bluenavy',
   'blueyale',

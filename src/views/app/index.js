@@ -4,6 +4,13 @@ import { connect } from 'react-redux';
 
 import AppLayout from '../../layout/AppLayout';
 import Email from './email';
+import Search from './advance-search/index';
+import Products from './products';
+import Reporting from './reporting';
+import Billing from './billing';
+import GuestCommunication from './guest-communication';
+
+;
 
 const Dashboards = React.lazy(() =>
   import(/* webpackChunkName: "dashboards" */ './dashboards')
@@ -38,6 +45,26 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/email`}
               render={(props) => <Email {...props} />}
+            />
+            <Route
+              path={`${match.url}/advance-search`}
+              render={(props) => <Search {...props} />}
+            />
+            <Route
+              path={`${match.url}/products`}
+              render={(props) => <Products {...props} />}
+            />
+            <Route
+              path={`${match.url}/reporting`}
+              render={(props) => <Reporting {...props} />}
+            />
+            <Route
+              path={`${match.url}/billing`}
+              render={(props) => <Billing {...props} />}
+            />
+            <Route
+              path={`${match.url}/guest-communication`}
+              render={(props) => <GuestCommunication {...props} />}
             />
             <Route
               path={`${match.url}/applications`}
