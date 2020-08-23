@@ -74,22 +74,22 @@ const data = [
     to: '/app/products',
     subs: [
       {
-        icon: 'simple-icon-briefcase',
+        icon: 'iconsminds-coffee',
         label: 'menu.drinks',
         to: '/app/products/drinks',
       },
       {
-        icon: 'simple-icon-pie-chart',
+        icon: 'iconsminds-chopsticks',
         label: 'menu.starters',
         to: '/app/products/starters',
       },
       {
-        icon: 'simple-icon-basket-loaded',
+        icon: 'iconsminds-hamburger',
         label: 'menu.mains',
         to: '/app/products/mains',
       },
       {
-        icon: 'simple-icon-doc',
+        icon: 'iconsminds-ice-cream',
         label: 'menu.desserts',
         to: '/app/products/desserts',
       },

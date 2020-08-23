@@ -36,11 +36,9 @@ const FoodCard = ({ product }) => {
           <NavLink to={`/app/products/details/${product.title}`}>
             <CardTitle className="mb-4"> {product.title} </CardTitle>
           </NavLink>
-          <CardSubtitle className="mb-4">
-            Homemade Cheesecake with Fresh Berries and Mint
-          </CardSubtitle>
+          <CardSubtitle className="mb-4">{product.description}</CardSubtitle>
           <CardText className="text-muted text-small mb-0 font-weight-light">
-            09.04.2018
+            {product.createDate}
           </CardText>
         </CardBody>
       </Card>
