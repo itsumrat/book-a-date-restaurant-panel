@@ -32,6 +32,28 @@ const data = [
     icon: 'iconsminds-shop-4',
     label: 'menu.reservations',
     to: '/app/reservations',
+    subs: [
+      {
+        icon: 'simple-icon-briefcase',
+        label: 'menu.default',
+        to: '/app/reservations/default',
+      },
+      {
+        icon: 'simple-icon-credit-card',
+        label: 'menu.data-list',
+        to: '/app/reservations/data-list',
+      },
+      {
+        icon: 'simple-icon-picture',
+        label: 'menu.details',
+        to: '/app/reservations/details',
+      },
+      {
+        icon: 'simple-icon-book-open',
+        label: 'menu.details-alt',
+        to: '/app/reservations/details-alt',
+      },
+    ],
   },
   {
     id: 'email',
@@ -96,6 +118,30 @@ const data = [
     icon: 'iconsminds-business-mens',
     label: 'team.team',
     to: '/app/team',
+  },
+  {
+    id: 'calendar',
+    icon: 'simple-icon-calendar',
+    label: 'calendar.calendar',
+    to: '/app/calendar',
+  },
+  {
+    id: 'settings',
+    icon: 'simple-icon-settings',
+    label: 'settings.settings',
+    to: '/app/settings',
+  },
+  {
+    id: 'review',
+    icon: 'simple-icon-feed',
+    label: 'review.review',
+    to: '/app/review',
+  },
+  {
+    id: 'open-close-hour',
+    icon: 'iconsminds-24-hour',
+    label: 'open-close-hour.open-close-hour',
+    to: '/app/open-close-hour',
   },
   {
     id: 'pages',

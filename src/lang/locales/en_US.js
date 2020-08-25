@@ -130,6 +130,10 @@ module.exports = {
   'menu.guest-communication': 'Guest Communication',
   'menu.features': 'Features',
   'menu.team': 'Team',
+  'menu.calendar': 'Calendar',
+  'menu.settings': 'Settings',
+  'menu.open-close-hour': 'Opening and Closing Hour',
+  'menu.review': 'Review',
   'menu.prices': 'Prices',
   'menu.videos': 'Videos',
   'menu.mailing': 'Mailing',
@@ -233,6 +237,14 @@ module.exports = {
 
   // Team
   'team.team': 'Team',
+  // Calender
+  'calendar.calendar': 'Calendar',
+  // Settings
+  'settings.settings': 'Settings',
+  // Review
+  'review.review': 'Review',
+  // Open and Closing Hour
+  'open-close-hour.open-close-hour': 'Open and Closing Hour',
   /* 05.Pages */
   'pages.add-new': 'ADD NEW',
   'pages.add-new-modal-title': 'Add New Item',

@@ -11,6 +11,10 @@ import Billing from './billing';
 import GuestCommunication from './guest-communication';
 import Team from './team';
 import Reservations from './reservations';
+import Calendar from './calender';
+import Settings from './settings';
+import Review from './review';
+import OpenAndClosingHour from './open-and-close';
 
 ;
 
@@ -77,8 +81,28 @@ const App = ({ match }) => {
               render={(props) => <Team {...props} />}
             />
             <Route
+              path={`${match.url}/calendar`}
+              render={(props) => <Calendar {...props} />}
+            />
+            <Route
+              path={`${match.url}/settings`}
+              render={(props) => <Settings {...props} />}
+            />
+            <Route
+              path={`${match.url}/review`}
+              render={(props) => <Review {...props} />}
+            />
+            <Route
+              path={`${match.url}/open-close-hour`}
+              render={(props) => <OpenAndClosingHour {...props} />}
+            />
+            <Route
               path={`${match.url}/applications`}
               render={(props) => <Applications {...props} />}
+            />
+            <Route
+              path={`${match.url}/open-and-close-hour`}
+              render={(props) => <OpenAndClosingHour {...props} />}
             />
             <Route
               path={`${match.url}/pages`}
