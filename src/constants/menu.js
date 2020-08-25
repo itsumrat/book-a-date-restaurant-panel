@@ -32,28 +32,6 @@ const data = [
     icon: 'iconsminds-shop-4',
     label: 'menu.reservations',
     to: '/app/reservations',
-    subs: [
-      {
-        icon: 'simple-icon-briefcase',
-        label: 'menu.default',
-        to: '/app/dashboards/default',
-      },
-      {
-        icon: 'simple-icon-pie-chart',
-        label: 'menu.analytics',
-        to: '/app/dashboards/analytics',
-      },
-      {
-        icon: 'simple-icon-basket-loaded',
-        label: 'menu.ecommerce',
-        to: '/app/dashboards/ecommerce',
-      },
-      {
-        icon: 'simple-icon-doc',
-        label: 'menu.content',
-        to: '/app/dashboards/content',
-      },
-    ],
   },
   {
     id: 'email',
@@ -112,6 +90,12 @@ const data = [
     icon: 'iconsminds-communication-tower-2',
     label: 'guest-communication.guest-communication',
     to: '/app/guest-communication',
+  },
+  {
+    id: 'team',
+    icon: 'iconsminds-business-mens',
+    label: 'team.team',
+    to: '/app/team',
   },
   {
     id: 'pages',

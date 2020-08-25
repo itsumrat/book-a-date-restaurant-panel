@@ -129,6 +129,7 @@ module.exports = {
   'menu.billing': 'Billings',
   'menu.guest-communication': 'Guest Communication',
   'menu.features': 'Features',
+  'menu.team': 'Team',
   'menu.prices': 'Prices',
   'menu.videos': 'Videos',
   'menu.mailing': 'Mailing',
@@ -229,6 +230,9 @@ module.exports = {
   'billing.billing': 'Billing',
   // Guest Communication
   'guest-communication.guest-communication': 'Guest Communication',
+
+  // Team
+  'team.team': 'Team',
   /* 05.Pages */
   'pages.add-new': 'ADD NEW',
   'pages.add-new-modal-title': 'Add New Item',
@@ -385,6 +389,7 @@ module.exports = {
   'badge.dark': 'Dark',
 
   /* 07.03.Buttons */
+  'button.add-new-user': 'Add New User',
   'button.default': 'Bootstrap Default',
   'button.colors': 'Colors',
   'button.rounded': 'Rounded',
@@ -596,6 +601,7 @@ module.exports = {
   /* 07.15.Modal */
   'modal.basic': 'Basic',
   'modal.modal-title': 'Modal title',
+  'modal.add-new-user': 'Add New User',
   'modal.launch-demo-modal': 'Launch Demo Modal',
   'modal.scrolling-long-content': 'Scrolling Long Content',
   'modal.backdrop': 'Backdrop',
@@ -648,6 +654,8 @@ module.exports = {
 
   /* 07.20.Tables */
   'table.bootstrap-tables': 'Bootstrap Tables',
+  'table.team': 'Team',
+  'table.reservation-list': 'Reservation List',
   'table.bootstrap-basic': 'Basic Table',
   'table.bootstrap-striped': 'Striped Rows',
   'table.bootstrap-bordered': 'Bordered Table',

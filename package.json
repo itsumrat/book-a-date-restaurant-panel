@@ -43,6 +43,7 @@
     "react-transition-group": "^4.4.1",
     "react-yandex-maps": "^4.4.0",
     "reactstrap": "^8.4.1",
+    "reactstrap-date-picker": "0.0.9",
     "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
     "sortablejs": "^1.10.2",

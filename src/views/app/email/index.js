@@ -4,8 +4,12 @@ import { Row } from 'reactstrap';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import EmailForm from '../../../containers/email/EmailForm';
+import EmailTemplateText from '../../../containers/email/EmailTemplateTextForm';
 
 const Email = ({ intl, match }) => {
+  const onSubmit = (values) => {
+    console.log(values);
+  };
   return (
     <>
       <Row>
@@ -15,12 +19,11 @@ const Email = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx lg="12" xl="6">
-          <Row>
-            <Colxx md="12" className="mb-4">
-              <EmailForm />
-            </Colxx>
-          </Row>
+        <Colxx md="6" className="mb-4">
+          <EmailForm />
+        </Colxx>
+        <Colxx md="6" className="mb-4">
+          <EmailTemplateText onSubmit={onSubmit} />
         </Colxx>
       </Row>
     </>

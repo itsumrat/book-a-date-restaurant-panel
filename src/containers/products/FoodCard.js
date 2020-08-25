@@ -1,15 +1,13 @@
 import React from 'react';
 import {
-  // Badge,
   Card,
   CardBody,
   CardImg,
   CardSubtitle,
-  CardText,
 } from 'reactstrap';
 import CardTitle from 'reactstrap/es/CardTitle';
-import { Colxx } from '../../components/common/CustomBootstrap';
 import { NavLink } from 'react-router-dom';
+import { Colxx } from '../../components/common/CustomBootstrap';
 
 const FoodCard = ({ product }) => {
   return (
@@ -17,29 +15,15 @@ const FoodCard = ({ product }) => {
       <Card className="mb-4">
         <div className="position-relative">
           <CardImg top src={product.img} alt="Card image cap" />
-          {/*<Badge*/}
-          {/*  color="primary"*/}
-          {/*  pill*/}
-          {/*  className="position-absolute badge-top-left"*/}
-          {/*>*/}
-          {/*  NEW*/}
-          {/*</Badge>*/}
-          {/*<Badge*/}
-          {/*  color="secondary"*/}
-          {/*  pill*/}
-          {/*  className="position-absolute badge-top-left-2"*/}
-          {/*>*/}
-          {/*  TRENDING*/}
-          {/*</Badge>*/}
         </div>
         <CardBody>
           <NavLink to={`/app/products/details/${product.title}`}>
             <CardTitle className="mb-4"> {product.title} </CardTitle>
           </NavLink>
           <CardSubtitle className="mb-4">{product.description}</CardSubtitle>
-          <CardText className="text-muted text-small mb-0 font-weight-light">
-            {product.createDate}
-          </CardText>
+          {/* <CardText className="text-muted text-small mb-0 font-weight-light"> */}
+          {/*  {product.createDate} */}
+          {/* </CardText> */}
         </CardBody>
       </Card>
     </Colxx>

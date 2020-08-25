@@ -12,3 +12,12 @@ html {
 .sidebar .main-menu ul li a{
   text-align: center !important;
 }
+
+.logo-single {
+  width: 110px;
+  height: 90px;
+  background: url('../../img/logo.png') no-repeat;
+  background-position: center center;
+  display: inline-block;
+  margin-bottom: 60px;
+}

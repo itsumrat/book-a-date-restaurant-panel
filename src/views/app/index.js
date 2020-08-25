@@ -9,6 +9,8 @@ import Products from './products';
 import Reporting from './reporting';
 import Billing from './billing';
 import GuestCommunication from './guest-communication';
+import Team from './team';
+import Reservations from './reservations';
 
 ;
 
@@ -43,6 +45,10 @@ const App = ({ match }) => {
               render={(props) => <Dashboards {...props} />}
             />
             <Route
+              path={`${match.url}/reservations`}
+              render={(props) => <Reservations {...props} />}
+            />
+            <Route
               path={`${match.url}/email`}
               render={(props) => <Email {...props} />}
             />
@@ -65,6 +71,10 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/guest-communication`}
               render={(props) => <GuestCommunication {...props} />}
+            />
+            <Route
+              path={`${match.url}/team`}
+              render={(props) => <Team {...props} />}
             />
             <Route
               path={`${match.url}/applications`}
