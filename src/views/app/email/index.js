@@ -22,7 +22,7 @@ const Email = ({ intl, match }) => {
         <Colxx md="6" className="mb-4">
           <EmailForm />
         </Colxx>
-        <Colxx md="6" className="mb-4">
+        <Colxx md="12" className="mb-4">
           <EmailTemplateText onSubmit={onSubmit} />
         </Colxx>
       </Row>
