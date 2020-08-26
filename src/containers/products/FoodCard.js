@@ -4,8 +4,9 @@ import {
   CardBody,
   CardImg,
   CardSubtitle,
+  CardText,
+  CardTitle,
 } from 'reactstrap';
-import CardTitle from 'reactstrap/es/CardTitle';
 import { NavLink } from 'react-router-dom';
 import { Colxx } from '../../components/common/CustomBootstrap';
 
@@ -21,9 +22,9 @@ const FoodCard = ({ product }) => {
             <CardTitle className="mb-4"> {product.title} </CardTitle>
           </NavLink>
           <CardSubtitle className="mb-4">{product.description}</CardSubtitle>
-          {/* <CardText className="text-muted text-small mb-0 font-weight-light"> */}
-          {/*  {product.createDate} */}
-          {/* </CardText> */}
+          <CardText className="text-muted text-small mb-0 font-weight-light">
+            {`£ ${product.price}`}
+          </CardText>
         </CardBody>
       </Card>
     </Colxx>

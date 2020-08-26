@@ -1,22 +1,22 @@
 import React from 'react';
-import { Row, Card, CardBody, CardTitle } from 'reactstrap';
+import { injectIntl } from 'react-intl';
+import { Card, CardBody, CardTitle, Row } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import LinesEllipsis from 'react-lines-ellipsis';
+import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
+import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import SingleLightbox from '../../../components/pages/SingleLightbox';
+import VideoPlayer from '../../../components/common/VideoPlayer';
+import IntlMessages from '../../../helpers/IntlMessages';
+import { blogCategories, blogData } from '../../../data/blog';
 import responsiveHOC from 'react-lines-ellipsis/lib/responsiveHOC';
-import Breadcrumb from '../../../../containers/navs/Breadcrumb';
-import {
-  Separator,
-  Colxx,
-} from '../../../../components/common/CustomBootstrap';
-import SingleLightbox from '../../../../components/pages/SingleLightbox';
-import VideoPlayer from '../../../../components/common/VideoPlayer';
-import { blogData, blogCategories } from '../../../../data/blog';
-import IntlMessages from '../../../../helpers/IntlMessages';
+import LinesEllipsis from 'react-lines-ellipsis';
+
 
 const recentPosts = blogData.slice(0, 4);
 const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis);
 
-const BlogDetail = ({ match }) => {
+const BlogDetailsPage = ({ intl, match }) => {
+
   return (
     <>
       <Row>
@@ -222,5 +222,4 @@ const BlogDetail = ({ match }) => {
     </>
   );
 };
-
-export default BlogDetail;
+export default injectIntl(BlogDetailsPage);

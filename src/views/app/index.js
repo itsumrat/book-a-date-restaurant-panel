@@ -15,6 +15,8 @@ import Calendar from './calender';
 import Settings from './settings';
 import Review from './review';
 import OpenAndClosingHour from './open-and-close';
+import Blog from './blog';
+import BlogDetailsPage from './blog/BlogDetailsPage';
 
 ;
 
@@ -95,6 +97,16 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/open-close-hour`}
               render={(props) => <OpenAndClosingHour {...props} />}
+            />
+            <Route
+              exact
+              path={`${match.url}/blog`}
+              render={(props) => <Blog {...props} />}
+            />
+            <Route
+              exact
+              path={`${match.url}/blog/:name`}
+              render={(props) => <BlogDetailsPage {...props} />}
             />
             <Route
               path={`${match.url}/applications`}

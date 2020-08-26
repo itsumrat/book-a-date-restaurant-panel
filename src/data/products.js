@@ -10,6 +10,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Signature Rib Steak',
     sales: 1647,
+    price: 11,
     stock: 62,
   },
   {
@@ -23,6 +24,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Signature Tacos with Beef Steak',
     sales: 1240,
+    price: 13,
     stock: 48,
   },
   {
@@ -36,6 +38,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Homemade cheesecake with fresh berries and mint',
     sales: 1080,
+    price: 5,
     stock: 57,
   },
   {
@@ -49,6 +52,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Chocolate cake with berries',
     sales: 1014,
+    price: 7,
     stock: 41,
   },
   {
@@ -62,6 +66,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'French Bordeaux Cabernet Sauvignon 2005',
     sales: 985,
+    price: 12,
     stock: 23,
   },
   {
@@ -75,6 +80,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'New Zealand Sauvignon Blanc 2014',
     sales: 962,
+    price: 12,
     stock: 34,
   },
   {
@@ -88,6 +94,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Cheesecake with fresh berries and mint for dessert',
     sales: 921,
+    price: 12,
     stock: 31,
   },
   {
@@ -101,6 +108,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Delicious vegan chocolate cake',
     sales: 887,
+    price: 12,
     stock: 21,
   },
   {
@@ -115,6 +123,7 @@ const produtcs = [
     description:
       'White chocolate strawberry yogurt cake decorated with fresh fruits and chocolate',
     sales: 865,
+    price: 11,
     stock: 53,
   },
   {
@@ -128,6 +137,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Christmas fruit cake, pudding on top',
     sales: 824,
+    price: 12,
     stock: 55,
   },
   {
@@ -141,6 +151,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Wedding cake decorated with donuts and wild berries',
     sales: 714,
+    price: 12,
     stock: 12,
   },
   {
@@ -154,6 +165,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Christmas fruit cake, pudding on top',
     sales: 702,
+    price: 12,
     stock: 14,
   },
   {
@@ -168,6 +180,7 @@ const produtcs = [
     description:
       'White chocolate strawberry yogurt cake decorated with fresh fruits and chocolate',
     sales: 689,
+    price: 12,
     stock: 78,
   },
   {
@@ -181,6 +194,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Delicious vegan chocolate cake',
     sales: 645,
+    price: 12,
     stock: 55,
   },
   {
@@ -194,6 +208,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Cheesecake with fresh berries and mint for dessert',
     sales: 632,
+    price: 12,
     stock: 20,
   },
   {
@@ -207,6 +222,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Chocolate cake with mascarpone',
     sales: 621,
+    price: 12,
     stock: 6,
   },
   {
@@ -220,6 +236,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Chocolate cake with berries',
     sales: 595,
+    price: 12,
     stock: 17,
   },
   {
@@ -233,6 +250,7 @@ const produtcs = [
     statusColor: 'secondary',
     description: 'Homemade cheesecake with fresh berries and mint',
     sales: 574,
+    price: 12,
     stock: 16,
   },
   {
@@ -246,6 +264,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Cheesecake with chocolate cookies and Cream biscuits',
     sales: 562,
+    price: 12,
     stock: 9,
   },
   {
@@ -259,6 +278,7 @@ const produtcs = [
     statusColor: 'primary',
     description: 'Wedding cake with flowers Macarons and blueberries',
     sales: 524,
+    price: 12,
     stock: 14,
   },
 ];

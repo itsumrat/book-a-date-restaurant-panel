@@ -4,8 +4,8 @@ import axios from 'axios';
 import { servicePath } from '../../../constants/defaultValues';
 import ListPageHeading from '../../../containers/pages/ListPageHeading';
 import AddNewModal from '../../../containers/pages/AddNewModal';
-import ListPageListing from '../../../containers/pages/ListPageListing';
 import useMousetrap from '../../../hooks/use-mousetrap';
+import DataListDividedTable  from '../../../containers/reservations/DataListDividedTable';
 
 
 const getIndex = (value, arr, prop) => {
@@ -187,17 +187,18 @@ const ReservationDataListPages = ({ match }) => {
           toggleModal={() => setModalOpen(!modalOpen)}
           categories={categories}
         />
-        <ListPageListing
-          items={items}
-          displayMode={displayMode}
-          selectedItems={selectedItems}
-          onCheckItem={onCheckItem}
-          currentPage={currentPage}
-          totalPage={totalPage}
-          onContextMenuClick={onContextMenuClick}
-          onContextMenu={onContextMenu}
-          onChangePage={setCurrentPage}
-        />
+        <DataListDividedTable />
+        {/*<ListPageListing*/}
+        {/*  items={items}*/}
+        {/*  displayMode={displayMode}*/}
+        {/*  selectedItems={selectedItems}*/}
+        {/*  onCheckItem={onCheckItem}*/}
+        {/*  currentPage={currentPage}*/}
+        {/*  totalPage={totalPage}*/}
+        {/*  onContextMenuClick={onContextMenuClick}*/}
+        {/*  onContextMenu={onContextMenu}*/}
+        {/*  onChangePage={setCurrentPage}*/}
+        {/*/>*/}
       </div>
     </>
   );

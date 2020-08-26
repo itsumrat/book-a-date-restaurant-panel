@@ -8,6 +8,7 @@ import GuestsCard from '../../../containers/reservations/GuestsCard';
 import NextDaysCard from '../../../containers/reservations/NextDaysCard';
 import LatestReservationsCard from '../../../containers/reservations/LatestReservationsCard';
 import ReservationListTable from '../../../containers/reservations/ReservationListTable';
+import NewRestaurantReservations from '../../../containers/reservations/NewRestaurantReservations';
 
 const ReservationDefault = ({ intl, match }) => {
   return (
@@ -34,11 +35,12 @@ const ReservationDefault = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row className="mt-3">
-        <Colxx lg="4">
+        <Colxx lg="6">
           <LatestReservationsCard />
         </Colxx>
-        <Colxx lg="8">
-          <ReservationListTable data={[]} />
+        <Colxx lg="6">
+          {/*<ReservationListTable data={[]} />*/}
+          <NewRestaurantReservations/>
         </Colxx>
       </Row>
     </>

@@ -1,40 +1,39 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import {
-  Row,
+  Badge,
   Card,
   CardBody,
-  Badge,
   Pagination,
   PaginationItem,
   PaginationLink,
+  Row,
 } from 'reactstrap';
-import LinesEllipsis from 'react-lines-ellipsis';
-import responsiveHOC from 'react-lines-ellipsis/lib/responsiveHOC';
 import { NavLink } from 'react-router-dom';
-import Breadcrumb from '../../../../containers/navs/Breadcrumb';
-import {
-  Separator,
-  Colxx,
-} from '../../../../components/common/CustomBootstrap';
-import { blogData } from '../../../../data/blog';
+import responsiveHOC from 'react-lines-ellipsis/lib/responsiveHOC';
+import LinesEllipsis from 'react-lines-ellipsis';
+import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
+import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import { blogData } from '../../../data/blog';
 
 const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis);
 
-const BlogList = ({ match }) => {
+const Blog = ({ intl, match }) => {
+  console.log(match.url)
   return (
     <>
       <Row>
         <Colxx xxs="12">
-          <Breadcrumb heading="menu.blog-list" match={match} />
+          <Breadcrumb heading="menu.blog" match={match} />
           <Separator className="mb-5" />
         </Colxx>
         {blogData.map((blogItem, index) => {
           return (
+            // eslint-disable-next-line react/no-array-index-key
             <Colxx xxs="12" lg="6" className="mb-5" key={`blogItem_${index}`}>
               <Card className="flex-row listing-card-container">
                 <div className="w-40 position-relative">
-                  <NavLink to="blog-detail">
+                  <NavLink to={`blog/${blogItem.title}`}>
                     <img
                       className="card-img-left"
                       src={blogItem.thumb}
@@ -53,7 +52,7 @@ const BlogList = ({ match }) => {
                 </div>
                 <div className="w-60 d-flex align-items-center">
                   <CardBody>
-                    <NavLink to="blog-detail">
+                    <NavLink to={`blog/${blogItem.title}`}>
                       <ResponsiveEllipsis
                         className="mb-3 listing-heading"
                         text={blogItem.title}
@@ -106,5 +105,4 @@ const BlogList = ({ match }) => {
     </>
   );
 };
-
-export default BlogList;
+export default injectIntl(Blog);

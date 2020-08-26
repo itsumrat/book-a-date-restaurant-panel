@@ -1,28 +1,45 @@
-import React from 'react';
-import { injectIntl } from 'react-intl';
-import { Row } from 'reactstrap';
-import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
-import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import React, { Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
-const Reporting = ({ intl, match }) => {
-  return (
-    <>
-      <Row>
-        <Colxx xxs="12">
-          <Breadcrumb heading="menu.reporting" match={match} />
-          <Separator className="mb-5" />
-        </Colxx>
-      </Row>
-      <Row>
-        <Colxx lg="12" xl="6">
-          <Row>
-            <Colxx md="12" className="mb-4">
-              <h1>Reporting Page</h1>
-            </Colxx>
-          </Row>
-        </Colxx>
-      </Row>
-    </>
-  );
-};
-export default injectIntl(Reporting);
+const SalesReports = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-default" */ './salesReports')
+);
+const CustomerReports = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-content" */ './customerReports')
+);
+const BookingReports = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-analytics" */ './bookingReports')
+);
+const ProductReports = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-ecommerce" */ './productReports')
+);
+
+const Reporting = ({ match }) => (
+  <Suspense fallback={<div className="loading" />}>
+    <Switch>
+      <Redirect
+        exact
+        from={`${match.url}/`}
+        to={`${match.url}/sales-reports`}
+      />
+      <Route
+        path={`${match.url}/sales-reports`}
+        render={(props) => <SalesReports {...props} />}
+      />
+      <Route
+        path={`${match.url}/customers-reports`}
+        render={(props) => <CustomerReports {...props} />}
+      />
+      <Route
+        path={`${match.url}/product-reports`}
+        render={(props) => <ProductReports {...props} />}
+      />
+      <Route
+        path={`${match.url}/booking-reports`}
+        render={(props) => <BookingReports {...props} />}
+      />
+      <Redirect to="/error" />
+    </Switch>
+  </Suspense>
+);
+export default Reporting;

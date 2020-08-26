@@ -1,6 +1,8 @@
 const orders = [
   {
     name: 'Marty Otte',
+    img: '/assets/img/chocolate-cake-thumb.jpg',
+    email: 'otte@bookadate.com',
     address: 'Kansas City, USA',
     date: '02.01.2019',
     statusColor: 'secondary',
@@ -8,6 +10,8 @@ const orders = [
   },
   {
     name: 'Linn Ronning',
+    img: '/assets/img/tea-loaf.jpg',
+    email: 'ronning@bookadate.com',
     address: 'Toronto, Canada',
     date: '02.04.2018',
     statusColor: 'primary',
@@ -15,6 +19,8 @@ const orders = [
   },
   {
     name: 'Rasheeda Vaquera',
+    img: '/assets/img/coconut-cake.jpg',
+    email: 'vaquera@bookadate.com',
     address: 'Kühndorf, Germany',
     date: '02.02.2019',
     statusColor: 'primary',
@@ -22,15 +28,19 @@ const orders = [
   },
   {
     name: 'Esperanza Lodge',
+    img: '/assets/img/parkin.jpg',
+    email: 'lodge@bookadate.com',
     address: 'Montluçon, France',
-    date: '20.03.2018',
+    date: '07.03.2019',
     statusColor: 'primary',
     status: 'PROCESSED',
   },
   {
     name: 'Ken Ballweg',
+    img: '/assets/img/marble-cake.jpg',
+    email: 'ken@bookadate.com',
     address: 'Birmingham, UK',
-    date: '17.02.2018',
+    date: '09.05.2019',
     statusColor: 'secondary',
     status: 'ON HOLD',
   },

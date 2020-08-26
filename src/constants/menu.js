@@ -100,6 +100,28 @@ const data = [
     icon: 'iconsminds-address-book-2',
     label: 'reporting.reporting',
     to: '/app/reporting',
+    subs: [
+      {
+        icon: 'iconsminds-money-bag',
+        label: 'menu.sales-reports',
+        to: '/app/reporting/sales-reports',
+      },
+      {
+        icon: 'iconsminds-business-man-woman',
+        label: 'menu.customers-reports',
+        to: '/app/reporting/customers-reports',
+      },
+      {
+        icon: 'simple-icon-feed',
+        label: 'menu.booking-reports',
+        to: '/app/reporting/booking-reports',
+      },
+      {
+        icon: 'simple-icon-doc',
+        label: 'menu.product-reports',
+        to: '/app/reporting/product-reports',
+      },
+    ],
   },
   {
     id: 'billing',
@@ -130,6 +152,53 @@ const data = [
     icon: 'simple-icon-settings',
     label: 'settings.settings',
     to: '/app/settings',
+    subs: [
+      {
+        id: 'pages-miscellaneous',
+        label: 'menu.miscellaneous',
+        to: '/app/pages/miscellaneous',
+        subs: [
+          {
+            icon: 'simple-icon-question',
+            label: 'menu.faq',
+            to: '/app/pages/miscellaneous/faq',
+          },
+          {
+            icon: 'simple-icon-graduation',
+            label: 'menu.knowledge-base',
+            to: '/app/pages/miscellaneous/knowledge-base',
+          },
+
+          {
+            icon: 'simple-icon-diamond',
+            label: 'menu.prices',
+            to: '/app/pages/miscellaneous/prices',
+          },
+          {
+            icon: 'simple-icon-magnifier',
+            label: 'menu.search',
+            to: '/app/pages/miscellaneous/search',
+          },
+          {
+            icon: 'simple-icon-envelope-open',
+            label: 'menu.mailing',
+            to: '/app/pages/miscellaneous/mailing',
+          },
+          {
+            icon: 'simple-icon-bag',
+            label: 'menu.invoice',
+            to: '/app/pages/miscellaneous/invoice',
+          },
+
+          {
+            icon: 'simple-icon-exclamation',
+            label: 'menu.error',
+            to: '/error',
+            newWindow: true,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'review',
@@ -142,6 +211,12 @@ const data = [
     icon: 'iconsminds-24-hour',
     label: 'open-close-hour.open-close-hour',
     to: '/app/open-close-hour',
+  },
+  {
+    id: 'blog',
+    icon: 'simple-icon-share',
+    label: 'menu.blog',
+    to: '/app/blog',
   },
   {
     id: 'pages',

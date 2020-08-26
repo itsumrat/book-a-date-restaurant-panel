@@ -28,7 +28,6 @@ const UserForm = ({ onSubmit, closeModal }) => {
   return (
     <Card>
       <CardBody>
-        <h6 className="mb-4">Form Level Validation</h6>
         <Formik
           validate={validate}
           initialValues={{

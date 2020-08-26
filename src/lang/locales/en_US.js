@@ -126,6 +126,10 @@ module.exports = {
   'menu.starters': 'Starters',
   'menu.desserts': 'Desserts',
   'menu.reporting': 'Reporting',
+  'menu.sales-reports': 'Sales Reports',
+  'menu.customers-reports': 'Customers Reports',
+  'menu.product-reports': 'Product Reports',
+  'menu.booking-reports': 'Booking Reports',
   'menu.billing': 'Billings',
   'menu.guest-communication': 'Guest Communication',
   'menu.features': 'Features',
@@ -230,6 +234,10 @@ module.exports = {
 
   // Reporting
   'reporting.reporting': 'Reporting',
+  'reporting.sales-reports': 'Sales Reports',
+  'reporting.customers-reports': 'Customers Reports',
+  'reporting.product-reports': 'Product Reports',
+  'reporting.booking-reports': 'Booking Reports',
   // Billing
   'billing.billing': 'Billing',
   // Guest Communication
@@ -667,6 +675,7 @@ module.exports = {
   /* 07.20.Tables */
   'table.bootstrap-tables': 'Bootstrap Tables',
   'table.team': 'Team',
+  'table.new-restaurant-reservations': 'New Restaurant Reservations',
   'table.reservation-list': 'Reservation List',
   'table.bootstrap-basic': 'Basic Table',
   'table.bootstrap-striped': 'Striped Rows',
