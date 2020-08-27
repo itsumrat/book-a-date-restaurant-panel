@@ -253,6 +253,8 @@ module.exports = {
   'review.review': 'Review',
   // Open and Closing Hour
   'open-close-hour.open-close-hour': 'Open and Closing Hour',
+  'open-close-hour.time-table': 'Time Table',
+  'open-close-hour.special-days': 'Special Days',
   /* 05.Pages */
   'pages.add-new': 'ADD NEW',
   'pages.add-new-modal-title': 'Add New Item',

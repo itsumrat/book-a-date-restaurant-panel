@@ -26,7 +26,7 @@ const NewRestaurantReservations = ({ data }) => {
           <div key={ind}>
             <CardBody>
               <Row>
-                <Colxx md="3">
+                <Colxx md="4">
                   <img
                     alt="Thumbnail"
                     src={order.img}

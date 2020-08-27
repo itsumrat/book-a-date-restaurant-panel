@@ -11,14 +11,12 @@ import Billing from './billing';
 import GuestCommunication from './guest-communication';
 import Team from './team';
 import Reservations from './reservations';
-import Calendar from './calender';
 import Settings from './settings';
 import Review from './review';
 import OpenAndClosingHour from './open-and-close';
 import Blog from './blog';
 import BlogDetailsPage from './blog/BlogDetailsPage';
-
-;
+import CalendarPage from './calendar';
 
 const Dashboards = React.lazy(() =>
   import(/* webpackChunkName: "dashboards" */ './dashboards')
@@ -84,7 +82,7 @@ const App = ({ match }) => {
             />
             <Route
               path={`${match.url}/calendar`}
-              render={(props) => <Calendar {...props} />}
+              render={(props) => <CalendarPage {...props} />}
             />
             <Route
               path={`${match.url}/settings`}
