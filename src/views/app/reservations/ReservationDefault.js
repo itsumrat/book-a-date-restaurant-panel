@@ -39,8 +39,8 @@ const ReservationDefault = ({ intl, match }) => {
           <LatestReservationsCard />
         </Colxx>
         <Colxx lg="6">
-          {/*<ReservationListTable data={[]} />*/}
-          <NewRestaurantReservations/>
+          {/* <ReservationListTable data={[]} /> */}
+          <NewRestaurantReservations />
         </Colxx>
       </Row>
     </>

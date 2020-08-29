@@ -20,7 +20,8 @@ export const centerTextPlugin = {
     const { ctx } = chart.chart;
     ctx.restore();
 
-    let activeLabel = chart.data.labels[0];
+    // let activeLabel = chart.data.labels[0];
+    let activeLabel = '';
     let activeValue = chart.data.datasets[0].data[0];
     let dataset = chart.data.datasets[0];
     let meta = dataset._meta[Object.keys(dataset._meta)[0]];
@@ -32,7 +33,8 @@ export const centerTextPlugin = {
       : activePercentage;
 
     if (chart.pointAvailable) {
-      activeLabel = chart.data.labels[chart.pointIndex];
+      // activeLabel = chart.data.labels[chart.pointIndex];
+      activeLabel = '';
       activeValue =
         chart.data.datasets[chart.pointDataIndex].data[chart.pointIndex];
 
@@ -60,6 +62,7 @@ export const centerTextPlugin = {
     const text2 = activeLabel;
     const textX2 = Math.round((width - ctx.measureText(text2).width) / 2);
     const textY2 = height / 2 - 30;
+
     ctx.fillText(text2, textX2, textY2);
 
     ctx.save();

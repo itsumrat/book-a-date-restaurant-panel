@@ -6,11 +6,11 @@ import RadialProgressCard from '../../components/cards/RadialProgressCard';
 
 const SortableStaticticsRow = ({ messages }) => {
   const [state, setState] = useState([
-    {
-      key: 1,
-      title: 'dashboards.payment-status',
-      percent: 64,
-    },
+    // {
+    //   key: 1,
+    //   title: 'dashboards.payment-status',
+    //   percent: 64,
+    // },
     {
       key: 2,
       title: 'dashboards.work-progress',
@@ -21,11 +21,11 @@ const SortableStaticticsRow = ({ messages }) => {
       title: 'dashboards.tasks-completed',
       percent: 32,
     },
-    {
-      key: 4,
-      title: 'dashboards.payments-done',
-      percent: 45,
-    },
+    // {
+    //   key: 4,
+    //   title: 'dashboards.payments-done',
+    //   percent: 45,
+    // },
   ]);
 
   return (

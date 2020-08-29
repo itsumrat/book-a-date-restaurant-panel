@@ -15,7 +15,7 @@ const FoodCard = ({ product }) => {
     <Colxx xxs="12" xs="6" lg="4">
       <Card className="mb-4">
         <div className="position-relative">
-          <CardImg top src={product.img} alt="Card image cap" />
+          <CardImg style={{height: '275px'}} top src={product.img} alt="Card image cap" />
         </div>
         <CardBody>
           <NavLink to={`/app/products/details/${product.title}`}>

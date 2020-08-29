@@ -26,6 +26,7 @@ import ProductListed from '../../../containers/dashboards/ProductListed';
 import InboundReservations from '../../../containers/dashboards/InboundReservations';
 import Customers from '../../../containers/dashboards/Customers';
 import BestProductLineSellers from '../../../containers/dashboards/BestProductLineSellers';
+import ProductCategoriesDoughnut from '../../../containers/dashboards/ProductCategoriesDoughnut';
 
 const DefaultDashboard = ({ intl, match }) => {
   const { messages } = intl;
@@ -53,7 +54,8 @@ const DefaultDashboard = ({ intl, match }) => {
       </Row>
       <Row>
         <Colxx lg="4" md="12" className="mb-4">
-          <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" />
+          {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
+          <ProductCategoriesDoughnut />
         </Colxx>
         <Colxx lg="4" md="6" className="mb-4">
           {/* <Logs /> */}
@@ -130,9 +132,9 @@ const DefaultDashboard = ({ intl, match }) => {
             </Colxx>
           </Row>
         </Colxx>
-        <Colxx lg="6" md="6" xl="4" sm="12" className="mb-4">
-          <AdvancedSearch messages={messages} />
-        </Colxx>
+        {/* <Colxx lg="6" md="6" xl="4" sm="12" className="mb-4"> */}
+        {/*  <AdvancedSearch messages={messages} /> */}
+        {/* </Colxx> */}
         <Colxx lg="6" xl="4" className="mb-4">
           <SmallLineCharts />
           <TopRatedItems />

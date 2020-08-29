@@ -21,7 +21,7 @@ const NextDaysCard = () => {
           </Colxx>
           <Colxx>
             <p className="lead font-weight-bolder">2 $</p>
-            <p className="card-text font-weight-semibold mb-0">Deposit</p>
+            <p className="card-text font-weight-semibold mb-0">Value</p>
           </Colxx>
         </Row>
       </CardBody>

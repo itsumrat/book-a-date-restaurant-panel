@@ -15,6 +15,11 @@ const ReservationDetailsAlt = React.lazy(() =>
     /* webpackChunkName: "dashboard-ecommerce" */ './Reservation-details-alt'
   )
 );
+const ReservationThumbList = React.lazy(() =>
+  import(
+    /* webpackChunkName: "dashboard-ecommerce" */ './ReservationThumbList'
+    )
+);
 
 const Reservations = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
@@ -35,6 +40,10 @@ const Reservations = ({ match }) => (
       <Route
         path={`${match.url}/data-list`}
         render={(props) => <ReservationDataList {...props} />}
+      />
+      <Route
+        path={`${match.url}/thumb-list`}
+        render={(props) => <ReservationThumbList {...props} />}
       />
       <Redirect to="/error" />
     </Switch>

@@ -155,18 +155,29 @@ export const pieChartData = {
 };
 
 export const doughnutChartData = {
-  labels: ['Cakes', 'Cupcakes', 'Desserts'],
+  labels: [
+    'product category 1',
+    'product category 2',
+    'product category 3',
+    'product category 4',
+  ],
   datasets: [
     {
       label: '',
-      borderColor: [colors.themeColor3, colors.themeColor2, colors.themeColor1],
+      borderColor: [
+        colors.themeColor3,
+        colors.themeColor2,
+        colors.themeColor1,
+        colors.themeColor4,
+      ],
       backgroundColor: [
         colors.themeColor3_10,
         colors.themeColor2_10,
         colors.themeColor1_10,
+        colors.themeColor4_10,
       ],
       borderWidth: 2,
-      data: [15, 25, 20],
+      data: [15, 25, 20, 21],
     },
   ],
 };

@@ -14,7 +14,7 @@ const ProductCategoriesDoughnut = () => {
           <IntlMessages id="dashboards.product-categories" />
         </CardTitle>
         <div className="dashboard-donut-chart">
-          <DoughnutChart shadow data={doughnutChartData} />
+          <DoughnutChart  shadow data={doughnutChartData} />
         </div>
       </CardBody>
     </Card>

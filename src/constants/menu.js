@@ -53,6 +53,11 @@ const data = [
         label: 'menu.details-alt',
         to: '/app/reservations/details-alt',
       },
+      {
+        icon: 'simple-icon-list',
+        label: 'menu.thumb-list',
+        to: '/app/reservations/thumb-list',
+      },
     ],
   },
   {

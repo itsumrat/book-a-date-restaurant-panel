@@ -16,15 +16,6 @@ const LatestReservationsCard = () => {
         <Row className="flex-row-reverse">
           <Button>View Schedule</Button>
         </Row>
-        <Row>
-          <Card>
-            <CardTitle>Calender</CardTitle>
-            <CardBody>
-              <Badge>Confirmed</Badge>
-              <Separator className="m-0" />
-            </CardBody>
-          </Card>
-        </Row>
       </CardBody>
     </Card>
   );

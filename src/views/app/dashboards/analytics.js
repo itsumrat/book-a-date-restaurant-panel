@@ -35,9 +35,9 @@ const DashboardAnalytics = ({ intl, match }) => {
         <Colxx xl="4" lg="6" md="12" className="mb-4">
           <ProductCategoriesDoughnut />
         </Colxx>
-        <Colxx xl="4" lg="6" md="12" className="mb-4">
-          <ProfileStatuses cardClass="dashboard-progress" />
-        </Colxx>
+        {/* <Colxx xl="4" lg="6" md="12" className="mb-4"> */}
+        {/*  <ProfileStatuses cardClass="dashboard-progress" /> */}
+        {/* </Colxx> */}
         <Colxx xl="4" lg="12" md="12">
           <SmallLineCharts itemClass="dashboard-small-chart-analytics" />
         </Colxx>

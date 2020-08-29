@@ -14,6 +14,8 @@ import DatatablePagination from '../../components/DatatablePagination';
 const produtcs = [
   {
     id: 1,
+    time: '12:02',
+    telephone: '024322448',
     productDetails: 'Signature Rib Steak',
     img: '/assets/img/marble-cake-thumb.jpg',
     productLine: 'Cakes',
@@ -28,6 +30,8 @@ const produtcs = [
   },
   {
     id: 2,
+    time: '12:04',
+    telephone: '02482441',
     productDetails: 'Signature tacos',
     productLine: 'Cupcakes',
     img: '/assets/img/fat-rascal-thumb.jpg',
@@ -42,6 +46,8 @@ const produtcs = [
   },
   {
     id: 3,
+    time: '12:06',
+    telephone: '024824409',
     productDetails: 'Cheese Cake',
     img: '/assets/img/chocolate-cake-thumb.jpg',
     productLine: 'Cakes',
@@ -56,6 +62,8 @@ const produtcs = [
   },
   {
     id: 4,
+    time: '12:07',
+    telephone: '02482467',
     productDetails: 'Goose Breast',
     img: '/assets/img/goose-breast-thumb.jpg',
     productLine: 'Cakes',
@@ -70,6 +78,8 @@ const produtcs = [
   },
   {
     id: 5,
+    time: '12:09',
+    telephone: '024824409',
     productDetails: 'Bottle of Red wine',
     productLine: 'Cupcakes',
     img: '/assets/img/petit-gateau-thumb.jpg',
@@ -84,6 +94,8 @@ const produtcs = [
   },
   {
     id: 6,
+    time: '12:12',
+    telephone: '02482454',
     productDetails: 'Bottle of White Wine',
     img: '/assets/img/salzburger-nockerl-thumb.jpg',
     productLine: 'Desserts',
@@ -98,6 +110,8 @@ const produtcs = [
   },
   {
     id: 7,
+    time: '12:23',
+    telephone: '02482456',
     productDetails: 'Napoleonshat',
     img: '/assets/img/napoleonshat-thumb.jpg',
     productLine: 'Desserts',
@@ -112,6 +126,8 @@ const produtcs = [
   },
   {
     id: 8,
+    time: '12:34',
+    telephone: '024824456',
     productDetails: 'Cheesecake',
     img: '/assets/img/cheesecake-thumb.jpg',
     productLine: 'Cakes',
@@ -126,6 +142,8 @@ const produtcs = [
   },
   {
     id: 9,
+    time: '12:12',
+    telephone: '024824454',
     productDetails: 'Financier',
     img: '/assets/img/financier-thumb.jpg',
     productLine: 'Cakes',
@@ -141,6 +159,8 @@ const produtcs = [
   },
   {
     id: 10,
+    time: '12:02',
+    telephone: '02482328',
     productDetails: 'Genoise',
     img: '/assets/img/genoise-thumb.jpg',
     productLine: 'Cupcakes',
@@ -155,6 +175,8 @@ const produtcs = [
   },
   {
     id: 11,
+    time: '12:02',
+    telephone: '024821248',
     productDetails: 'Gingerbread',
     img: '/assets/img/gingerbread-thumb.jpg',
     productLine: 'Cakes',
@@ -169,6 +191,8 @@ const produtcs = [
   },
   {
     id: 12,
+    time: '12:02',
+    telephone: '0248244435',
     productDetails: 'Magdalena',
     img: '/assets/img/magdalena-thumb.jpg',
     productLine: 'Cakes',
@@ -183,6 +207,8 @@ const produtcs = [
   },
   {
     id: 13,
+    time: '12:02',
+    telephone: '02482445',
     productDetails: 'Parkin',
     img: '/assets/img/parkin-thumb.jpg',
     productLine: 'Cakes',
@@ -198,6 +224,8 @@ const produtcs = [
   },
   {
     id: 14,
+    time: '12:02',
+    telephone: '022342448',
     productDetails: 'Streuselkuchen',
     img: '/assets/img/streuselkuchen-thumb.jpg',
     productLine: 'Cakes',
@@ -212,6 +240,8 @@ const produtcs = [
   },
   {
     id: 15,
+    time: '12:02',
+    telephone: '02483248',
     productDetails: 'Tea loaf',
     img: '/assets/img/tea-loaf-thumb.jpg',
     productLine: 'Cakes',
@@ -226,6 +256,8 @@ const produtcs = [
   },
   {
     id: 16,
+    time: '12:02',
+    telephone: '02486448',
     productDetails: 'Merveilleux',
     img: '/assets/img/merveilleux-thumb.jpg',
     productLine: 'Cakes',
@@ -240,6 +272,8 @@ const produtcs = [
   },
   {
     id: 17,
+    time: '12:02',
+    telephone: '02452448',
     productDetails: 'Fruitcake',
     img: '/assets/img/fruitcake-thumb.jpg',
     productLine: 'Cakes',
@@ -254,6 +288,8 @@ const produtcs = [
   },
   {
     id: 18,
+    time: '12:02',
+    telephone: '02482448',
     productDetails: 'Bebinca',
     img: '/assets/img/bebinca-thumb.jpg',
     productLine: 'Cakes',
@@ -268,6 +304,8 @@ const produtcs = [
   },
   {
     id: 19,
+    time: '12:02',
+    telephone: '024823448',
     productDetails: 'Cremeschnitte',
     img: '/assets/img/cremeschnitte-thumb.jpg',
     productLine: 'Desserts',
@@ -282,6 +320,8 @@ const produtcs = [
   },
   {
     id: 20,
+    time: '12:02',
+    telephone: '02482448',
     productDetails: 'Soufflé',
     img: '/assets/img/souffle-thumb.jpg',
     productLine: 'Cupcakes',
@@ -390,6 +430,12 @@ const DataListDividedTable = () => {
   const cols = React.useMemo(
     () => [
       {
+        Header: 'Time',
+        accessor: 'time',
+        cellClass: 'list-item-heading w-40',
+        Cell: (props) => <>{props.value}</>,
+      },
+      {
         Header: 'Product details',
         accessor: 'productDetails',
         cellClass: 'list-item-heading w-40',
@@ -398,6 +444,12 @@ const DataListDividedTable = () => {
       {
         Header: 'Customer name',
         accessor: 'customerName',
+        cellClass: 'list-item-heading w-40',
+        Cell: (props) => <>{props.value}</>,
+      },
+      {
+        Header: 'Telephone',
+        accessor: 'telephone',
         cellClass: 'list-item-heading w-40',
         Cell: (props) => <>{props.value}</>,
       },
@@ -414,14 +466,16 @@ const DataListDividedTable = () => {
         Cell: (props) => <>{props.value}</>,
       },
       {
+        Header: 'Date Reservation',
         accessor: 'createDate',
         cellClass: 'text-muted  w-40',
         Cell: (props) => <>{props.value}</>,
       },
       {
+        Header: 'Status',
         accessor: 'status',
         cellClass: 'text-muted  w-40',
-        Cell: (props) => <Badge color={'secondary'} pill>{props.value}</Badge>,
+        Cell: (props) => <Badge color="secondary" pill>{props.value}</Badge>,
       },
     ],
     []
