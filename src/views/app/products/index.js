@@ -1,5 +1,8 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import Details from './details';
+import ProductDetailPage from './ProductDetailPage';
+import ProductsDetailsAltPages from './Products-details-alt';
 
 const ProductDrinks = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-default" */ './drinks')
@@ -37,6 +40,14 @@ const Products = ({ match }) => {
         <Route
           path={`${match.url}/mains`}
           render={(props) => <ProductMains {...props} />}
+        />
+        <Route
+          path={`${match.url}/details`}
+          render={(props) => <ProductDetailPage {...props} />}
+        />
+        <Route
+          path={`${match.url}/details-alt`}
+          render={(props) => <ProductsDetailsAltPages {...props} />}
         />
         <Route
           exact

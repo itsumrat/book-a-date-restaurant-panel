@@ -45,7 +45,7 @@ const AdvancedSearch = ({ messages }) => {
         <Form className="form-container">
           <FormGroup>
             <label>
-              <IntlMessages id="dashboards.toppings" />
+              <IntlMessages id="dashboards.date" />
             </label>
             <Select
               components={{ Input: CustomSelectInput }}
@@ -59,7 +59,7 @@ const AdvancedSearch = ({ messages }) => {
           </FormGroup>
           <FormGroup>
             <label>
-              <IntlMessages id="dashboards.type" />
+              <IntlMessages id="dashboards.time" />
             </label>
             <Select
               components={{ Input: CustomSelectInput }}
@@ -73,7 +73,7 @@ const AdvancedSearch = ({ messages }) => {
           </FormGroup>
           <FormGroup>
             <Label>
-              <IntlMessages id="dashboards.keyword" />
+              <IntlMessages id="dashboards.guest-keyword" />
             </Label>
             <Input type="text" placeholder={messages['dashboards.keyword']} />
           </FormGroup>

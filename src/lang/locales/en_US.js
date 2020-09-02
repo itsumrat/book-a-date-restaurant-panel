@@ -169,6 +169,9 @@ module.exports = {
   'dashboards.rescheduled-orders': 'Rescheduled orders',
   'dashboards.new-comments': 'New Comments',
   'dashboards.sales': 'Sales',
+  'dashboards.date': 'Date',
+  'dashboards.time': 'Time',
+  'dashboards.guest-keyword': 'Search for Guest or Keyword',
   'dashboards.orders': 'Orders',
   'dashboards.refunds': 'Refunds',
   'dashboards.recent-orders': 'Recent Orders',
@@ -622,6 +625,7 @@ module.exports = {
 
   /* 07.15.Modal */
   'modal.basic': 'Basic',
+  'modal.add-special-day': 'Add Special Day',
   'modal.modal-title': 'Modal title',
   'modal.add-new-user': 'Add New User',
   'modal.launch-demo-modal': 'Launch Demo Modal',

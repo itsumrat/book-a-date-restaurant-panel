@@ -15,11 +15,11 @@ const data = [
         label: 'menu.analytics',
         to: '/app/dashboards/analytics',
       },
-      {
-        icon: 'simple-icon-basket-loaded',
-        label: 'menu.ecommerce',
-        to: '/app/dashboards/ecommerce',
-      },
+      // {
+      //   icon: 'simple-icon-basket-loaded',
+      //   label: 'menu.ecommerce',
+      //   to: '/app/dashboards/ecommerce',
+      // },
       {
         icon: 'simple-icon-doc',
         label: 'menu.content',
@@ -65,6 +65,18 @@ const data = [
     icon: 'iconsminds-mail',
     label: 'email.email',
     to: '/app/email',
+    subs: [
+      {
+        icon: 'simple-icon-briefcase',
+        label: 'menu.default',
+        to: '/app/email/default',
+      },
+      {
+        icon: 'simple-icon-envelope-open',
+        label: 'menu.mailing',
+        to: '/app/email/mailing',
+      },
+    ],
   },
   {
     id: 'advance-search',
@@ -97,6 +109,16 @@ const data = [
         icon: 'iconsminds-ice-cream',
         label: 'menu.desserts',
         to: '/app/products/desserts',
+      },
+      {
+        icon: 'simple-icon-picture',
+        label: 'menu.details',
+        to: '/app/products/details',
+      },
+      {
+        icon: 'simple-icon-book-open',
+        label: 'menu.details-alt',
+        to: '/app/products/details-alt',
       },
     ],
   },
@@ -133,6 +155,23 @@ const data = [
     icon: 'iconsminds-billing',
     label: 'billing.billing',
     to: '/app/billing',
+    subs: [
+      {
+        icon: 'simple-icon-briefcase',
+        label: 'menu.default',
+        to: '/app/billing/default',
+      },
+      {
+        icon: 'simple-icon-bag',
+        label: 'menu.invoice',
+        to: '/app/billing/invoice',
+      },
+      {
+        icon: 'simple-icon-diamond',
+        label: 'menu.prices',
+        to: '/app/billing/prices',
+      },
+    ],
   },
   {
     id: 'guest-communication',
@@ -185,7 +224,7 @@ const data = [
             to: '/app/pages/miscellaneous/search',
           },
           {
-            icon: 'simple-icon-envelope-open',
+            icon: 'E',
             label: 'menu.mailing',
             to: '/app/pages/miscellaneous/mailing',
           },
@@ -200,6 +239,162 @@ const data = [
             label: 'menu.error',
             to: '/error',
             newWindow: true,
+          },
+        ],
+      },
+      {
+        id: 'pages-authorization',
+        label: 'menu.authorization',
+        to: '/user',
+        subs: [
+          {
+            icon: 'simple-icon-user-following',
+            label: 'menu.login',
+            to: '/user/login',
+            newWindow: true,
+          },
+          {
+            icon: 'simple-icon-user-follow',
+            label: 'menu.register',
+            to: '/user/register',
+            newWindow: true,
+          },
+          {
+            icon: 'simple-icon-user-following',
+            label: 'menu.forgot-password',
+            to: '/user/forgot-password',
+            newWindow: true,
+          },
+          {
+            icon: 'simple-icon-user-unfollow',
+            label: 'menu.reset-password',
+            to: '/user/reset-password',
+            newWindow: true,
+          },
+        ],
+      },
+      {
+        id: 'ui-forms',
+        label: 'menu.forms',
+        to: '/app/ui/forms',
+        subs: [
+          {
+            icon: 'simple-icon-notebook',
+            label: 'menu.layouts',
+            to: '/app/ui/forms/layouts',
+          },
+          {
+            icon: 'simple-icon-puzzle',
+            label: 'menu.components',
+            to: '/app/ui/forms/components',
+          },
+          {
+            icon: 'simple-icon-check',
+            label: 'menu.validations',
+            to: '/app/ui/forms/validations',
+          },
+          {
+            icon: 'simple-icon-magic-wand',
+            label: 'menu.wizard',
+            to: '/app/ui/forms/wizard',
+          },
+        ],
+      },
+      {
+        id: 'ui-components',
+        label: 'menu.components',
+        to: '/app/ui/components',
+        subs: [
+          {
+            icon: 'simple-icon-bell',
+            label: 'menu.alerts',
+            to: '/app/ui/components/alerts',
+          },
+          {
+            icon: 'simple-icon-badge',
+            label: 'menu.badges',
+            to: '/app/ui/components/badges',
+          },
+          {
+            icon: 'simple-icon-control-play',
+            label: 'menu.buttons',
+            to: '/app/ui/components/buttons',
+          },
+          {
+            icon: 'simple-icon-layers',
+            label: 'menu.cards',
+            to: '/app/ui/components/cards',
+          },
+          {
+            icon: 'simple-icon-picture',
+            label: 'menu.carousel',
+            to: '/app/ui/components/carousel',
+          },
+          {
+            icon: 'simple-icon-chart',
+            label: 'menu.charts',
+            to: '/app/ui/components/charts',
+          },
+          {
+            icon: 'simple-icon-arrow-up',
+            label: 'menu.collapse',
+            to: '/app/ui/components/collapse',
+          },
+          {
+            icon: 'simple-icon-arrow-down',
+            label: 'menu.dropdowns',
+            to: '/app/ui/components/dropdowns',
+          },
+          {
+            icon: 'simple-icon-book-open',
+            label: 'menu.editors',
+            to: '/app/ui/components/editors',
+          },
+
+          {
+            icon: 'simple-icon-star',
+            label: 'menu.icons',
+            to: '/app/ui/components/icons',
+          },
+          {
+            icon: 'simple-icon-note',
+            label: 'menu.input-groups',
+            to: '/app/ui/components/input-groups',
+          },
+          {
+            icon: 'simple-icon-screen-desktop',
+            label: 'menu.jumbotron',
+            to: '/app/ui/components/jumbotron',
+          },
+          {
+            icon: 'simple-icon-map',
+            label: 'menu.maps',
+            to: '/app/ui/components/maps',
+          },
+          {
+            icon: 'simple-icon-docs',
+            label: 'menu.modal',
+            to: '/app/ui/components/modal',
+          },
+          {
+            icon: 'simple-icon-cursor',
+            label: 'menu.navigation',
+            to: '/app/ui/components/navigation',
+          },
+          {
+            icon: 'simple-icon-pin',
+            label: 'menu.popover-tooltip',
+            to: '/app/ui/components/popover-tooltip',
+          },
+          {
+            icon: 'simple-icon-shuffle',
+            label: 'menu.sortable',
+            to: '/app/ui/components/sortable',
+          },
+          {
+            icon: 'simple-icon-grid',
+            label: 'menu.tables',
+            to: '/app/ui/components/tables',
           },
         ],
       },

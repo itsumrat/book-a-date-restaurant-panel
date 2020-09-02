@@ -15,7 +15,7 @@ const CalendarPage = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx xl="6" lg="12" className="mb-4">
+        <Colxx xl="12" lg="12" className="mb-4">
           <CalendarCard />
         </Colxx>
       </Row>

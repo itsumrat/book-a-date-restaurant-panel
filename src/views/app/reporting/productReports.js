@@ -3,6 +3,10 @@ import { injectIntl } from 'react-intl';
 import { Row } from 'reactstrap';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import InboundReservations from '../../../containers/dashboards/InboundReservations';
+import SmallLineCharts from '../../../containers/dashboards/SmallLineCharts';
+import TopRatedItems from '../../../containers/dashboards/TopRatedItems';
+import ProductCategoriesDoughnut from '../../../containers/dashboards/ProductCategoriesDoughnut';
 
 const ProductReports = ({ intl, match }) => {
   return (
@@ -14,10 +18,17 @@ const ProductReports = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx lg="12" xl="6">
+        <Colxx lg="12" xl="12">
           <Row>
-            <Colxx md="12" className="mb-4">
-              <h1>Product Reports Page</h1>
+            <Colxx md="4" className="mb-4">
+              <InboundReservations />
+            </Colxx>
+            <Colxx lg="8" xl="4" className="mb-4">
+              <TopRatedItems />
+            </Colxx>
+            <Colxx lg="4" md="12" className="mb-4">
+              {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
+              <ProductCategoriesDoughnut />
             </Colxx>
           </Row>
         </Colxx>

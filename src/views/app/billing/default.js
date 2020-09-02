@@ -1,24 +1,26 @@
 import React from 'react';
-import { injectIntl } from 'react-intl';
 import { Row } from 'reactstrap';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
-import SalesChartCard from '../../../containers/dashboards/SalesChartCard';
+import SortableStaticticsRow from '../../../containers/dashboards/SortableStaticticsRow';
+import { injectIntl } from 'react-intl';
+import BillingStatus from '../../../containers/billing/BillingStatus';
 
-const SalesReports = ({ intl, match }) => {
+const Default = ({ intl, match }) => {
+  const { messages } = intl;
   return (
     <>
       <Row>
         <Colxx xxs="12">
-          <Breadcrumb heading="menu.sales-reports" match={match} />
+          <Breadcrumb heading="menu.billing" match={match} />
           <Separator className="mb-5" />
         </Colxx>
       </Row>
       <Row>
-        <Colxx lg="12" xl="6">
+        <Colxx lg="12" xl="12">
           <Row>
             <Colxx md="12" className="mb-4">
-              <SalesChartCard />
+              <BillingStatus messages={messages} />
             </Colxx>
           </Row>
         </Colxx>
@@ -26,4 +28,5 @@ const SalesReports = ({ intl, match }) => {
     </>
   );
 };
-export default React.memo(SalesReports);
+
+export default injectIntl(Default);

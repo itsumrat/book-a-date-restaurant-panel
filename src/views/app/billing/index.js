@@ -1,28 +1,37 @@
-import React from 'react';
-import { injectIntl } from 'react-intl';
-import { Row } from 'reactstrap';
-import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
-import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import React, { Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
-const Billing = ({ intl, match }) => {
+
+const BillingDefault = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-default" */ './default')
+);
+const BillingPrice = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-content" */ './price')
+);
+const BillingInvoice = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-analytics" */ './invoice')
+);
+
+const Billing = ({ match }) => {
   return (
-    <>
-      <Row>
-        <Colxx xxs="12">
-          <Breadcrumb heading="menu.billing" match={match} />
-          <Separator className="mb-5" />
-        </Colxx>
-      </Row>
-      <Row>
-        <Colxx lg="12" xl="6">
-          <Row>
-            <Colxx md="12" className="mb-4">
-              <h1>Billing Page</h1>
-            </Colxx>
-          </Row>
-        </Colxx>
-      </Row>
-    </>
+    <Suspense fallback={<div className="loading" />}>
+      <Switch>
+        <Redirect exact from={`${match.url}/`} to={`${match.url}/default`} />
+        <Route
+          path={`${match.url}/default`}
+          render={(props) => <BillingDefault {...props} />}
+        />
+        <Route
+          path={`${match.url}/prices`}
+          render={(props) => <BillingPrice {...props} />}
+        />
+        <Route
+          path={`${match.url}/invoice`}
+          render={(props) => <BillingInvoice {...props} />}
+        />
+        <Redirect to="/error" />
+      </Switch>
+    </Suspense>
   );
 };
-export default injectIntl(Billing);
+export default Billing;

@@ -1,32 +1,27 @@
-import React from 'react';
-import { injectIntl } from 'react-intl';
-import { Row } from 'reactstrap';
-import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
-import Breadcrumb from '../../../containers/navs/Breadcrumb';
-import EmailForm from '../../../containers/email/EmailForm';
-import EmailTemplateText from '../../../containers/email/EmailTemplateTextForm';
+import React, { Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
-const Email = ({ intl, match }) => {
-  const onSubmit = (values) => {
-    console.log(values);
-  };
-  return (
-    <>
-      <Row>
-        <Colxx xxs="12">
-          <Breadcrumb heading="menu.email" match={match} />
-          <Separator className="mb-5" />
-        </Colxx>
-      </Row>
-      <Row>
-        <Colxx md="6" className="mb-4">
-          <EmailForm />
-        </Colxx>
-        <Colxx md="12" className="mb-4">
-          <EmailTemplateText onSubmit={onSubmit} />
-        </Colxx>
-      </Row>
-    </>
-  );
-};
-export default injectIntl(Email);
+const EmailDefault = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-default" */ './default')
+);
+const EmailMailing = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-content" */ './mailing')
+);
+
+const Email = ({ match }) => (
+  <Suspense fallback={<div className="loading" />}>
+    <Switch>
+      <Redirect exact from={`${match.url}/`} to={`${match.url}/default`} />
+      <Route
+        path={`${match.url}/default`}
+        render={(props) => <EmailDefault {...props} />}
+      />
+      <Route
+        path={`${match.url}/mailing`}
+        render={(props) => <EmailMailing {...props} />}
+      />
+      <Redirect to="/error" />
+    </Switch>
+  </Suspense>
+);
+export default Email;

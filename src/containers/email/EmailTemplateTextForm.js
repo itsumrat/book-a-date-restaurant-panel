@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardBody, FormGroup, Label } from 'reactstrap';
 import { Field, Form, Formik } from 'formik';
 import Row from 'reactstrap/es/Row';
 import CustomInput from 'reactstrap/es/CustomInput';
+import Switch from 'rc-switch/es';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import { FormikRadioButtonGroup } from '../form-validations/FormikFields';
 
 const options = [
-  { value: 'client', label: 'Client' },
+  { value: 'customer', label: 'Customer' },
   { value: 'administrator', label: 'Administrator' },
 ];
 const clientOptions = [
   { value: 'booking-mail', label: 'Send booking mail' },
   { value: 'confirmation-mail', label: 'Send confirmation mail' },
   { value: 'reschedule-mail', label: 'send reschedule mail' },
+  { value: 'payment_confirmation', label: 'send payment confirmation mail' },
+  { value: 'cancellation-mail', label: 'send cancellation mail' },
 ];
 const EmailTemplateTextForm = ({ onSubmit }) => {
+  const [sendBooking, setSendBooking] = useState(false);
+  const [sendRescheduleMail, setsendRescheduleMail] = useState(false);
+  const [sendConfirmationMail, setSendConfirmationMail] = useState(false);
+  const [sendPaymentConfirmMail, setsendPaymentConfirmMail] = useState(false);
+  const [sendCancellationMail, setsendCancellationMail] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const validate = (values) => {
     const errors = {};
@@ -36,9 +44,16 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
         <Formik
           validate={validate}
           initialValues={{
-            booking_email: '',
-            confirmation_email: '',
-            reschedule_email: '',
+            booking_email:
+              "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc",
+            confirmation_email:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+            reschedule_email:
+              'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+            payment_confirmation_message:
+              'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+            cancellation_message:
+              'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
             recipient: '',
             sendBooking: false,
             sendRescheduleMail: false,
@@ -103,6 +118,36 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                       </div>
                     )}
                   </FormGroup>
+                  <FormGroup>
+                    <Label>Payment Confirmation Email</Label>
+                    <Field
+                      className="form-control"
+                      as="textarea"
+                      rows="5"
+                      name="payment_confirmation_message"
+                    />
+                    {errors.payment_confirmation_message &&
+                      touched.payment_confirmation_message && (
+                        <div className="invalid-feedback d-block">
+                          {errors.payment_confirmation_message}
+                        </div>
+                      )}
+                  </FormGroup>
+                  <FormGroup>
+                    <Label>Cancellation Email</Label>
+                    <Field
+                      className="form-control"
+                      as="textarea"
+                      rows="5"
+                      name="cancellation_message"
+                    />
+                    {errors.cancellation_message &&
+                      touched.cancellation_message && (
+                        <div className="invalid-feedback d-block">
+                          {errors.reschedule_email}
+                        </div>
+                      )}
+                  </FormGroup>
                 </Colxx>
                 <Colxx lg="2" md="2">
                   <FormGroup className="error-l-150">
@@ -131,10 +176,10 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                           Message sent to Client
                         </Label>
                         <FormikRadioButtonGroup
-                          name="client"
+                          name="customer"
                           id="radioClient"
                           label="One of these please"
-                          value={values.client}
+                          value={values.customer}
                           onChange={setFieldValue}
                           onBlur={setFieldTouched}
                           options={clientOptions}
@@ -148,38 +193,41 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                     </Colxx>
                     <Colxx>
                       <FormGroup className="error-l-150">
-                        <Label>Message sent to Client</Label>
-                        <CustomInput
+                        <Label>Status</Label>
+                        <Switch
                           className="custom-switch custom-switch-primary"
-                          type="switch"
-                          id="sendBookingId"
-                          name="sendBooking"
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          checked={values.sendBooking}
-                          inline
+                          checked={sendBooking}
+                          onChange={(primary) => setSendBooking(primary)}
                         />
                       </FormGroup>
                       <FormGroup className="error-l-150">
-                        <CustomInput
-                          type="switch"
-                          id="sendConfirmationMailId"
-                          name="sendConfirmationMail"
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          checked={values.sendConfirmationMail}
-                          inline
+                        <Switch
+                          className="custom-switch custom-switch-primary"
+                          checked={sendConfirmationMail}
+                          onChange={(primary) =>
+                            setSendConfirmationMail(primary)
+                          }
                         />
                       </FormGroup>
                       <FormGroup className="error-l-150">
-                        <CustomInput
-                          type="switch"
-                          id="sendRescheduleMailId"
-                          name="sendRescheduleMail"
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          checked={values.sendRescheduleMail}
-                          inline
+                        <Switch
+                          className="custom-switch custom-switch-primary"
+                          checked={sendRescheduleMail}
+                          onChange={(primary) => setsendRescheduleMail(primary)}
+                        />
+                      </FormGroup>
+                      <FormGroup className="error-l-150">
+                        <Switch
+                          className="custom-switch custom-switch-primary"
+                          checked={sendPaymentConfirmMail}
+                          onChange={(primary) => setsendPaymentConfirmMail(primary)}
+                        />
+                      </FormGroup>
+                      <FormGroup className="error-l-150">
+                        <Switch
+                          className="custom-switch custom-switch-primary"
+                          checked={sendCancellationMail}
+                          onChange={(primary) => setsendCancellationMail(primary)}
                         />
                       </FormGroup>
                     </Colxx>

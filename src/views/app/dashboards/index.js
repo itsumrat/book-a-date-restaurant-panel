@@ -10,9 +10,7 @@ const ContentDefault = React.lazy(() =>
 const AnalyticsDefault = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-analytics" */ './analytics')
 );
-const EcommerceDefault = React.lazy(() =>
-  import(/* webpackChunkName: "dashboard-ecommerce" */ './ecommerce')
-);
+
 
 const Dashboards = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
@@ -25,10 +23,6 @@ const Dashboards = ({ match }) => (
       <Route
         path={`${match.url}/content`}
         render={(props) => <ContentDefault {...props} />}
-      />
-      <Route
-        path={`${match.url}/ecommerce`}
-        render={(props) => <EcommerceDefault {...props} />}
       />
       <Route
         path={`${match.url}/analytics`}
