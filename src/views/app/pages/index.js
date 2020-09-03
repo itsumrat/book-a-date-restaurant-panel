@@ -30,10 +30,10 @@ const Pages = ({ match }) => (
         path={`${match.url}/blog`}
         render={(props) => <Blog {...props} />}
       />
-      {/*<Route*/}
-      {/*  path={`${match.url}/miscellaneous`}*/}
-      {/*  render={(props) => <Miscellaneous {...props} />}*/}
-      {/*/>*/}
+      <Route
+        path={`${match.url}/miscellaneous`}
+        render={(props) => <Miscellaneous {...props} />}
+      />
       <Redirect to="/error" />
     </Switch>
   </Suspense>

@@ -117,10 +117,10 @@ const App = ({ match }) => {
               path={`${match.url}/pages`}
               render={(props) => <Pages {...props} />}
             />
-            {/*<Route*/}
-            {/*  path={`${match.url}/ui`}*/}
-            {/*  render={(props) => <Ui {...props} />}*/}
-            {/*/>*/}
+            <Route
+              path={`${match.url}/ui`}
+              render={(props) => <Ui {...props} />}
+            />
             {/*<Route*/}
             {/*  path={`${match.url}/menu`}*/}
             {/*  render={(props) => <Menu {...props} />}*/}
