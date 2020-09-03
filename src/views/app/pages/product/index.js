@@ -17,6 +17,7 @@ const DetailsAlt = React.lazy(() =>
   import(/* webpackChunkName: "product-details-alt" */ './details-alt')
 );
 
+
 const PagesProduct = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>

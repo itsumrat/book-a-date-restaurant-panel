@@ -371,7 +371,6 @@ function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
               {headerGroup.headers.map((column, columnIndex) => (
                 <th
                   key={`th_${columnIndex}`}
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
                   className={
                     column.isSorted
                       ? column.isSortedDesc
@@ -430,14 +429,15 @@ const DataListDividedTable = () => {
   const cols = React.useMemo(
     () => [
       {
-        Header: 'Time',
-        accessor: 'time',
-        cellClass: 'list-item-heading w-40',
+        Header: 'Date Reservation',
+        accessor: 'createDate',
+        cellClass: 'text-muted  w-40',
+        isSorted: false,
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: 'Product details',
-        accessor: 'productDetails',
+        Header: 'Time',
+        accessor: 'time',
         cellClass: 'list-item-heading w-40',
         Cell: (props) => <>{props.value}</>,
       },
@@ -466,9 +466,9 @@ const DataListDividedTable = () => {
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: 'Date Reservation',
-        accessor: 'createDate',
-        cellClass: 'text-muted  w-40',
+        Header: 'Product details',
+        accessor: 'productDetails',
+        cellClass: 'list-item-heading w-40',
         Cell: (props) => <>{props.value}</>,
       },
       {

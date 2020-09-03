@@ -20,6 +20,14 @@ const ProductDetails = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-ecommerce" */ './details')
 );
 
+
+const ProductDataList = React.lazy(() =>
+  import(/* webpackChunkName: "dashboard-ecommerce" */ './ProductDataList')
+);
+
+const ImageList = React.lazy(() =>
+  import(/* webpackChunkName: "product-image-list" */ './ProductImagelist')
+);
 const Products = ({ match }) => {
   return (
     <Suspense fallback={<div className="loading" />}>
@@ -48,6 +56,18 @@ const Products = ({ match }) => {
         <Route
           path={`${match.url}/details-alt`}
           render={(props) => <ProductsDetailsAltPages {...props} />}
+        />
+        <Route
+          path={`${match.url}/data-list`}
+          render={(props) => <ProductDataList {...props} />}
+        />
+        <Route
+          path={`${match.url}/data-list`}
+          render={(props) => <ProductDataList {...props} />}
+        />
+        <Route
+          path={`${match.url}/image-list`}
+          render={(props) => <ImageList {...props} />}
         />
         <Route
           exact

@@ -5,8 +5,8 @@ import Button from 'reactstrap/es/Button';
 import Row from 'reactstrap/es/Row';
 import CardBody from 'reactstrap/es/CardBody';
 import { Table } from 'reactstrap';
-import { Colxx } from '../../components/common/CustomBootstrap';
 import moment from 'moment';
+import { Colxx } from '../../components/common/CustomBootstrap';
 
 const SpecialDays = ({ data, handleAddSpecialDay }) => {
   return (
@@ -29,7 +29,7 @@ const SpecialDays = ({ data, handleAddSpecialDay }) => {
               <th>Status</th>
               <th>Day</th>
               <th>Date</th>
-              <th>Shift</th>
+              <th>Campaign</th>
             </tr>
           </thead>
           <tbody>
@@ -39,7 +39,7 @@ const SpecialDays = ({ data, handleAddSpecialDay }) => {
                 <td>{d.status}</td>
                 <td>{d.day}</td>
                 <td>{moment(new Date(d.date)).format('LLLL')}</td>
-                <td>{d.shift}</td>
+                <td>{d.campaign}</td>
               </tr>
             ))}
           </tbody>

@@ -2,18 +2,17 @@ import React from 'react';
 import { Button, Card, CardBody, FormGroup, Label } from 'reactstrap';
 import { Field, Form, Formik } from 'formik';
 import Row from 'reactstrap/es/Row';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const SpecialDayForm = ({ onSubmit, closeModal }) => {
   const validate = (values) => {
     const errors = {};
 
-
     return errors;
   };
 
-  return(
+  return (
     <Card>
       <CardBody>
         <Formik
@@ -22,11 +21,18 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
             day: '',
             status: '',
             date: new Date(),
-            shift: '',
+            campaign: '',
           }}
           onSubmit={onSubmit}
         >
-          {({ values, handleChange, errors, touched, isValidating, setFieldValue }) => (
+          {({
+            values,
+            handleChange,
+            errors,
+            touched,
+            isValidating,
+            setFieldValue,
+          }) => (
             <Form className="av-tooltip tooltip-label-right">
               <FormGroup>
                 <Label>Status</Label>
@@ -47,7 +53,9 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
                   <option value="closed">Closed</option>
                 </Field>
                 {errors.status && touched.status && (
-                  <div className="invalid-feedback d-block">{errors.status}</div>
+                  <div className="invalid-feedback d-block">
+                    {errors.status}
+                  </div>
                 )}
               </FormGroup>
               <FormGroup>
@@ -63,7 +71,7 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
                 <DatePicker
                   name="date"
                   selected={values.date}
-                  onChange={(date)=>{
+                  onChange={(date) => {
                     handleChange('date');
                     setFieldValue('date', date);
                   }}
@@ -79,10 +87,10 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
                   className="form-control"
                   required
                   as="select"
-                  name="shift"
+                  name="campaign"
                   value={values.gender}
                   onChange={(event) =>
-                    setFieldValue('shift', event.target.value)
+                    setFieldValue('campaign', event.target.value)
                   }
                 >
                   <option value="" disabled="disabled">
@@ -106,7 +114,6 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
                   className="mr-3"
                   onClick={closeModal}
                   color="danger"
-                  type="submit"
                 >
                   Cancel
                 </Button>
@@ -116,7 +123,7 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
         </Formik>
       </CardBody>
     </Card>
-  )
-}
+  );
+};
 
-export default SpecialDayForm
+export default SpecialDayForm;

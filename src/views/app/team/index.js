@@ -1,97 +1,26 @@
-import React, { useState } from 'react';
-import { injectIntl } from 'react-intl';
-import {
-  Button,
-  Input,
-  Modal,
-  ModalBody,
-  ModalHeader,
-  Row,
-} from 'reactstrap';
-import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
-import Breadcrumb from '../../../containers/navs/Breadcrumb';
-import TeamTable from '../../../containers/team/TeamTable';
-import IntlMessages from '../../../helpers/IntlMessages';
-import UserForm from '../../../containers/team/UserForm';
+import React, { Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
-const Team = ({ intl, match }) => {
-  const { messages } = intl;
-  const [searchKeyword, setSearchKeyword] = useState('');
-  const [modalBasic, setModalBasic] = useState(false);
-  const [team, setTeam] = useState([]);
-
-  const onSubmit = (values) => {
-    console.log(values);
-    setTeam((state) => {
-      return [...state, values];
-    });
-    setModalBasic(false);
-  };
-
-  const search = () => {
-    console.log(searchKeyword);
-    setSearchKeyword('');
-  };
-  const handleSearchInputKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      search();
-    }
-  };
-
-  const closeModal = () => {
-    setModalBasic(false);
-  };
-
-  return (
-    <>
-      <Row>
-        <Colxx xxs="12">
-          <Breadcrumb heading="menu.team" match={match} />
-          <Separator className="mb-5" />
-        </Colxx>
-      </Row>
-      <Row>
-        <Colxx>
-          <Row>
-            <Colxx lg="3" xxs="12" sm="12">
-              <div className="search" data-search-path="/app/pages/search">
-                <Input
-                  name="searchKeyword"
-                  id="searchKeyword"
-                  placeholder={messages['menu.search']}
-                  value={searchKeyword}
-                  onChange={(e) => setSearchKeyword(e.target.value)}
-                  onKeyPress={(e) => handleSearchInputKeyPress(e)}
-                />
-              </div>
-            </Colxx>
-            <Colxx className="d-flex flex-row-reverse">
-              <Button
-                onClick={() => setModalBasic(true)}
-                color="primary"
-                className="mb-2"
-              >
-                <IntlMessages id="button.add-new-user" />
-              </Button>
-            </Colxx>
-          </Row>
-          <Row>
-            <Colxx>
-              <TeamTable data={team} />
-            </Colxx>
-          </Row>
-        </Colxx>
-      </Row>
-
-      <Modal isOpen={modalBasic} toggle={() => setModalBasic(!modalBasic)}>
-        <ModalHeader>
-          <IntlMessages id="modal.add-new-user" />
-        </ModalHeader>
-        <ModalBody>
-          <UserForm closeModal={closeModal} onSubmit={onSubmit} />
-        </ModalBody>
-      </Modal>
-    </>
-  );
-};
-export default injectIntl(Team);
+const TeamDefault = React.lazy(() =>
+  import(/* webpackChunkName: "pages-product" */ './Default')
+);
+const Profile = React.lazy(() =>
+  import(/* webpackChunkName: "pages-profile" */ './profile')
+);
+const Team = ({ match }) => (
+  <Suspense fallback={<div className="loading" />}>
+    <Switch>
+      <Redirect exact from={`${match.url}/`} to={`${match.url}/product`} />
+      <Route
+        path={`${match.url}/default`}
+        render={(props) => <TeamDefault {...props} />}
+      />
+      <Route
+        path={`${match.url}/profile`}
+        render={(props) => <Profile {...props} />}
+      />
+      <Redirect to="/error" />
+    </Switch>
+  </Suspense>
+);
+export default Team;

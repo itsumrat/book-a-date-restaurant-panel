@@ -13,7 +13,26 @@ import SpecialDayForm from '../../../containers/email/SpecialDayForm';
 
 const EmailDefault = ({ intl, match }) => {
   const [modalBasic, setModalBasic] = useState(false);
-  const [specialDays, setSpecialDays] = useState([]);
+  const [specialDays, setSpecialDays] = useState([
+    {
+      day: 'Valentine Day',
+      status: 'Open',
+      date: new Date(),
+      campaign: 'Morning Shift',
+    },
+    {
+      day: 'Mothers Day',
+      status: 'Open',
+      date: new Date(),
+      campaign: 'Evening Shift',
+    },
+    {
+      day: 'Fathers Day',
+      status: 'Close',
+      date: new Date(),
+      campaign: 'No Shift',
+    },
+  ]);
   const onSubmit = (values) => {
     console.log(values);
   };

@@ -72,10 +72,10 @@ const App = ({ match }) => {
               path={`${match.url}/billing`}
               render={(props) => <Billing {...props} />}
             />
-            <Route
-              path={`${match.url}/guest-communication`}
-              render={(props) => <GuestCommunication {...props} />}
-            />
+            {/*<Route*/}
+            {/*  path={`${match.url}/guest-communication`}*/}
+            {/*  render={(props) => <GuestCommunication {...props} />}*/}
+            {/*/>*/}
             <Route
               path={`${match.url}/team`}
               render={(props) => <Team {...props} />}
@@ -97,15 +97,14 @@ const App = ({ match }) => {
               render={(props) => <OpenAndClosingHour {...props} />}
             />
             <Route
-              exact
               path={`${match.url}/blog`}
               render={(props) => <Blog {...props} />}
             />
-            <Route
-              exact
-              path={`${match.url}/blog/:name`}
-              render={(props) => <BlogDetailsPage {...props} />}
-            />
+            {/*<Route*/}
+            {/*  exact*/}
+            {/*  path={`${match.url}/blog/:name`}*/}
+            {/*  render={(props) => <BlogDetailsPage {...props} />}*/}
+            {/*/>*/}
             <Route
               path={`${match.url}/applications`}
               render={(props) => <Applications {...props} />}
@@ -118,14 +117,14 @@ const App = ({ match }) => {
               path={`${match.url}/pages`}
               render={(props) => <Pages {...props} />}
             />
-            <Route
-              path={`${match.url}/ui`}
-              render={(props) => <Ui {...props} />}
-            />
-            <Route
-              path={`${match.url}/menu`}
-              render={(props) => <Menu {...props} />}
-            />
+            {/*<Route*/}
+            {/*  path={`${match.url}/ui`}*/}
+            {/*  render={(props) => <Ui {...props} />}*/}
+            {/*/>*/}
+            {/*<Route*/}
+            {/*  path={`${match.url}/menu`}*/}
+            {/*  render={(props) => <Menu {...props} />}*/}
+            {/*/>*/}
             <Route
               path={`${match.url}/blank-page`}
               render={(props) => <BlankPage {...props} />}

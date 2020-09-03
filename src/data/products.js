@@ -2,20 +2,23 @@ import product1 from '../assets/img/product1.jpg';
 import product2 from '../assets/img/product2.jpg';
 import product8 from '../assets/img/product8.jpg';
 import product9 from '../assets/img/product 9.jpg';
+import starter1 from '../assets/img/Starter1.jpg';
+import starter2 from '../assets/img/Starter2.jpg';
+import starter3 from '../assets/img/Starter3.jpg';
 
 const produtcs = [
   {
     id: 1,
     title: 'Signature Rib Steak',
     productLine: 1,
-    img: product1,
+    img: starter1,
     category: 'Cakes',
     createDate: '02.04.2018',
     status: 'ON HOLD',
     statusColor: 'primary',
-    description: 'Signature Rib Steak',
+    description: 'Potato Kofters',
     sales: 1647,
-    price: 11,
+    price: 3,
     stock: 62,
   },
   {
@@ -23,27 +26,27 @@ const produtcs = [
     title: 'Signature tacos',
     productLine: 2,
     category: 'Cupcakes',
-    img: product2,
+    img: starter2,
     createDate: '01.04.2018',
     status: 'PROCESSED',
     statusColor: 'secondary',
-    description: 'Signature Tacos with Beef Steak',
+    description: 'Camembert Cheese',
     sales: 1240,
-    price: 13,
+    price: 3,
     stock: 48,
   },
   {
     id: 3,
     title: 'Cheese Cake',
     productLine: 3,
-    img: '/assets/img/chocolate-cake-thumb.jpg',
+    img: starter3,
     category: 'Cakes',
     createDate: '25.03.2018',
     status: 'PROCESSED',
     statusColor: 'secondary',
-    description: 'Homemade cheesecake with fresh berries and mint',
+    description: 'Vegetarian Tart',
     sales: 1080,
-    price: 5,
+    price: 3,
     stock: 57,
   },
   {
