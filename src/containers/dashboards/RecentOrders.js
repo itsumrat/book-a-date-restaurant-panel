@@ -31,6 +31,7 @@ const RecentOrders = () => {
                     className="d-block position-relative"
                   >
                     <img
+                      style={{ minWidth: 100 }}
                       src={order.img}
                       alt={order.title}
                       className="list-thumbnail border-0"

@@ -32,6 +32,18 @@ const EmailDefault = ({ intl, match }) => {
       date: new Date(),
       campaign: 'No Shift',
     },
+    {
+      day: 'Valentine Day',
+      status: 'Open',
+      date: new Date(),
+      campaign: 'Afternoon Shift',
+    },
+    {
+      day: 'Valentine Day',
+      status: 'Open',
+      date: new Date(),
+      campaign: 'Evening Shift',
+    },
   ]);
   const onSubmit = (values) => {
     console.log(values);

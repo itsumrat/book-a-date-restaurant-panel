@@ -16,7 +16,7 @@ const Search = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx lg="12" xl="6">
+        <Colxx lg="12" xl="12">
           <Row>
             <Colxx md="12" className="mb-4">
               <AdvancedSearch messages={messages} />

@@ -125,10 +125,10 @@ const App = ({ match }) => {
             {/*  path={`${match.url}/menu`}*/}
             {/*  render={(props) => <Menu {...props} />}*/}
             {/*/>*/}
-            <Route
-              path={`${match.url}/blank-page`}
-              render={(props) => <BlankPage {...props} />}
-            />
+            {/*<Route*/}
+            {/*  path={`${match.url}/blank-page`}*/}
+            {/*  render={(props) => <BlankPage {...props} />}*/}
+            {/*/>*/}
             <Redirect to="/error" />
           </Switch>
         </Suspense>

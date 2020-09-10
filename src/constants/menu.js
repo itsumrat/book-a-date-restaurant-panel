@@ -43,21 +43,16 @@ const data = [
         label: 'menu.data-list',
         to: '/app/reservations/data-list',
       },
-      {
-        icon: 'simple-icon-picture',
-        label: 'menu.details',
-        to: '/app/reservations/details',
-      },
-      {
-        icon: 'simple-icon-book-open',
-        label: 'menu.details-alt',
-        to: '/app/reservations/details-alt',
-      },
-      {
-        icon: 'simple-icon-list',
-        label: 'menu.thumb-list',
-        to: '/app/reservations/thumb-list',
-      },
+      // {
+      //   icon: 'simple-icon-picture',
+      //   label: 'menu.details',
+      //   to: '/app/reservations/details',
+      // },
+      // {
+      //   icon: 'simple-icon-book-open',
+      //   label: 'menu.details-alt',
+      //   to: '/app/reservations/details-alt',
+      // },
     ],
   },
   {
@@ -121,14 +116,14 @@ const data = [
         to: '/app/products/details-alt',
       },
       {
-        icon: 'simple-icon-credit-card',
-        label: 'menu.data-list',
-        to: '/app/products/data-list',
-      },
-      {
         icon: 'simple-icon-grid',
         label: 'menu.image-list',
         to: '/app/products/image-list',
+      },
+      {
+        icon: 'simple-icon-list',
+        label: 'menu.thumb-list',
+        to: '/app/products/thumb-list',
       },
     ],
   },
@@ -810,12 +805,12 @@ const data = [
   //     },
   //   ],
   // },
-  {
-    id: 'blankpage',
-    icon: 'iconsminds-bucket',
-    label: 'menu.blank-page',
-    to: '/app/blank-page',
-  },
+  // {
+  //   id: 'blankpage',
+  //   icon: 'iconsminds-bucket',
+  //   label: 'menu.blank-page',
+  //   to: '/app/blank-page',
+  // },
   // {
   //   id: 'docs',
   //   icon: 'iconsminds-library',

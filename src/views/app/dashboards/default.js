@@ -53,15 +53,15 @@ const DefaultDashboard = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx lg="4" md="12" className="mb-4">
+        <Colxx lg="6" md="12" className="mb-4">
           {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
           <ProductCategoriesDoughnut />
         </Colxx>
-        <Colxx lg="4" md="6" className="mb-4">
+        <Colxx lg="6" md="6" className="mb-4">
           {/* <Logs /> */}
           <InboundReservations />
         </Colxx>
-        <Colxx lg="4" md="6" className="mb-4">
+        <Colxx lg="6" md="6" className="mb-4">
           {/* <Tickets /> */}
           <Customers />
         </Colxx>

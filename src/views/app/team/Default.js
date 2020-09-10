@@ -18,7 +18,22 @@ const TeamDefault = ({ intl, match }) => {
   const { messages } = intl;
   const [searchKeyword, setSearchKeyword] = useState('');
   const [modalBasic, setModalBasic] = useState(false);
-  const [team, setTeam] = useState([]);
+  const [team, setTeam] = useState([
+    {
+      name: 'Sarah Kortney',
+      email: 'sarah@bookadate.com',
+      title: 'Restaurant Owner',
+      access: 'ALL_ACCESS',
+      phone: '132456895',
+    },
+    {
+      title: 'Restaurant Manager',
+      email: 'tom@bookadate.com',
+      name: 'Tom Jones',
+      access: '2nd Access',
+      phone: '65498415694',
+    },
+  ]);
 
   const onSubmit = (values) => {
     console.log(values);

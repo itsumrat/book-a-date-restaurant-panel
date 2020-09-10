@@ -9,6 +9,9 @@ import NextDaysCard from '../../../containers/reservations/NextDaysCard';
 import LatestReservationsCard from '../../../containers/reservations/LatestReservationsCard';
 import ReservationListTable from '../../../containers/reservations/ReservationListTable';
 import NewRestaurantReservations from '../../../containers/reservations/NewRestaurantReservations';
+import LastSevenDays from '../../../containers/reservations/LastSevendays';
+import GuestYesterday from '../../../containers/reservations/GuestYesterday';
+import ReservationYesterday from '../../../containers/reservations/ReservationYesterday';
 
 const ReservationDefault = ({ intl, match }) => {
   return (
@@ -34,13 +37,29 @@ const ReservationDefault = ({ intl, match }) => {
           </Row>
         </Colxx>
       </Row>
-      <Row className="mt-3">
-        <Colxx lg="6">
-          <LatestReservationsCard />
+      <br />
+      <Row>
+        <Colxx lg="12" xl="12">
+          <Row>
+            <Colxx lg="4">
+              <ReservationYesterday />
+            </Colxx>
+            <Colxx lg="4">
+              <GuestYesterday />
+            </Colxx>
+            <Colxx lg="4">
+              <LastSevenDays />
+            </Colxx>
+          </Row>
         </Colxx>
-        <Colxx lg="6">
+      </Row>
+      <Row className="mt-3">
+        <Colxx lg="12">
           {/* <ReservationListTable data={[]} /> */}
           <NewRestaurantReservations />
+        </Colxx>
+        <Colxx lg="12">
+          <LatestReservationsCard />
         </Colxx>
       </Row>
     </>

@@ -10,12 +10,16 @@ import { Colxx } from '../../components/common/CustomBootstrap';
 
 const SpecialDays = ({ data, handleAddSpecialDay }) => {
   return (
-    <Card>
+    <Card style={{ height: 510 }}>
       <CardTitle className="m-3">
         <Row className="d-flex">
           <Colxx>Special Days</Colxx>
           <Colxx className="d-flex flex-row-reverse">
-            <Button onClick={handleAddSpecialDay} color="primary" className="mb-2">
+            <Button
+              onClick={handleAddSpecialDay}
+              color="primary"
+              className="mb-2"
+            >
               Add
             </Button>
           </Colxx>
@@ -34,7 +38,7 @@ const SpecialDays = ({ data, handleAddSpecialDay }) => {
           </thead>
           <tbody>
             {data.map((d, i) => (
-              <tr key={d.day}>
+              <tr key={i}>
                 <th scope="row">{i}</th>
                 <td>{d.status}</td>
                 <td>{d.day}</td>

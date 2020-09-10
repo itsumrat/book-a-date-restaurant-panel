@@ -15,10 +15,10 @@ const NewRestaurantReservations = ({ data }) => {
           <IntlMessages id="table.new-restaurant-reservations" />
         </CardTitle>
         <Row>
-          <Colxx md="3">
+          <Colxx md="4">
             <CardTitle>Profile Photo</CardTitle>
           </Colxx>
-          <Colxx md="5">
+          <Colxx md="8">
             <CardTitle>Name</CardTitle>
           </Colxx>
         </Row>
@@ -28,12 +28,13 @@ const NewRestaurantReservations = ({ data }) => {
               <Row>
                 <Colxx md="4">
                   <img
+                    style={{ minWidth: '100%' }}
                     alt="Thumbnail"
                     src={order.img}
                     className="list-thumbnail responsive border-0 card-img-left"
                   />
                 </Colxx>
-                <Colxx md="5">
+                <Colxx md="8">
                   <CardTitle>{order.name}</CardTitle>
                   <CardText>{order.email} <br/> {`${new Date(new Date() - new Date(order.date)).getDate()} days ago`} </CardText>
                 </Colxx>
