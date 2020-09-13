@@ -2,10 +2,9 @@ import React from 'react';
 import { Row, CardTitle } from 'reactstrap';
 import IntlMessages from '../../helpers/IntlMessages';
 import { Colxx } from '../../components/common/CustomBootstrap';
-import produtcs from '../../data/products';
 import FoodCard from './FoodCard';
 
-const FoodCards = () => {
+const FoodCards = ({ products }) => {
   return (
     <Row>
       <Colxx xxs="12">
@@ -13,7 +12,7 @@ const FoodCards = () => {
           <IntlMessages id="products.product-list" />
         </CardTitle>
         <Row>
-          {produtcs.map((product) => (
+          {products.map((product) => (
             <FoodCard product={product} key={product.id} />
           ))}
         </Row>

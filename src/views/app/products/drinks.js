@@ -4,6 +4,7 @@ import { Row } from 'reactstrap';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import FoodCards from '../../../containers/products/FoodCards';
+import drinks from '../../../data/drinks';
 
 const Drinks = ({ intl, match }) => {
   return (
@@ -15,7 +16,7 @@ const Drinks = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <FoodCards />
+        <FoodCards products={drinks} />
       </Row>
     </>
   );
