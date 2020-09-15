@@ -6,6 +6,7 @@ import ListPageHeading from '../../../containers/pages/ListPageHeading';
 import AddNewModal from '../../../containers/pages/AddNewModal';
 import useMousetrap from '../../../hooks/use-mousetrap';
 import DataListDividedTable  from '../../../containers/reservations/DataListDividedTable';
+import ReservationPageListHeading from './ReservationPageListHeading';
 
 
 const getIndex = (value, arr, prop) => {
@@ -154,7 +155,7 @@ const ReservationDataListPages = ({ match }) => {
   ) : (
     <>
       <div className="disable-text-selection">
-        <ListPageHeading
+        <ReservationPageListHeading
           heading="menu.data-list"
           displayMode={displayMode}
           changeDisplayMode={setDisplayMode}

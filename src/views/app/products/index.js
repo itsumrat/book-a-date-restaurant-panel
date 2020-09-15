@@ -16,18 +16,7 @@ const ProductMains = React.lazy(() =>
 const ProductDesserts = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-ecommerce" */ './desserts')
 );
-const ProductDetails = React.lazy(() =>
-  import(/* webpackChunkName: "dashboard-ecommerce" */ './details')
-);
 
-const ImageList = React.lazy(() =>
-  import(/* webpackChunkName: "product-image-list" */ './ProductImagelist')
-);
-const ReservationThumbList = React.lazy(() =>
-  import(
-    /* webpackChunkName: "dashboard-ecommerce" */ './ReservationThumbList'
-    )
-);
 const Products = ({ match }) => {
   return (
     <Suspense fallback={<div className="loading" />}>
@@ -50,26 +39,23 @@ const Products = ({ match }) => {
           render={(props) => <ProductMains {...props} />}
         />
         <Route
-          path={`${match.url}/details`}
+          exact
+          path={`${match.url}/details/:id`}
           render={(props) => <ProductDetailPage {...props} />}
         />
         <Route
           path={`${match.url}/details-alt`}
           render={(props) => <ProductsDetailsAltPages {...props} />}
         />
-        <Route
-          path={`${match.url}/image-list`}
-          render={(props) => <ImageList {...props} />}
-        />
-        <Route
-          exact
-          path={`${match.url}/details/:title`}
-          render={(props) => <ProductDetails {...props} />}
-        />
-        <Route
-          path={`${match.url}/thumb-list`}
-          render={(props) => <ReservationThumbList {...props} />}
-        />
+        {/*<Route*/}
+        {/*  exact*/}
+        {/*  path={`${match.url}/details/:title`}*/}
+        {/*  render={(props) => <ProductDetails {...props} />}*/}
+        {/*/>*/}
+        {/*<Route*/}
+        {/*  path={`${match.url}/thumb-list`}*/}
+        {/*  render={(props) => <ReservationThumbList {...props} />}*/}
+        {/*/>*/}
         <Redirect to="/error" />
       </Switch>
     </Suspense>

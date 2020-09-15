@@ -1,29 +1,52 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import { NavLink } from 'react-router-dom';
+import products from '../../data/products';
 
-const images = [
-  '/assets/img/fruitcake.jpg',
-  '/assets/img/napoleonshat.jpg',
-  '/assets/img/tea-loaf.jpg',
-  '/assets/img/magdalena.jpg',
-  '/assets/img/marble-cake.jpg',
-  '/assets/img/parkin.jpg',
-];
+// const images = [
+//   '/assets/img/fruitcake.jpg',
+//   '/assets/img/napoleonshat.jpg',
+//   '/assets/img/tea-loaf.jpg',
+//   '/assets/img/magdalena.jpg',
+//   '/assets/img/marble-cake.jpg',
+//   '/assets/img/parkin.jpg',
+// ];
 
-const thumbs = [
-  '/assets/img/fruitcake-thumb.jpg',
-  '/assets/img/napoleonshat-thumb.jpg',
-  '/assets/img/tea-loaf-thumb.jpg',
-  '/assets/img/magdalena-thumb.jpg',
-  '/assets/img/marble-cake-thumb.jpg',
-  '/assets/img/parkin-thumb.jpg',
-];
+// const thumbs = [
+//   '/assets/img/fruitcake-thumb.jpg',
+//   '/assets/img/napoleonshat-thumb.jpg',
+//   '/assets/img/tea-loaf-thumb.jpg',
+//   '/assets/img/magdalena-thumb.jpg',
+//   '/assets/img/marble-cake-thumb.jpg',
+//   '/assets/img/parkin-thumb.jpg',
+// ];
 
-const GalleryDetail = () => {
+const GalleryDetail = ({ productCategory }) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [thumbs, setThumbs] = useState([]);
+  const [images, setImages] = useState([]);
+
+
+  useEffect(()=>{
+    products.forEach((product) => {
+      if (product.category === productCategory) {
+        setThumbs(state=>{
+          return[
+            ...state,
+            product.img
+          ]
+        });
+        setImages(state=>{
+          return[
+            ...state,
+            product.img
+          ]
+        });
+      }
+    });
+  },[])
 
   return (
     <div>
@@ -40,6 +63,7 @@ const GalleryDetail = () => {
                 location={{}}
               >
                 <img
+                  style={{ height: 130 }}
                   className="img-fluid border-radius"
                   src={item}
                   alt="thumbnail"

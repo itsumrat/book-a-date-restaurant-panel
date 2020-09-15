@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
 import { ContextMenuTrigger } from 'react-contextmenu';
 import { Colxx } from '../../components/common/CustomBootstrap';
+import Button from 'reactstrap/lib/Button';
 
 const ThumbListView = ({ product, isSelect, collect, onCheckItem }) => {
   return (
     <Colxx xxs="12" key={product.id} className="mb-3">
       <ContextMenuTrigger id="menu_id" data={product.id} collect={collect}>
         <Card
-          onClick={(event) => onCheckItem(event, product.id)}
           className={classnames('d-flex flex-row', {
             active: isSelect,
           })}
@@ -41,7 +41,7 @@ const ThumbListView = ({ product, isSelect, collect, onCheckItem }) => {
                 </Badge>
               </div>
             </div>
-            <div className="custom-control custom-checkbox pl-1 align-self-center pr-4">
+            <div onClick={(event) => onCheckItem(event, product.id)} className="custom-control custom-checkbox pl-1 align-self-center pr-4">
               <CustomInput
                 className="item-check mb-0"
                 type="checkbox"
@@ -51,7 +51,11 @@ const ThumbListView = ({ product, isSelect, collect, onCheckItem }) => {
                 label=""
               />
             </div>
+
           </div>
+          <button type="button" className="btn btn-link">
+            Request Submission
+          </button>
         </Card>
       </ContextMenuTrigger>
     </Colxx>

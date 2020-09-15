@@ -17,6 +17,7 @@ import OpenAndClosingHour from './open-and-close';
 import Blog from './blog';
 import BlogDetailsPage from './blog/BlogDetailsPage';
 import CalendarPage from './calendar';
+import ProductCreate from './createProduct';
 
 const Dashboards = React.lazy(() =>
   import(/* webpackChunkName: "dashboards" */ './dashboards')
@@ -63,6 +64,10 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/products`}
               render={(props) => <Products {...props} />}
+            />
+            <Route
+              path={`${match.url}/product-create`}
+              render={(props) => <ProductCreate {...props} />}
             />
             <Route
               path={`${match.url}/reporting`}

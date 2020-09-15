@@ -19,7 +19,6 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
     <Colxx sm="6" lg="4" xl="3" className="mb-3" key={product.id}>
       <ContextMenuTrigger id="menu_id" data={product.id} collect={collect}>
         <Card
-          onClick={(event) => onCheckItem(event, product.id)}
           className={classnames({
             active: isSelect,
           })}
@@ -38,7 +37,7 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
           </div>
           <CardBody>
             <Row>
-              <Colxx xxs="2">
+              <Colxx xxs="2" onClick={(event) => onCheckItem(event, product.id)}  >
                 <CustomInput
                   className="item-check mb-0"
                   type="checkbox"
@@ -54,6 +53,11 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
                   {product.date}
                 </CardText>
               </Colxx>
+            </Row>
+            <Row>
+              <button type="button" className="btn btn-link">
+                Request Submission
+              </button>
             </Row>
           </CardBody>
         </Card>

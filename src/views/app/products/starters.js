@@ -4,9 +4,10 @@ import { Row } from 'reactstrap';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import FoodCards from '../../../containers/products/FoodCards';
-import starters from '../../../data/starters';
+import products from '../../../data/products';
 
 const Starters = ({ intl, match }) => {
+  const starters = products.filter((pro) => pro.category === 'starter');
   return (
     <>
       <Row>

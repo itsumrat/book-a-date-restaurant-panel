@@ -120,36 +120,36 @@ const BlogDetailsPage = ({ intl, match }) => {
         </Colxx>
 
         <Colxx xxs="12" md="12" xl="4" className="col-left">
-          <Card className="mb-4">
-            <CardBody className="p-0">
-              <VideoPlayer
-                autoplay={false}
-                controls
-                controlBar={{
-                  pictureInPictureToggle: false,
-                }}
-                className="video-js side-bar-video card-img-top"
-                poster="/assets/img/subpage-video-poster.jpg"
-                sources={[
-                  {
-                    src:
-                      'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4',
-                    type: 'video/mp4',
-                  },
-                ]}
-              />
-            </CardBody>
-            <CardBody>
-              <p className="list-item-heading mb-4">
-                Homemade Cheesecake with Fresh Berries and Mint
-              </p>
-              <footer>
-                <p className="text-muted text-small mb-0 font-weight-light">
-                  09.04.2018
-                </p>
-              </footer>
-            </CardBody>
-          </Card>
+          {/*<Card className="mb-4">*/}
+          {/*  <CardBody className="p-0">*/}
+          {/*    <VideoPlayer*/}
+          {/*      autoplay={false}*/}
+          {/*      controls*/}
+          {/*      controlBar={{*/}
+          {/*        pictureInPictureToggle: false,*/}
+          {/*      }}*/}
+          {/*      className="video-js side-bar-video card-img-top"*/}
+          {/*      poster="/assets/img/subpage-video-poster.jpg"*/}
+          {/*      sources={[*/}
+          {/*        {*/}
+          {/*          src:*/}
+          {/*            'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4',*/}
+          {/*          type: 'video/mp4',*/}
+          {/*        },*/}
+          {/*      ]}*/}
+          {/*    />*/}
+          {/*  </CardBody>*/}
+          {/*  <CardBody>*/}
+          {/*     <p className="list-item-heading mb-4">*/}
+          {/*      Homemade Cheesecake with Fresh Berries and Mint*/}
+          {/*   </p>*/}
+          {/*    <footer>*/}
+          {/*      <p className="text-muted text-small mb-0 font-weight-light">*/}
+          {/*        09.04.2018*/}
+          {/*      </p>*/}
+          {/*    </footer>*/}
+          {/*  </CardBody>*/}
+          {/*</Card>*/}
           <Card className="mb-4">
             <CardBody>
               <CardTitle>
@@ -189,34 +189,34 @@ const BlogDetailsPage = ({ intl, match }) => {
               })}
             </CardBody>
           </Card>
-          <Card className="mb-4">
-            <CardBody>
-              <CardTitle>
-                <IntlMessages id="todo.categories" />
-              </CardTitle>
-              {blogCategories.map((categoryItem, index) => {
-                return (
-                  <div
-                    className="d-flex flex-row align-items-center mb-3"
-                    key={`blogItem${index}`}
-                  >
-                    <NavLink to={categoryItem.link}>
-                      <i
-                        className={`large-icon initial-height ${categoryItem.icon}`}
-                      />
-                    </NavLink>
-                    <div className="pl-3 pt-2 pr-2 pb-2">
-                      <NavLink to={categoryItem.link}>
-                        <p className="list-item-heading mb-1">
-                          {categoryItem.title}
-                        </p>
-                      </NavLink>
-                    </div>
-                  </div>
-                );
-              })}
-            </CardBody>
-          </Card>
+          {/*<Card className="mb-4">*/}
+          {/*  <CardBody>*/}
+          {/*    <CardTitle>*/}
+          {/*      <IntlMessages id="todo.categories" />*/}
+          {/*    </CardTitle>*/}
+          {/*    {blogCategories.map((categoryItem, index) => {*/}
+          {/*      return (*/}
+          {/*        <div*/}
+          {/*          className="d-flex flex-row align-items-center mb-3"*/}
+          {/*          key={`blogItem${index}`}*/}
+          {/*        >*/}
+          {/*          <NavLink to={categoryItem.link}>*/}
+          {/*            <i*/}
+          {/*              className={`large-icon initial-height ${categoryItem.icon}`}*/}
+          {/*            />*/}
+          {/*          </NavLink>*/}
+          {/*          <div className="pl-3 pt-2 pr-2 pb-2">*/}
+          {/*            <NavLink to={categoryItem.link}>*/}
+          {/*              <p className="list-item-heading mb-1">*/}
+          {/*                {categoryItem.title}*/}
+          {/*              </p>*/}
+          {/*            </NavLink>*/}
+          {/*          </div>*/}
+          {/*        </div>*/}
+          {/*      );*/}
+          {/*    })}*/}
+          {/*  </CardBody>*/}
+          {/*</Card>*/}
         </Colxx>
       </Row>
     </>

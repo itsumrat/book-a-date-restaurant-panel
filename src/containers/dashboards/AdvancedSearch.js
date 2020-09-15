@@ -14,8 +14,10 @@ import {
 } from 'reactstrap';
 import Select from 'react-select';
 
+import Row from 'reactstrap/es/Row';
 import IntlMessages from '../../helpers/IntlMessages';
 import CustomSelectInput from '../../components/common/CustomSelectInput';
+import { Colxx } from '../../components/common/CustomBootstrap';
 
 const selectData = [
   { label: 'Chocolate', value: 'chocolate', key: 0 },
@@ -38,59 +40,72 @@ const AdvancedSearch = ({ messages }) => {
 
   return (
     <Card className="dashboard-search">
-      <CardBody>
-        <CardTitle className="text-white">
-          <IntlMessages id="dashboards.advanced-search" />
-        </CardTitle>
-        <Form className="form-container">
-          <FormGroup>
-            <label>
-              <IntlMessages id="dashboards.date" />
-            </label>
-            <Select
-              components={{ Input: CustomSelectInput }}
-              className="react-select"
-              classNamePrefix="react-select"
-              name="form-field-name"
-              value={selectedOptions}
-              onChange={(val) => setSelectedOptions(val)}
-              options={selectData}
-            />
-          </FormGroup>
-          <FormGroup>
-            <label>
-              <IntlMessages id="dashboards.time" />
-            </label>
-            <Select
-              components={{ Input: CustomSelectInput }}
-              className="react-select"
-              classNamePrefix="react-select"
-              name="form-field-name"
-              value={selectedOptionsType}
-              onChange={(val) => setSelectedOptionsType(val)}
-              options={selectDataType}
-            />
-          </FormGroup>
-          <FormGroup>
+      <Form className="form-container">
+        <Row>
+          <Colxx lg={3} md={3}>
+            <FormGroup>
+              <label>
+                <IntlMessages id="dashboards.product-name" />
+              </label>
+              <Select
+                components={{ Input: CustomSelectInput }}
+                className="react-select"
+                classNamePrefix="react-select"
+                name="form-field-name"
+                value={selectedOptions}
+                onChange={(val) => setSelectedOptions(val)}
+                options={selectData}
+              />
+            </FormGroup>
+          </Colxx>
+          <Colxx lg={3} md={3}>
+            <FormGroup>
+              <label>
+                <IntlMessages id="dashboards.product-category" />
+              </label>
+              <Select
+                components={{ Input: CustomSelectInput }}
+                className="react-select"
+                classNamePrefix="react-select"
+                name="form-field-name"
+                value={selectedOptionsType}
+                onChange={(val) => setSelectedOptionsType(val)}
+                options={selectDataType}
+              />
+            </FormGroup>
+          </Colxx>
+          <FormGroup >
             <Label>
-              <IntlMessages id="dashboards.guest-keyword" />
+              <IntlMessages id="dashboards.term" />
             </Label>
-            <Input type="text" placeholder={messages['dashboards.keyword']} />
+              <Input />
           </FormGroup>
-          <FormGroup>
-            <CustomInput
-              type="checkbox"
-              id="exampleCustomCheckbox"
-              label="Check this custom checkbox"
-            />
-          </FormGroup>
-          <FormGroup className="text-center">
-            <Button color="primary" className="btn-lg mt-3">
-              <IntlMessages id="dashboards.search" />
-            </Button>
-          </FormGroup>
-        </Form>
-      </CardBody>
+          {/*<Colxx lg={2} md={3}>*/}
+          {/*  <FormGroup>*/}
+          {/*    <Label>*/}
+          {/*      <IntlMessages id="dashboards.guest-keyword" />*/}
+          {/*    </Label>*/}
+          {/*    <Input type="text" placeholder={messages['dashboards.keyword']} />*/}
+          {/*  </FormGroup>*/}
+          {/*</Colxx>*/}
+          {/*<Colxx lg={3} md={3} style={{ margin: 'auto' }}>*/}
+          {/*  <FormGroup>*/}
+          {/*    <CustomInput*/}
+          {/*      type="checkbox"*/}
+          {/*      id="exampleCustomCheckbox"*/}
+          {/*      label="Term"*/}
+          {/*    />*/}
+          {/*  </FormGroup>*/}
+          {/*</Colxx>*/}
+          <Colxx lg={3} md={6}>
+            <FormGroup className="text-center">
+              <Button color="primary" className="btn-lg mt-3">
+                <IntlMessages id="dashboards.search" />
+              </Button>
+            </FormGroup>
+          </Colxx>
+        </Row>
+      </Form>
     </Card>
   );
 };

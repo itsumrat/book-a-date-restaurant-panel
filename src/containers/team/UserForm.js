@@ -26,7 +26,7 @@ const UserForm = ({ onSubmit, closeModal }) => {
     return errors;
   };
   return (
-    <Card>
+    <div>
       <CardBody>
         <Formik
           validate={validate}
@@ -109,7 +109,7 @@ const UserForm = ({ onSubmit, closeModal }) => {
           )}
         </Formik>
       </CardBody>
-    </Card>
+    </div>
   );
 };
 

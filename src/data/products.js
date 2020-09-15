@@ -1,18 +1,19 @@
-import product1 from '../assets/img/product1.jpg';
-import product2 from '../assets/img/product2.jpg';
 import product8 from '../assets/img/product8.jpg';
 import product9 from '../assets/img/product 9.jpg';
 import starter1 from '../assets/img/Starter1.jpg';
 import starter2 from '../assets/img/Starter2.jpg';
 import starter3 from '../assets/img/Starter3.jpg';
+import bottle_of_red_wine from '../assets/img/product1.jpg';
+import bottle_of_white_wine from '../assets/img/product2.jpg';
+import drinks3 from '../assets/img/drink3.jpeg';
 
-const produtcs = [
+const products = [
   {
     id: 1,
     title: 'Signature Rib Steak',
     productLine: 1,
     img: starter1,
-    category: 'Cakes',
+    category: 'starter',
     createDate: '02.04.2018',
     status: 'ON HOLD',
     statusColor: 'primary',
@@ -25,7 +26,7 @@ const produtcs = [
     id: 2,
     title: 'Signature tacos',
     productLine: 2,
-    category: 'Cupcakes',
+    category: 'starter',
     img: starter2,
     createDate: '01.04.2018',
     status: 'PROCESSED',
@@ -40,7 +41,7 @@ const produtcs = [
     title: 'Cheese Cake',
     productLine: 3,
     img: starter3,
-    category: 'Cakes',
+    category: 'starter',
     createDate: '25.03.2018',
     status: 'PROCESSED',
     statusColor: 'secondary',
@@ -54,7 +55,7 @@ const produtcs = [
     title: 'Goose Breast',
     productLine: 4,
     img: '/assets/img/goose-breast-thumb.jpg',
-    category: 'Cakes',
+    category: 'desserts',
     createDate: '21.03.2018',
     status: 'PROCESSED',
     statusColor: 'secondary',
@@ -139,7 +140,7 @@ const produtcs = [
     title: 'Genoise',
     productLine: 10,
     img: '/assets/img/genoise-thumb.jpg',
-    category: 'Cupcakes',
+    category: 'desserts',
     createDate: '11.06.2018',
     status: 'PROCESSED',
     statusColor: 'secondary',
@@ -266,7 +267,7 @@ const produtcs = [
     title: 'Cremeschnitte',
     productLine: 29,
     img: '/assets/img/cremeschnitte-thumb.jpg',
-    category: 'Desserts',
+    category: 'desserts',
     createDate: '04.03.2018',
     status: 'ON HOLD',
     statusColor: 'primary',
@@ -289,6 +290,76 @@ const produtcs = [
     price: 12,
     stock: 14,
   },
+  {
+    id: 21,
+    title: 'Bottle of Red Wine',
+    productLine: 5,
+    category: 'drinks',
+    img: bottle_of_red_wine,
+    createDate: '02.06.2018',
+    status: 'ON HOLD',
+    statusColor: 'primary',
+    description: 'French Bordeaux Cabernet Sauvignon 2005',
+    sales: 985,
+    price: 12,
+    stock: 23,
+  },
+  {
+    id: 22,
+    title: 'Bottle of White Wine',
+    productLine: 5,
+    category: 'drinks',
+    img: bottle_of_white_wine,
+    createDate: '02.06.2018',
+    status: 'ON HOLD',
+    statusColor: 'primary',
+    description: 'Bottle of White Wine',
+    sales: 985,
+    price: 12,
+    stock: 23,
+  },
+  {
+    id: 23,
+    title: 'Glass of Prosecco ',
+    productLine: 5,
+    category: 'drinks',
+    img: drinks3,
+    createDate: '02.06.2018',
+    status: 'ON HOLD',
+    statusColor: 'primary',
+    description: 'Glass of Prosecco',
+    sales: 985,
+    price: 12,
+    stock: 23,
+  },
+  {
+    id: 81,
+    title: 'Signature Rib Steak',
+    productLine: 8,
+    img: product8,
+    category: 'mains',
+    createDate: '18.08.2018',
+    status: 'ON HOLD',
+    statusColor: 'primary',
+    description: 'Potato Kofters',
+    sales: 887,
+    price: 12,
+    stock: 21,
+  },
+  {
+    id: 82,
+    title: 'Signature tacos',
+    productLine: 2,
+    category: 'mains',
+    img: starter2,
+    createDate: '01.04.2018',
+    status: 'PROCESSED',
+    statusColor: 'secondary',
+    description: 'Camembert Cheese',
+    sales: 1240,
+    price: 3,
+    stock: 48,
+  },
 ];
 
-export default produtcs;
+export default products;

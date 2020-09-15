@@ -39,15 +39,15 @@ const BlogDefault = ({ intl, match }) => {
                       src={blogItem.thumb}
                       alt="Card cap"
                     />
-                    {blogItem.badge && (
-                      <Badge
-                        color="primary"
-                        pill
-                        className="position-absolute badge-top-left"
-                      >
-                        {blogItem.badge}
-                      </Badge>
-                    )}
+                    {/*{blogItem.badge && (*/}
+                    {/*  <Badge*/}
+                    {/*    color="primary"*/}
+                    {/*    pill*/}
+                    {/*    className="position-absolute badge-top-left"*/}
+                    {/*  >*/}
+                    {/*    {blogItem.badge}*/}
+                    {/*  </Badge>*/}
+                    {/*)}*/}
                   </NavLink>
                 </div>
                 <div className="w-60 d-flex align-items-center">

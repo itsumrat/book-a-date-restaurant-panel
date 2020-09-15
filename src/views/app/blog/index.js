@@ -20,10 +20,10 @@ const Blog = ({ match }) => (
         path={`${match.url}/default`}
         render={(props) => <BlogDefault {...props} />}
       />
-      <Route
-        path={`${match.url}/blog-list`}
-        render={(props) => <BlogList {...props} />}
-      />
+      {/*<Route*/}
+      {/*  path={`${match.url}/blog-list`}*/}
+      {/*  render={(props) => <BlogList {...props} />}*/}
+      {/*/>*/}
       <Route
         path={`${match.url}/blog-detail`}
         render={(props) => <BlogDetail {...props} />}

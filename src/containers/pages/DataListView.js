@@ -10,7 +10,6 @@ const DataListView = ({ product, isSelect, collect, onCheckItem }) => {
     <Colxx xxs="12" className="mb-3">
       <ContextMenuTrigger id="menu_id" data={product.id} collect={collect}>
         <Card
-          onClick={(event) => onCheckItem(event, product.id)}
           className={classnames('d-flex flex-row', {
             active: isSelect,
           })}
@@ -34,7 +33,7 @@ const DataListView = ({ product, isSelect, collect, onCheckItem }) => {
                 </Badge>
               </div>
             </div>
-            <div className="custom-control custom-checkbox pl-1 align-self-center pr-4">
+            <div onClick={(event) => onCheckItem(event, product.id)} className="custom-control custom-checkbox pl-1 align-self-center pr-4">
               <CustomInput
                 className="item-check mb-0"
                 type="checkbox"
@@ -44,6 +43,9 @@ const DataListView = ({ product, isSelect, collect, onCheckItem }) => {
                 label=""
               />
             </div>
+            <button type="button" className="btn btn-link">
+              Request Submission
+            </button>
           </div>
         </Card>
       </ContextMenuTrigger>

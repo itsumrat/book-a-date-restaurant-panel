@@ -26,7 +26,7 @@ const ProductReports = ({ intl, match }) => {
             <Colxx lg="8" xl="4" className="mb-4">
               <TopRatedItems />
             </Colxx>
-            <Colxx lg="4" md="12" className="mb-4">
+            <Colxx lg="6" md="12" className="mb-4">
               {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
               <ProductCategoriesDoughnut />
             </Colxx>
