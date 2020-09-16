@@ -54,34 +54,34 @@ const ProductDetailPage = ({ match, intl }) => {
       <Row>
         <Colxx xxs="12">
           <h1>{product && product.title}</h1>
-          <div className="text-zero top-right-button-container">
-            <UncontrolledDropdown>
-              <DropdownToggle
-                caret
-                color="primary"
-                size="lg"
-                outline
-                className="top-right-button top-right-button-single"
-              >
-                <IntlMessages id="pages.actions" />
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem header>
-                  <IntlMessages id="pages.header" />
-                </DropdownItem>
-                <DropdownItem disabled>
-                  <IntlMessages id="pages.delete" />
-                </DropdownItem>
-                <DropdownItem>
-                  <IntlMessages id="pages.another-action" />
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  <IntlMessages id="pages.another-action" />
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </div>
+          {/*<div className="text-zero top-right-button-container">*/}
+          {/*  <UncontrolledDropdown>*/}
+          {/*    <DropdownToggle*/}
+          {/*      caret*/}
+          {/*      color="primary"*/}
+          {/*      size="lg"*/}
+          {/*      outline*/}
+          {/*      className="top-right-button top-right-button-single"*/}
+          {/*    >*/}
+          {/*      <IntlMessages id="pages.actions" />*/}
+          {/*    </DropdownToggle>*/}
+          {/*    <DropdownMenu>*/}
+          {/*      <DropdownItem header>*/}
+          {/*        <IntlMessages id="pages.header" />*/}
+          {/*      </DropdownItem>*/}
+          {/*      <DropdownItem disabled>*/}
+          {/*        <IntlMessages id="pages.delete" />*/}
+          {/*      </DropdownItem>*/}
+          {/*      <DropdownItem>*/}
+          {/*        <IntlMessages id="pages.another-action" />*/}
+          {/*      </DropdownItem>*/}
+          {/*      <DropdownItem divider />*/}
+          {/*      <DropdownItem>*/}
+          {/*        <IntlMessages id="pages.another-action" />*/}
+          {/*      </DropdownItem>*/}
+          {/*    </DropdownMenu>*/}
+          {/*  </UncontrolledDropdown>*/}
+          {/*</div>*/}
 
           <Breadcrumb match={match} />
           <Separator className="mb-5" />
@@ -107,7 +107,8 @@ const ProductDetailPage = ({ match, intl }) => {
                       startAt: 0,
                       gap: 10,
                       perView: 5,
-                      data: detailThumbs,
+                      data: [],
+                      // data: detailThumbs,
                       breakpoints: {
                         576: {
                           perView: 4,
@@ -256,69 +257,69 @@ const ProductDetailPage = ({ match, intl }) => {
               </Card>
             </Colxx>
 
-            <Colxx xxs="12" xl="4" className="col-right">
-              <Card className="mb-4">
-                <CardBody>
-                  {/*<div className="mb-3">*/}
-                  {/*  <div className="post-icon mr-3 d-inline-block">*/}
-                  {/*    <NavLink to="#" location={{}}>*/}
-                  {/*      <i className="simple-icon-heart mr-1" />*/}
-                  {/*    </NavLink>*/}
-                  {/*    <span>4 {messages['pages.likes']}</span>*/}
-                  {/*  </div>*/}
+            {/*<Colxx xxs="12" xl="4" className="col-right">*/}
+            {/*  <Card className="mb-4">*/}
+            {/*    <CardBody>*/}
+            {/*      <div className="mb-3">*/}
+            {/*        <div className="post-icon mr-3 d-inline-block">*/}
+            {/*          <NavLink to="#" location={{}}>*/}
+            {/*            <i className="simple-icon-heart mr-1" />*/}
+            {/*          </NavLink>*/}
+            {/*          <span>4 {messages['pages.likes']}</span>*/}
+            {/*        </div>*/}
 
-                  {/*  <div className="post-icon mr-3 d-inline-block">*/}
-                  {/*    <NavLink to="#" location={{}}>*/}
-                  {/*      <i className="simple-icon-bubble mr-1" />*/}
-                  {/*    </NavLink>*/}
-                  {/*    <span>2 {messages['pages.comments-title']}</span>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
-                  <p className="mb-3">
-                    Vivamus ultricies augue vitae commodo condimentum. Nullam
-                    faucibus eros eu mauris feugiat, eget consectetur tortor
-                    tempus.
-                    <br />
-                    <br />
-                    Sed volutpat mollis dui eget fringilla. Vestibulum blandit
-                    urna ut tellus lobortis tristique. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia
-                    Curae; Pellentesque quis cursus mauris.
-                    <br />
-                    <br />
-                    Nulla non purus fermentum, pulvinar dui condimentum,
-                    malesuada nibh. Sed viverra quam urna, at condimentum ante
-                    viverra non. Mauris posuere erat sapien, a convallis libero
-                    lobortis sit amet. Suspendisse in orci tellus.
-                  </p>
-                  {/*<p className="text-muted text-small mb-2">*/}
-                  {/*  {messages['forms.tags']}*/}
-                  {/*</p>*/}
-                  {/*<p className="mb-3">*/}
-                  {/*  <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-                  {/*    FRONTEND*/}
-                  {/*  </Badge>*/}
-                  {/*  <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-                  {/*    JAVASCRIPT*/}
-                  {/*  </Badge>*/}
-                  {/*  <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-                  {/*    SECURITY*/}
-                  {/*  </Badge>*/}
-                  {/*  <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-                  {/*    DESIGN*/}
-                  {/*  </Badge>*/}
-                  {/*</p>*/}
-                </CardBody>
-              </Card>
-              <Card className="mb-4">
-                <CardBody>
-                  <CardTitle>
-                    <IntlMessages id="pages.other-products" />
-                  </CardTitle>
-                  <GalleryDetail productCategory={product.category} />
-                </CardBody>
-              </Card>
-            </Colxx>
+            {/*        <div className="post-icon mr-3 d-inline-block">*/}
+            {/*          <NavLink to="#" location={{}}>*/}
+            {/*            <i className="simple-icon-bubble mr-1" />*/}
+            {/*          </NavLink>*/}
+            {/*          <span>2 {messages['pages.comments-title']}</span>*/}
+            {/*        </div>*/}
+            {/*      </div>*/}
+            {/*      <p className="mb-3">*/}
+            {/*        Vivamus ultricies augue vitae commodo condimentum. Nullam*/}
+            {/*        faucibus eros eu mauris feugiat, eget consectetur tortor*/}
+            {/*        tempus.*/}
+            {/*        <br />*/}
+            {/*        <br />*/}
+            {/*        Sed volutpat mollis dui eget fringilla. Vestibulum blandit*/}
+            {/*        urna ut tellus lobortis tristique. Vestibulum ante ipsum*/}
+            {/*        primis in faucibus orci luctus et ultrices posuere cubilia*/}
+            {/*        Curae; Pellentesque quis cursus mauris.*/}
+            {/*        <br />*/}
+            {/*        <br />*/}
+            {/*        Nulla non purus fermentum, pulvinar dui condimentum,*/}
+            {/*        malesuada nibh. Sed viverra quam urna, at condimentum ante*/}
+            {/*        viverra non. Mauris posuere erat sapien, a convallis libero*/}
+            {/*        lobortis sit amet. Suspendisse in orci tellus.*/}
+            {/*      </p>*/}
+            {/*      <p className="text-muted text-small mb-2">*/}
+            {/*        {messages['forms.tags']}*/}
+            {/*      </p>*/}
+            {/*      <p className="mb-3">*/}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
+            {/*          FRONTEND*/}
+            {/*        </Badge>*/}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
+            {/*          JAVASCRIPT*/}
+            {/*        </Badge>*/}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
+            {/*          SECURITY*/}
+            {/*        </Badge>*/}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
+            {/*          DESIGN*/}
+            {/*        </Badge>*/}
+            {/*      </p>*/}
+            {/*    </CardBody>*/}
+            {/*  </Card>*/}
+            {/*  <Card className="mb-4">*/}
+            {/*    <CardBody>*/}
+            {/*      <CardTitle>*/}
+            {/*        <IntlMessages id="pages.other-products" />*/}
+            {/*      </CardTitle>*/}
+            {/*      <GalleryDetail productCategory={product.category} />*/}
+            {/*    </CardBody>*/}
+            {/*  </Card>*/}
+            {/*</Colxx>*/}
           </Row>
         </Colxx>
 
@@ -388,50 +389,50 @@ const ProductDetailPage = ({ match, intl }) => {
                             served with an ice cold glass of milk!
                           </p>
 
-                          <p className="text-muted text-small mb-2">
-                            <IntlMessages id="pages.rating" />
-                          </p>
-                          <div className="mb-3">
-                            <Rating total={5} rating={5} interactive={false} />
-                          </div>
+                          {/*<p className="text-muted text-small mb-2">*/}
+                          {/*  <IntlMessages id="pages.rating" />*/}
+                          {/*</p>*/}
+                          {/*<div className="mb-3">*/}
+                          {/*  <Rating total={5} rating={5} interactive={false} />*/}
+                          {/*</div>*/}
 
-                          <p className="text-muted text-small mb-2">
-                            <IntlMessages id="pages.price" />
-                          </p>
-                          <p className="mb-3">$8,14</p>
-                          <p className="text-muted text-small mb-2">
-                            <IntlMessages id="pages.ingredients" />
-                          </p>
-                          <div className="mb-3">
-                            <p className="d-sm-inline-block mb-1">
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Flour
-                              </Badge>
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Chocolate
-                              </Badge>
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Caster Sugar
-                              </Badge>
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Baking Powder
-                              </Badge>
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Milk
-                              </Badge>
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Eggs
-                              </Badge>
-                              <Badge color="outline-secondary mb-1 mr-1" pill>
-                                Vegetable Oil
-                              </Badge>
-                            </p>
-                          </div>
+                          {/*<p className="text-muted text-small mb-2">*/}
+                          {/*  <IntlMessages id="pages.price" />*/}
+                          {/*</p>*/}
+                          {/*<p className="mb-3">$8,14</p>*/}
+                          {/*<p className="text-muted text-small mb-2">*/}
+                          {/*  <IntlMessages id="pages.ingredients" />*/}
+                          {/*</p>*/}
+                          {/*<div className="mb-3">*/}
+                          {/*  <p className="d-sm-inline-block mb-1">*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Flour*/}
+                          {/*    </Badge>*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Chocolate*/}
+                          {/*    </Badge>*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Caster Sugar*/}
+                          {/*    </Badge>*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Baking Powder*/}
+                          {/*    </Badge>*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Milk*/}
+                          {/*    </Badge>*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Eggs*/}
+                          {/*    </Badge>*/}
+                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
+                          {/*      Vegetable Oil*/}
+                          {/*    </Badge>*/}
+                          {/*  </p>*/}
+                          {/*</div>*/}
 
-                          <p className="text-muted text-small mb-2">
-                            <IntlMessages id="pages.is-vegan" />
-                          </p>
-                          <p>No</p>
+                          {/*<p className="text-muted text-small mb-2">*/}
+                          {/*  <IntlMessages id="pages.is-vegan" />*/}
+                          {/*</p>*/}
+                          {/*<p>No</p>*/}
                         </CardBody>
                       </Card>
                       <Row>
