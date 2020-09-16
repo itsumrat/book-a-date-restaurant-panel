@@ -183,7 +183,7 @@ const ProductDetailPage = ({ match, intl }) => {
                                 <th scope="col">#</th>
                                 <th scope="col">First</th>
                                 <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Date</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -191,18 +191,19 @@ const ProductDetailPage = ({ match, intl }) => {
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
-                                <td>@mdo</td>
+                                <td>10/9/2020</td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
-                                <td>@fat</td>
+                                <td>10/9/2020</td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
-                                <td colSpan="2">Larry the Bird</td>
-                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>Thornton</td>
+                                <td>10/9/2020</td>
                               </tr>
                             </tbody>
                           </Table>
@@ -400,34 +401,34 @@ const ProductDetailPage = ({ match, intl }) => {
                           {/*  <IntlMessages id="pages.price" />*/}
                           {/*</p>*/}
                           {/*<p className="mb-3">$8,14</p>*/}
-                          {/*<p className="text-muted text-small mb-2">*/}
-                          {/*  <IntlMessages id="pages.ingredients" />*/}
-                          {/*</p>*/}
-                          {/*<div className="mb-3">*/}
-                          {/*  <p className="d-sm-inline-block mb-1">*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Flour*/}
-                          {/*    </Badge>*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Chocolate*/}
-                          {/*    </Badge>*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Caster Sugar*/}
-                          {/*    </Badge>*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Baking Powder*/}
-                          {/*    </Badge>*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Milk*/}
-                          {/*    </Badge>*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Eggs*/}
-                          {/*    </Badge>*/}
-                          {/*    <Badge color="outline-secondary mb-1 mr-1" pill>*/}
-                          {/*      Vegetable Oil*/}
-                          {/*    </Badge>*/}
-                          {/*  </p>*/}
-                          {/*</div>*/}
+                          <p className="text-muted text-small mb-2">
+                            <IntlMessages id="pages.ingredients" />
+                          </p>
+                          <div className="mb-3">
+                            <p className="d-sm-inline-block mb-1">
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Flour
+                              </Badge>
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Chocolate
+                              </Badge>
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Caster Sugar
+                              </Badge>
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Baking Powder
+                              </Badge>
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Milk
+                              </Badge>
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Eggs
+                              </Badge>
+                              <Badge color="outline-secondary mb-1 mr-1" pill>
+                                Vegetable Oil
+                              </Badge>
+                            </p>
+                          </div>
 
                           {/*<p className="text-muted text-small mb-2">*/}
                           {/*  <IntlMessages id="pages.is-vegan" />*/}
