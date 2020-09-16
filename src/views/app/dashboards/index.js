@@ -165,11 +165,11 @@ const DefaultDashboard = ({ intl, match }) => {
           <ProductCategoriesPolarArea />
         </Colxx>
       </Row>
-      <Row>
-        <Colxx xxs="12" className="mb-4">
-          <SalesChartCard />
-        </Colxx>
-      </Row>
+      {/*<Row>*/}
+      {/*  <Colxx xxs="12" className="mb-4">*/}
+      {/*    <SalesChartCard />*/}
+      {/*  </Colxx>*/}
+      {/*</Row>*/}
     </>
   );
 };

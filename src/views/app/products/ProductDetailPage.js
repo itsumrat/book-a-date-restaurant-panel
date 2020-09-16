@@ -361,13 +361,13 @@ const ProductDetailPage = ({ match, intl }) => {
                   <Row>
                     <Colxx xxs="12" lg="4" className="mb-4">
                       <Card className="mb-4">
-                        <div className="position-absolute card-top-buttons">
-                          <Button outline color="white" className="icon-button">
-                            <i className="simple-icon-pencil" />
-                          </Button>
-                        </div>
+                        {/*<div className="position-absolute card-top-buttons">*/}
+                        {/*  <Button outline color="white" className="icon-button">*/}
+                        {/*    <i className="simple-icon-pencil" />*/}
+                        {/*  </Button>*/}
+                        {/*</div>*/}
                         <img
-                          src="/assets/img/detail.jpg"
+                          src={product.img}
                           alt="Detail"
                           className="card-img-top"
                         />
