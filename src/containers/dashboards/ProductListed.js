@@ -5,6 +5,7 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import IntlMessages from '../../helpers/IntlMessages';
 import data from '../../data/cakes';
+import products from '../../data/products';
 
 const ProductListed = () => {
   return (
@@ -16,27 +17,27 @@ const ProductListed = () => {
         <div className="d-flex flex-row">
           <div className="w-50">
             <ul className="list-unstyled mb-0">
-              {data.slice(0, 12).map((c, index) => {
+              {products.slice(0, 12).map((c, index) => {
                 return (
                   <li key={index} className="mb-1">
-                    <NavLink to={c.link}>{c.title}</NavLink>
+                    <NavLink to={`/app/products/details/${c.id}`}>{c.title}</NavLink>
                   </li>
                 );
               })}
             </ul>
           </div>
 
-          <div className="w-50">
-            <ul className="list-unstyled mb-0">
-              {data.slice(12, 24).map((c, index) => {
-                return (
-                  <li key={index} className="mb-1">
-                    <NavLink to={c.link}>{c.title}</NavLink>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          {/*<div className="w-50">*/}
+          {/*  <ul className="list-unstyled mb-0">*/}
+          {/*    {data.slice(12, 24).map((c, index) => {*/}
+          {/*      return (*/}
+          {/*        <li key={index} className="mb-1">*/}
+          {/*          <NavLink to={c.link}>{c.title}</NavLink>*/}
+          {/*        </li>*/}
+          {/*      );*/}
+          {/*    })}*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
         </div>
       </CardBody>
     </Card>

@@ -8,6 +8,7 @@ import ListPageHeading from '../../../containers/pages/ListPageHeading';
 import AddNewModal from '../../../containers/pages/AddNewModal';
 import ListPageListing from '../../../containers/pages/ListPageListing';
 import useMousetrap from '../../../hooks/use-mousetrap';
+import products from '../../../data/products';
 
 const getIndex = (value, arr, prop) => {
   for (let i = 0; i < arr.length; i += 1) {
@@ -24,13 +25,15 @@ const orderOptions = [
   { column: 'title', label: 'Product Name' },
   { column: 'category', label: 'Category' },
   { column: 'status', label: 'Status' },
+  { column: 'date', label: 'Date' },
 ];
 const pageSizes = [4, 8, 12, 20];
 
 const categories = [
-  { label: 'Cakes', value: 'Cakes', key: 0 },
-  { label: 'Cupcakes', value: 'Cupcakes', key: 1 },
-  { label: 'Desserts', value: 'Desserts', key: 2 },
+  { label: 'Starter', value: 'Starter', key: 0 },
+  { label: 'Mains', value: 'Mains', key: 1 },
+  { label: 'Drinks', value: 'Drinks', key: 2 },
+  { label: 'Desserts', value: 'Desserts', key: 3 },
 ];
 
 const ProductImageList = ({ match }) => {
@@ -189,7 +192,7 @@ const ProductImageList = ({ match }) => {
           categories={categories}
         />
         <ListPageListing
-          items={items}
+          items={products}
           displayMode={displayMode}
           selectedItems={selectedItems}
           onCheckItem={onCheckItem}

@@ -25,7 +25,7 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
         >
           <div className="position-relative">
             <NavLink to={`?p=${product.id}`} className="w-40 w-sm-100">
-              <CardImg top alt={product.title} src={product.img} />
+              <CardImg style={{height: 220}} top alt={product.title} src={product.img} />
             </NavLink>
             <Badge
               color={product.statusColor}

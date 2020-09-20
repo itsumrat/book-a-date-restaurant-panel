@@ -93,18 +93,18 @@ const App = ({ match }) => {
               path={`${match.url}/settings`}
               render={(props) => <Settings {...props} />}
             />
-            <Route
-              path={`${match.url}/review`}
-              render={(props) => <Review {...props} />}
-            />
+            {/*<Route*/}
+            {/*  path={`${match.url}/review`}*/}
+            {/*  render={(props) => <Review {...props} />}*/}
+            {/*/>*/}
             <Route
               path={`${match.url}/open-close-hour`}
               render={(props) => <OpenAndClosingHour {...props} />}
             />
-            <Route
-              path={`${match.url}/blog`}
-              render={(props) => <Blog {...props} />}
-            />
+            {/*<Route*/}
+            {/*  path={`${match.url}/blog`}*/}
+            {/*  render={(props) => <Blog {...props} />}*/}
+            {/*/>*/}
             {/*<Route*/}
             {/*  exact*/}
             {/*  path={`${match.url}/blog/:name`}*/}

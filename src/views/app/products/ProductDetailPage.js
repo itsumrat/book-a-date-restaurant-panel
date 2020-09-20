@@ -429,7 +429,7 @@ const ProductDetailPage = ({ match, intl }) => {
                               </Badge>
                             </p>
                           </div>
-
+                          <Button>Add Ingredient</Button>
                           {/*<p className="text-muted text-small mb-2">*/}
                           {/*  <IntlMessages id="pages.is-vegan" />*/}
                           {/*</p>*/}

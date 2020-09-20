@@ -24,6 +24,7 @@ const orderOptions = [
   { column: 'title', label: 'Product Name' },
   { column: 'category', label: 'Category' },
   { column: 'status', label: 'Status' },
+  { column: 'date', label: 'Date' },
 ];
 const pageSizes = [4, 8, 12, 20];
 

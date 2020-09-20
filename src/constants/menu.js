@@ -29,7 +29,7 @@ const data = [
   },
   {
     id: 'reservations',
-    icon: 'iconsminds-shop-4',
+    icon: 'iconsminds-books',
     label: 'menu.reservations',
     to: '/app/reservations',
     subs: [
@@ -180,30 +180,50 @@ const data = [
     icon: 'iconsminds-business-mens',
     label: 'team.team',
     to: '/app/team',
-    // subs: [
-    //   {
-    //     icon: 'simple-icon-briefcase',
-    //     label: 'menu.default',
-    //     to: '/app/team/default',
-    //   },
-    //   {
-    //     id: 'pages-profile',
-    //     label: 'menu.profile',
-    //     to: '/app/team/profile',
-    //     subs: [
-    //       {
-    //         icon: 'simple-icon-share',
-    //         label: 'menu.social',
-    //         to: '/app/team/profile/social',
-    //       },
-    //       {
-    //         icon: 'simple-icon-link',
-    //         label: 'menu.portfolio',
-    //         to: '/app/team/profile/portfolio',
-    //       },
-    //     ],
-    //   },
-    // ],
+    subs: [
+      {
+        icon: 'simple-icon-briefcase',
+        label: 'menu.default',
+        to: '/app/team/default',
+      },
+      {
+        icon: 'simple-icon-check',
+        label: 'menu.todo',
+        to: '/app/team/todo',
+      },
+      {
+        icon: 'simple-icon-calculator',
+        label: 'menu.survey',
+        to: '/app/team/survey',
+      },
+      {
+        icon: 'simple-icon-bubbles',
+        label: 'menu.chat',
+        to: '/app/team/chat',
+      },
+      {
+        icon: 'simple-icon-share',
+        label: 'menu.social',
+        to: '/app/pages/profile/social',
+      },
+      // {
+      //   id: 'pages-profile',
+      //   label: 'menu.profile',
+      //   to: '/app/team/profile',
+      //   subs: [
+      //     {
+      //       icon: 'simple-icon-share',
+      //       label: 'menu.social',
+      //       to: '/app/team/profile/social',
+      //     },
+      //     {
+      //       icon: 'simple-icon-link',
+      //       label: 'menu.portfolio',
+      //       to: '/app/team/profile/portfolio',
+      //     },
+      //   ],
+      // },
+    ],
   },
   {
     id: 'calendar',
@@ -420,24 +440,24 @@ const data = [
       },
     ],
   },
-  {
-    id: 'review',
-    icon: 'simple-icon-feed',
-    label: 'review.review',
-    to: '/app/review',
-  },
+  // {
+  //   id: 'review',
+  //   icon: 'simple-icon-feed',
+  //   label: 'review.review',
+  //   to: '/app/review',
+  // },
   {
     id: 'open-close-hour',
     icon: 'iconsminds-24-hour',
     label: 'open-close-hour.open-close-hour',
     to: '/app/open-close-hour',
   },
-  {
-    id: 'blog',
-    icon: 'simple-icon-share',
-    label: 'menu.blog',
-    to: '/app/blog',
-  },
+  // {
+  //   id: 'blog',
+  //   icon: 'simple-icon-share',
+  //   label: 'menu.blog',
+  //   to: '/app/blog',
+  // },
   // {
   //   id: 'pages',
   //   icon: 'iconsminds-digital-drawing',

@@ -118,23 +118,39 @@ export const barChartData = {
 export const radarChartData = {
   datasets: [
     {
-      label: 'Stock',
+      label: 'Drinks',
       borderWidth: 2,
       pointBackgroundColor: colors.themeColor1,
       borderColor: colors.themeColor1,
       backgroundColor: colors.themeColor1_10,
-      data: [80, 90, 70],
+      data: [80, 90, 70, 87],
     },
     {
-      label: 'Order',
+      label: 'Starter',
       borderWidth: 2,
       pointBackgroundColor: colors.themeColor2,
       borderColor: colors.themeColor2,
       backgroundColor: colors.themeColor2_10,
-      data: [68, 80, 95],
+      data: [68, 80, 95, 69],
+    },
+    {
+      label: 'Mains',
+      borderWidth: 2,
+      pointBackgroundColor: colors.themeColor6,
+      borderColor: colors.themeColor6,
+      backgroundColor: colors.themeColor6_10,
+      data: [68, 90, 75, 95],
+    },
+    {
+      label: 'Desserts',
+      borderWidth: 2,
+      pointBackgroundColor: colors.themeColor3,
+      borderColor: colors.themeColor3,
+      backgroundColor: colors.themeColor3_10,
+      data: [75, 78, 95, 92],
     },
   ],
-  labels: ['Cakes', 'Desserts', 'Cupcakes'],
+  labels: ['Drinks', 'Starter', 'Mains', 'Desserts'],
 };
 
 export const pieChartData = {

@@ -4,8 +4,7 @@ import { servicePath } from '../../../constants/defaultValues';
 import ListPageHeading from '../../../containers/pages/ListPageHeading';
 import AddNewModal from '../../../containers/pages/AddNewModal';
 import useMousetrap from '../../../hooks/use-mousetrap';
-import DataListDividedTable  from '../../../containers/reservations/DataListDividedTable';
-
+import DataListDividedTable from '../../../containers/reservations/DataListDividedTable';
 
 const getIndex = (value, arr, prop) => {
   for (let i = 0; i < arr.length; i += 1) {

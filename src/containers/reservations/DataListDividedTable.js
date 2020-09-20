@@ -10,6 +10,7 @@ import classnames from 'classnames';
 
 import IntlMessages from '../../helpers/IntlMessages';
 import DatatablePagination from '../../components/DatatablePagination';
+import products from '../../data/products';
 
 const produtcs = [
   {
@@ -461,9 +462,11 @@ const DataListDividedTable = () => {
       },
       {
         Header: 'Product line',
-        accessor: 'productLine',
+        accessor: 'category',
         cellClass: 'list-item-heading w-40',
-        Cell: (props) => <>{props.value}</>,
+        Cell: (props) => (
+          <>{props.value.charAt(0).toUpperCase() + props.value.slice(1)}</>
+        ),
       },
       {
         Header: 'Product details',
@@ -485,7 +488,7 @@ const DataListDividedTable = () => {
       <CardTitle>
         <IntlMessages id="table.divided" />
       </CardTitle>
-      <Table columns={cols} data={produtcs} divided />
+      <Table columns={cols} data={products} divided />
     </div>
   );
 };

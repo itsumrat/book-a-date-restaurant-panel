@@ -29,9 +29,10 @@ const selectData = [
 ];
 
 const selectDataType = [
-  { label: 'Cake', value: 'cake', key: 0 },
-  { label: 'Cupcake', value: 'cupcake', key: 1 },
-  { label: 'Dessert', value: 'dessert', key: 2 },
+  { label: 'Starter', value: 'Starter', key: 0 },
+  { label: 'Mains', value: 'Mains', key: 1 },
+  { label: 'Drinks', value: 'Drinks', key: 2 },
+  { label: 'Desserts', value: 'Desserts', key: 3 },
 ];
 
 const AdvancedSearch = ({ messages }) => {
