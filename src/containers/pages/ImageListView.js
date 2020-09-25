@@ -8,11 +8,16 @@ import {
   CardText,
   CustomInput,
   Badge,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
 import { ContextMenuTrigger } from 'react-contextmenu';
 import { Colxx } from '../../components/common/CustomBootstrap';
+import IntlMessages from '../../helpers/IntlMessages';
 
 const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
   return (
@@ -25,7 +30,12 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
         >
           <div className="position-relative">
             <NavLink to={`?p=${product.id}`} className="w-40 w-sm-100">
-              <CardImg style={{height: 220}} top alt={product.title} src={product.img} />
+              <CardImg
+                style={{ height: 220 }}
+                top
+                alt={product.title}
+                src={product.img}
+              />
             </NavLink>
             <Badge
               color={product.statusColor}
@@ -34,10 +44,25 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
             >
               {product.status}
             </Badge>
+            <UncontrolledDropdown
+              direction="left"
+              style={{ top: 0, right: '-8px' }}
+              className="position-absolute badge-top-right"
+            >
+              <DropdownToggle className="m-0" style={{padding: '5px 10px'}}>:</DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Deactivate</DropdownItem>
+                <DropdownItem>Edit</DropdownItem>
+                <DropdownItem>Delete</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
           </div>
           <CardBody>
             <Row>
-              <Colxx xxs="2" onClick={(event) => onCheckItem(event, product.id)}  >
+              <Colxx
+                xxs="2"
+                onClick={(event) => onCheckItem(event, product.id)}
+              >
                 <CustomInput
                   className="item-check mb-0"
                   type="checkbox"

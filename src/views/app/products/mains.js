@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { injectIntl } from 'react-intl';
-import { Row } from 'reactstrap';
+import { Button, Row } from 'reactstrap';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import FoodCards from '../../../containers/products/FoodCards';
 import products from '../../../data/products';
+import IntlMessages from '../../../helpers/IntlMessages';
+import AddNewModal from '../../../containers/pages/AddNewModal';
 
 const Mains = ({ intl, match }) => {
-  const mains = products.filter((pro) => pro.category === 'mains');
+  const [modalOpen, setModalOpen] = useState(false);
+  const mains = products.filter((pro) => pro.category === 'mains' && pro.active===true);
   return (
     <>
       <Row>
@@ -17,8 +20,26 @@ const Mains = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <FoodCards products={mains} />
+        <Colxx xxs="12">
+          <Row className="justify-content-end">
+            <Button
+              color="primary"
+              size="lg"
+              className="top-right-button flex"
+              onClick={() => setModalOpen(true)}
+            >
+              <IntlMessages id="pages.add-new" />
+            </Button>
+          </Row>
+        </Colxx>
       </Row>
+      <AddNewModal
+        modalOpen={modalOpen}
+        toggleModal={() => setModalOpen(!modalOpen)}
+        // categories={categories}
+      />
+        <FoodCards products={mains} />
+
     </>
   );
 };

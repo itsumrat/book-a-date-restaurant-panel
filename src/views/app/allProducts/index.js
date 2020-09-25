@@ -5,13 +5,13 @@ import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import ProductImageList from './ProductImagelist';
 
-const ProductCreate = ({ intl, match }) => {
+const AllProduct = ({ intl, match }) => {
   const { messages } = intl;
   return (
     <>
       <Row>
         <Colxx xxs="12">
-          <Breadcrumb heading="products.products-create" match={match} />
+          <Breadcrumb heading="all-product.all-product" match={match} />
           <Separator className="mb-5" />
         </Colxx>
       </Row>
@@ -27,4 +27,4 @@ const ProductCreate = ({ intl, match }) => {
     </>
   );
 };
-export default injectIntl(ProductCreate);
+export default injectIntl(AllProduct);

@@ -6,12 +6,22 @@ import {
   CardImg,
   CardSubtitle,
   CardText,
-  CardTitle, Form, Modal, ModalBody, ModalFooter, ModalHeader, Row
+  CardTitle,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Form,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  Row,
+  UncontrolledDropdown,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import DatePicker from 'react-datepicker';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const FoodCard = ({ product }) => {
@@ -30,6 +40,22 @@ const FoodCard = ({ product }) => {
               alt="Card image cap"
             />
           </NavLink>
+          {product.active && (
+            <UncontrolledDropdown
+              direction="left"
+              style={{ top: 0, right: '-8px' }}
+              className="position-absolute badge-top-right"
+            >
+              <DropdownToggle className="m-0" style={{ padding: '5px 10px' }}>
+                :
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Deactivate</DropdownItem>
+                <DropdownItem>Edit</DropdownItem>
+                <DropdownItem>Delete</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          )}
         </div>
         <CardBody>
           <NavLink to={`/app/products/details/${product.id}`}>
@@ -43,21 +69,25 @@ const FoodCard = ({ product }) => {
                 {`£ ${product.price}`}
               </p>
 
-              <button
-                onClick={() => setModalBasic(true)}
-                style={{ paddingTop: 0, paddingBottom: 0 }}
-                type="button"
-                className="btn btn-link"
-              >
-                Request Submission
-              </button>
+              {product.active ? (
+                <button
+                  onClick={() => setModalBasic(true)}
+                  style={{ paddingTop: 0, paddingBottom: 0 }}
+                  type="button"
+                  className="btn btn-link"
+                >
+                  Request Submission
+                </button>
+              ) : (
+                <Button>Activated</Button>
+              )}
             </Colxx>
           </Row>
         </CardBody>
       </Card>
       <Modal isOpen={modalBasic} toggle={() => setModalBasic(!modalBasic)}>
         <ModalHeader>
-          {/*<IntlMessages id="modal.modal-title" />*/}
+          {/* <IntlMessages id="modal.modal-title" /> */}
           <h5>Advertise Product</h5>
         </ModalHeader>
         <ModalBody>
@@ -71,27 +101,20 @@ const FoodCard = ({ product }) => {
                 />
               </div>
               <div className="form-group has-float-label">
-                <p >Finish</p>
+                <p>Finish</p>
                 <DatePicker
                   selected={finishDateLO}
                   onChange={(val) => setFinishDateLO(val)}
                 />
               </div>
-
             </Colxx>
           </Row>
         </ModalBody>
         <ModalFooter>
-          <Button
-            color="primary"
-            onClick={() => setModalBasic(false)}
-          >
+          <Button color="primary" onClick={() => setModalBasic(false)}>
             Submit
           </Button>{' '}
-          <Button
-            color="secondary"
-            onClick={() => setModalBasic(false)}
-          >
+          <Button color="secondary" onClick={() => setModalBasic(false)}>
             Cancel
           </Button>
         </ModalFooter>

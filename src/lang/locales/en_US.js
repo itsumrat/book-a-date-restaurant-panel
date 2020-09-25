@@ -135,6 +135,8 @@ module.exports = {
   'menu.advance-search': 'Advance search',
   'menu.products': 'Products',
   'menu.product-create': 'Products Create',
+  'menu.all-product': 'All Products',
+  'menu.deactivated-product': 'Deactivated Products',
   'menu.drinks': 'Drinks',
   'menu.mains': 'Mains',
   'menu.starters': 'Starters',
@@ -253,6 +255,8 @@ module.exports = {
   'products.products-create': 'Create Products',
   'products.product-list': 'Product Listing',
   'product-create.product-create': 'Product Create',
+  'all-product.all-product': 'All Products',
+  'deactivated-product.deactivated-product': 'Deactivated Products',
 
   // Reporting
   'reporting.reporting': 'Reporting',

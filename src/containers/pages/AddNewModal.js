@@ -65,7 +65,7 @@ const dropzoneConfig = {
   ),
   headers: { 'My-Awesome-Header': 'header value' },
 };
-const AddNewModal = ({ modalOpen, toggleModal, categories }) => {
+const AddNewModal = ({ modalOpen, toggleModal }) => {
   let myDropzone;
   const clear = () => {
     myDropzone.removeAllFiles(true);
@@ -85,35 +85,39 @@ const AddNewModal = ({ modalOpen, toggleModal, categories }) => {
           <IntlMessages id="pages.product-name" />
         </Label>
         <Input />
-        <Label className="mt-4">
-          <IntlMessages id="pages.category" />
-        </Label>
-        <Select
-          components={{ Input: CustomSelectInput }}
-          className="react-select"
-          classNamePrefix="react-select"
-          name="form-field-name"
-          options={categories}
-        />
+        {/*<Label className="mt-4">*/}
+        {/*  <IntlMessages id="pages.category" />*/}
+        {/*</Label>*/}
+        {/*<Select*/}
+        {/*  components={{ Input: CustomSelectInput }}*/}
+        {/*  className="react-select"*/}
+        {/*  classNamePrefix="react-select"*/}
+        {/*  name="form-field-name"*/}
+        {/*  options={categories}*/}
+        {/*/>*/}
         <Label className="mt-4">
           <IntlMessages id="pages.description" />
         </Label>
         <Input type="textarea" name="text" id="exampleText" />
         <Label className="mt-4">
-          <IntlMessages id="pages.status" />
+          <IntlMessages id="pages.price" />
         </Label>
-        <CustomInput
-          type="radio"
-          id="exCustomRadio"
-          name="customRadio"
-          label="ON HOLD"
-        />
-        <CustomInput
-          type="radio"
-          id="exCustomRadio2"
-          name="customRadio"
-          label="PROCESSED"
-        />
+        <Input type="number" />
+        {/*<Label className="mt-4">*/}
+        {/*  <IntlMessages id="pages.status" />*/}
+        {/*</Label>*/}
+        {/*<CustomInput*/}
+        {/*  type="radio"*/}
+        {/*  id="exCustomRadio"*/}
+        {/*  name="customRadio"*/}
+        {/*  label="ON HOLD"*/}
+        {/*/>*/}
+        {/*<CustomInput*/}
+        {/*  type="radio"*/}
+        {/*  id="exCustomRadio2"*/}
+        {/*  name="customRadio"*/}
+        {/*  label="PROCESSED"*/}
+        {/*/>*/}
         <Label className="mt-4">
           <IntlMessages id="pages.photo" />
         </Label>

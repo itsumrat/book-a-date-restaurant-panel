@@ -16,6 +16,7 @@ import salmonfish from '../assets/img/Mains Salmon Fish .jpeg';
 const products = [
   {
     id: 1,
+    active: false,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -35,6 +36,7 @@ const products = [
   },
   {
     id: 2,
+    active: false,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -54,6 +56,7 @@ const products = [
   },
   {
     id: 3,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -73,6 +76,7 @@ const products = [
   },
   {
     id: 4,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -92,6 +96,7 @@ const products = [
   },
   {
     id: 23,
+    active: false,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -111,6 +116,7 @@ const products = [
   },
   {
     id: 81,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -130,6 +136,7 @@ const products = [
   },
   {
     id: 5,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -149,6 +156,7 @@ const products = [
   },
   {
     id: 6,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -168,6 +176,7 @@ const products = [
   },
   {
     id: 7,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -187,6 +196,7 @@ const products = [
   },
   {
     id: 8,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -206,6 +216,7 @@ const products = [
   },
   {
     id: 9,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -227,6 +238,7 @@ const products = [
   },
   {
     id: 10,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -246,6 +258,7 @@ const products = [
   },
   {
     id: 11,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -265,6 +278,7 @@ const products = [
   },
   {
     id: 12,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -284,6 +298,7 @@ const products = [
   },
   {
     id: 13,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -305,6 +320,7 @@ const products = [
   },
   {
     id: 14,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -324,6 +340,7 @@ const products = [
   },
   {
     id: 15,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -343,6 +360,7 @@ const products = [
   },
   {
     id: 16,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -362,6 +380,7 @@ const products = [
   },
   {
     id: 17,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -381,6 +400,7 @@ const products = [
   },
   {
     id: 18,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -400,6 +420,7 @@ const products = [
   },
   {
     id: 19,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -419,6 +440,7 @@ const products = [
   },
   {
     id: 20,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -438,6 +460,7 @@ const products = [
   },
   {
     id: 21,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -457,6 +480,7 @@ const products = [
   },
   {
     id: 22,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -476,6 +500,7 @@ const products = [
   },
   {
     id: 82,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -495,6 +520,7 @@ const products = [
   },
   {
     id: 83,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
