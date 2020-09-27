@@ -41,10 +41,13 @@ import SmallLineCharts from '../../../containers/dashboards/SmallLineCharts';
 import WebsiteVisitsChartCard from '../../../containers/dashboards/WebsiteVisitsChartCard';
 import NewComments from '../../../containers/dashboards/NewComments';
 import Orders from '../../../containers/pages/Orders';
+import AddNewModal from '../../../containers/pages/AddNewModal';
 
 const ProductDetailPage = ({ match, intl }) => {
   const [activeTab, setActiveTab] = useState('details');
   const [activeTabEx, setActiveTabEx] = useState('details');
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
   const product = products.find(
     (prod, i) => prod.id.toString() === match.params.id
   );
@@ -54,34 +57,34 @@ const ProductDetailPage = ({ match, intl }) => {
       <Row>
         <Colxx xxs="12">
           <h1>{product && product.title}</h1>
-          {/*<div className="text-zero top-right-button-container">*/}
-          {/*  <UncontrolledDropdown>*/}
-          {/*    <DropdownToggle*/}
-          {/*      caret*/}
-          {/*      color="primary"*/}
-          {/*      size="lg"*/}
-          {/*      outline*/}
-          {/*      className="top-right-button top-right-button-single"*/}
-          {/*    >*/}
-          {/*      <IntlMessages id="pages.actions" />*/}
-          {/*    </DropdownToggle>*/}
-          {/*    <DropdownMenu>*/}
-          {/*      <DropdownItem header>*/}
-          {/*        <IntlMessages id="pages.header" />*/}
-          {/*      </DropdownItem>*/}
-          {/*      <DropdownItem disabled>*/}
-          {/*        <IntlMessages id="pages.delete" />*/}
-          {/*      </DropdownItem>*/}
-          {/*      <DropdownItem>*/}
-          {/*        <IntlMessages id="pages.another-action" />*/}
-          {/*      </DropdownItem>*/}
-          {/*      <DropdownItem divider />*/}
-          {/*      <DropdownItem>*/}
-          {/*        <IntlMessages id="pages.another-action" />*/}
-          {/*      </DropdownItem>*/}
-          {/*    </DropdownMenu>*/}
-          {/*  </UncontrolledDropdown>*/}
-          {/*</div>*/}
+          {/* <div className="text-zero top-right-button-container"> */}
+          {/*  <UncontrolledDropdown> */}
+          {/*    <DropdownToggle */}
+          {/*      caret */}
+          {/*      color="primary" */}
+          {/*      size="lg" */}
+          {/*      outline */}
+          {/*      className="top-right-button top-right-button-single" */}
+          {/*    > */}
+          {/*      <IntlMessages id="pages.actions" /> */}
+          {/*    </DropdownToggle> */}
+          {/*    <DropdownMenu> */}
+          {/*      <DropdownItem header> */}
+          {/*        <IntlMessages id="pages.header" /> */}
+          {/*      </DropdownItem> */}
+          {/*      <DropdownItem disabled> */}
+          {/*        <IntlMessages id="pages.delete" /> */}
+          {/*      </DropdownItem> */}
+          {/*      <DropdownItem> */}
+          {/*        <IntlMessages id="pages.another-action" /> */}
+          {/*      </DropdownItem> */}
+          {/*      <DropdownItem divider /> */}
+          {/*      <DropdownItem> */}
+          {/*        <IntlMessages id="pages.another-action" /> */}
+          {/*      </DropdownItem> */}
+          {/*    </DropdownMenu> */}
+          {/*  </UncontrolledDropdown> */}
+          {/* </div> */}
 
           <Breadcrumb match={match} />
           <Separator className="mb-5" />
@@ -137,34 +140,34 @@ const ProductDetailPage = ({ match, intl }) => {
                         <IntlMessages id="pages.details-title" />
                       </NavLink>
                     </NavItem>
-                    {/*<NavItem>*/}
-                    {/*  <NavLink*/}
-                    {/*    className={classnames({*/}
-                    {/*      active: activeTab === 'comments',*/}
-                    {/*      'nav-link': true,*/}
-                    {/*    })}*/}
-                    {/*    onClick={() => setActiveTab('comments')}*/}
-                    {/*    to="#"*/}
-                    {/*    location={{}}*/}
-                    {/*  >*/}
-                    {/*    <IntlMessages id="pages.comments-title" />*/}
-                    {/*    (19)*/}
-                    {/*  </NavLink>*/}
-                    {/*</NavItem>*/}
-                    {/*<NavItem>*/}
-                    {/*  <NavLink*/}
-                    {/*    className={classnames({*/}
-                    {/*      active: activeTab === 'questions',*/}
-                    {/*      'nav-link': true,*/}
-                    {/*    })}*/}
-                    {/*    onClick={() => setActiveTab('questions')}*/}
-                    {/*    to="#"*/}
-                    {/*    location={{}}*/}
-                    {/*  >*/}
-                    {/*    <IntlMessages id="pages.questions-title" />*/}
-                    {/*    (6)*/}
-                    {/*  </NavLink>*/}
-                    {/*</NavItem>*/}
+                    {/* <NavItem> */}
+                    {/*  <NavLink */}
+                    {/*    className={classnames({ */}
+                    {/*      active: activeTab === 'comments', */}
+                    {/*      'nav-link': true, */}
+                    {/*    })} */}
+                    {/*    onClick={() => setActiveTab('comments')} */}
+                    {/*    to="#" */}
+                    {/*    location={{}} */}
+                    {/*  > */}
+                    {/*    <IntlMessages id="pages.comments-title" /> */}
+                    {/*    (19) */}
+                    {/*  </NavLink> */}
+                    {/* </NavItem> */}
+                    {/* <NavItem> */}
+                    {/*  <NavLink */}
+                    {/*    className={classnames({ */}
+                    {/*      active: activeTab === 'questions', */}
+                    {/*      'nav-link': true, */}
+                    {/*    })} */}
+                    {/*    onClick={() => setActiveTab('questions')} */}
+                    {/*    to="#" */}
+                    {/*    location={{}} */}
+                    {/*  > */}
+                    {/*    <IntlMessages id="pages.questions-title" /> */}
+                    {/*    (6) */}
+                    {/*  </NavLink> */}
+                    {/* </NavItem> */}
                   </Nav>
                 </CardHeader>
 
@@ -173,6 +176,18 @@ const ProductDetailPage = ({ match, intl }) => {
                     <Row>
                       <Colxx sm="12">
                         <CardBody>
+                          <Colxx className="d-inline-flex justify-content-between pl-0 pr-0">
+                            <p className="font-weight-bold mb-2">
+                              <IntlMessages id="pages.title" />
+                            </p>
+                            <Button onClick={() => {
+                              setIsEdit(true);
+                              setModalOpen(true)
+                            }}>
+                              Edit
+                            </Button>
+                          </Colxx>
+                          <p className="mb-3">{product.title}</p>
                           <p className="font-weight-bold">Descriptions</p>
                           <p>{product.description}</p>
                           <br />
@@ -211,116 +226,116 @@ const ProductDetailPage = ({ match, intl }) => {
                       </Colxx>
                     </Row>
                   </TabPane>
-                  {/*<TabPane tabId="comments">*/}
-                  {/*  <Row>*/}
-                  {/*    <Colxx sm="12">*/}
-                  {/*      <CardBody>*/}
-                  {/*        {commentWithLikesData.map((item) => {*/}
-                  {/*          return (*/}
-                  {/*            <CommentWithLikes*/}
-                  {/*              data={item}*/}
-                  {/*              key={`comments_${item.key}`}*/}
-                  {/*            />*/}
-                  {/*          );*/}
-                  {/*        })}*/}
-                  {/*        <InputGroup className="comment-contaiener">*/}
-                  {/*          <Input placeholder={messages['pages.addComment']} />*/}
-                  {/*          <InputGroupAddon addonType="append">*/}
-                  {/*            <Button color="primary">*/}
-                  {/*              <span className="d-inline-block">*/}
-                  {/*                {messages['pages.send']}*/}
-                  {/*              </span>{' '}*/}
-                  {/*              <i className="simple-icon-arrow-right ml-2" />*/}
-                  {/*            </Button>*/}
-                  {/*          </InputGroupAddon>*/}
-                  {/*        </InputGroup>*/}
-                  {/*      </CardBody>*/}
-                  {/*    </Colxx>*/}
-                  {/*  </Row>*/}
-                  {/*</TabPane>*/}
-                  {/*<TabPane tabId="questions">*/}
-                  {/*  <Row>*/}
-                  {/*    <Colxx sm="12">*/}
-                  {/*      <CardBody>*/}
-                  {/*        {detailsQuestionsData.map((item) => {*/}
-                  {/*          return (*/}
-                  {/*            <QuestionAnswer*/}
-                  {/*              data={item}*/}
-                  {/*              key={`qa_${item.key}`}*/}
-                  {/*            />*/}
-                  {/*          );*/}
-                  {/*        })}*/}
-                  {/*      </CardBody>*/}
-                  {/*    </Colxx>*/}
-                  {/*  </Row>*/}
-                  {/*</TabPane>*/}
+                  {/* <TabPane tabId="comments"> */}
+                  {/*  <Row> */}
+                  {/*    <Colxx sm="12"> */}
+                  {/*      <CardBody> */}
+                  {/*        {commentWithLikesData.map((item) => { */}
+                  {/*          return ( */}
+                  {/*            <CommentWithLikes */}
+                  {/*              data={item} */}
+                  {/*              key={`comments_${item.key}`} */}
+                  {/*            /> */}
+                  {/*          ); */}
+                  {/*        })} */}
+                  {/*        <InputGroup className="comment-contaiener"> */}
+                  {/*          <Input placeholder={messages['pages.addComment']} /> */}
+                  {/*          <InputGroupAddon addonType="append"> */}
+                  {/*            <Button color="primary"> */}
+                  {/*              <span className="d-inline-block"> */}
+                  {/*                {messages['pages.send']} */}
+                  {/*              </span>{' '} */}
+                  {/*              <i className="simple-icon-arrow-right ml-2" /> */}
+                  {/*            </Button> */}
+                  {/*          </InputGroupAddon> */}
+                  {/*        </InputGroup> */}
+                  {/*      </CardBody> */}
+                  {/*    </Colxx> */}
+                  {/*  </Row> */}
+                  {/* </TabPane> */}
+                  {/* <TabPane tabId="questions"> */}
+                  {/*  <Row> */}
+                  {/*    <Colxx sm="12"> */}
+                  {/*      <CardBody> */}
+                  {/*        {detailsQuestionsData.map((item) => { */}
+                  {/*          return ( */}
+                  {/*            <QuestionAnswer */}
+                  {/*              data={item} */}
+                  {/*              key={`qa_${item.key}`} */}
+                  {/*            /> */}
+                  {/*          ); */}
+                  {/*        })} */}
+                  {/*      </CardBody> */}
+                  {/*    </Colxx> */}
+                  {/*  </Row> */}
+                  {/* </TabPane> */}
                 </TabContent>
               </Card>
             </Colxx>
 
-            {/*<Colxx xxs="12" xl="4" className="col-right">*/}
-            {/*  <Card className="mb-4">*/}
-            {/*    <CardBody>*/}
-            {/*      <div className="mb-3">*/}
-            {/*        <div className="post-icon mr-3 d-inline-block">*/}
-            {/*          <NavLink to="#" location={{}}>*/}
-            {/*            <i className="simple-icon-heart mr-1" />*/}
-            {/*          </NavLink>*/}
-            {/*          <span>4 {messages['pages.likes']}</span>*/}
-            {/*        </div>*/}
+            {/* <Colxx xxs="12" xl="4" className="col-right"> */}
+            {/*  <Card className="mb-4"> */}
+            {/*    <CardBody> */}
+            {/*      <div className="mb-3"> */}
+            {/*        <div className="post-icon mr-3 d-inline-block"> */}
+            {/*          <NavLink to="#" location={{}}> */}
+            {/*            <i className="simple-icon-heart mr-1" /> */}
+            {/*          </NavLink> */}
+            {/*          <span>4 {messages['pages.likes']}</span> */}
+            {/*        </div> */}
 
-            {/*        <div className="post-icon mr-3 d-inline-block">*/}
-            {/*          <NavLink to="#" location={{}}>*/}
-            {/*            <i className="simple-icon-bubble mr-1" />*/}
-            {/*          </NavLink>*/}
-            {/*          <span>2 {messages['pages.comments-title']}</span>*/}
-            {/*        </div>*/}
-            {/*      </div>*/}
-            {/*      <p className="mb-3">*/}
-            {/*        Vivamus ultricies augue vitae commodo condimentum. Nullam*/}
-            {/*        faucibus eros eu mauris feugiat, eget consectetur tortor*/}
-            {/*        tempus.*/}
-            {/*        <br />*/}
-            {/*        <br />*/}
-            {/*        Sed volutpat mollis dui eget fringilla. Vestibulum blandit*/}
-            {/*        urna ut tellus lobortis tristique. Vestibulum ante ipsum*/}
-            {/*        primis in faucibus orci luctus et ultrices posuere cubilia*/}
-            {/*        Curae; Pellentesque quis cursus mauris.*/}
-            {/*        <br />*/}
-            {/*        <br />*/}
-            {/*        Nulla non purus fermentum, pulvinar dui condimentum,*/}
-            {/*        malesuada nibh. Sed viverra quam urna, at condimentum ante*/}
-            {/*        viverra non. Mauris posuere erat sapien, a convallis libero*/}
-            {/*        lobortis sit amet. Suspendisse in orci tellus.*/}
-            {/*      </p>*/}
-            {/*      <p className="text-muted text-small mb-2">*/}
-            {/*        {messages['forms.tags']}*/}
-            {/*      </p>*/}
-            {/*      <p className="mb-3">*/}
-            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-            {/*          FRONTEND*/}
-            {/*        </Badge>*/}
-            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-            {/*          JAVASCRIPT*/}
-            {/*        </Badge>*/}
-            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-            {/*          SECURITY*/}
-            {/*        </Badge>*/}
-            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill>*/}
-            {/*          DESIGN*/}
-            {/*        </Badge>*/}
-            {/*      </p>*/}
-            {/*    </CardBody>*/}
-            {/*  </Card>*/}
-            {/*  <Card className="mb-4">*/}
-            {/*    <CardBody>*/}
-            {/*      <CardTitle>*/}
-            {/*        <IntlMessages id="pages.other-products" />*/}
-            {/*      </CardTitle>*/}
-            {/*      <GalleryDetail productCategory={product.category} />*/}
-            {/*    </CardBody>*/}
-            {/*  </Card>*/}
-            {/*</Colxx>*/}
+            {/*        <div className="post-icon mr-3 d-inline-block"> */}
+            {/*          <NavLink to="#" location={{}}> */}
+            {/*            <i className="simple-icon-bubble mr-1" /> */}
+            {/*          </NavLink> */}
+            {/*          <span>2 {messages['pages.comments-title']}</span> */}
+            {/*        </div> */}
+            {/*      </div> */}
+            {/*      <p className="mb-3"> */}
+            {/*        Vivamus ultricies augue vitae commodo condimentum. Nullam */}
+            {/*        faucibus eros eu mauris feugiat, eget consectetur tortor */}
+            {/*        tempus. */}
+            {/*        <br /> */}
+            {/*        <br /> */}
+            {/*        Sed volutpat mollis dui eget fringilla. Vestibulum blandit */}
+            {/*        urna ut tellus lobortis tristique. Vestibulum ante ipsum */}
+            {/*        primis in faucibus orci luctus et ultrices posuere cubilia */}
+            {/*        Curae; Pellentesque quis cursus mauris. */}
+            {/*        <br /> */}
+            {/*        <br /> */}
+            {/*        Nulla non purus fermentum, pulvinar dui condimentum, */}
+            {/*        malesuada nibh. Sed viverra quam urna, at condimentum ante */}
+            {/*        viverra non. Mauris posuere erat sapien, a convallis libero */}
+            {/*        lobortis sit amet. Suspendisse in orci tellus. */}
+            {/*      </p> */}
+            {/*      <p className="text-muted text-small mb-2"> */}
+            {/*        {messages['forms.tags']} */}
+            {/*      </p> */}
+            {/*      <p className="mb-3"> */}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill> */}
+            {/*          FRONTEND */}
+            {/*        </Badge> */}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill> */}
+            {/*          JAVASCRIPT */}
+            {/*        </Badge> */}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill> */}
+            {/*          SECURITY */}
+            {/*        </Badge> */}
+            {/*        <Badge color="outline-secondary" className="mb-1 mr-1" pill> */}
+            {/*          DESIGN */}
+            {/*        </Badge> */}
+            {/*      </p> */}
+            {/*    </CardBody> */}
+            {/*  </Card> */}
+            {/*  <Card className="mb-4"> */}
+            {/*    <CardBody> */}
+            {/*      <CardTitle> */}
+            {/*        <IntlMessages id="pages.other-products" /> */}
+            {/*      </CardTitle> */}
+            {/*      <GalleryDetail productCategory={product.category} /> */}
+            {/*    </CardBody> */}
+            {/*  </Card> */}
+            {/* </Colxx> */}
           </Row>
         </Colxx>
 
@@ -362,11 +377,11 @@ const ProductDetailPage = ({ match, intl }) => {
                   <Row>
                     <Colxx xxs="12" lg="4" className="mb-4">
                       <Card className="mb-4">
-                        {/*<div className="position-absolute card-top-buttons">*/}
-                        {/*  <Button outline color="white" className="icon-button">*/}
-                        {/*    <i className="simple-icon-pencil" />*/}
-                        {/*  </Button>*/}
-                        {/*</div>*/}
+                        {/* <div className="position-absolute card-top-buttons"> */}
+                        {/*  <Button outline color="white" className="icon-button"> */}
+                        {/*    <i className="simple-icon-pencil" /> */}
+                        {/*  </Button> */}
+                        {/* </div> */}
                         <img
                           src={product.img}
                           alt="Detail"
@@ -390,17 +405,17 @@ const ProductDetailPage = ({ match, intl }) => {
                             served with an ice cold glass of milk!
                           </p>
 
-                          {/*<p className="text-muted text-small mb-2">*/}
-                          {/*  <IntlMessages id="pages.rating" />*/}
-                          {/*</p>*/}
-                          {/*<div className="mb-3">*/}
-                          {/*  <Rating total={5} rating={5} interactive={false} />*/}
-                          {/*</div>*/}
+                          {/* <p className="text-muted text-small mb-2"> */}
+                          {/*  <IntlMessages id="pages.rating" /> */}
+                          {/* </p> */}
+                          {/* <div className="mb-3"> */}
+                          {/*  <Rating total={5} rating={5} interactive={false} /> */}
+                          {/* </div> */}
 
-                          {/*<p className="text-muted text-small mb-2">*/}
-                          {/*  <IntlMessages id="pages.price" />*/}
-                          {/*</p>*/}
-                          {/*<p className="mb-3">$8,14</p>*/}
+                          {/* <p className="text-muted text-small mb-2"> */}
+                          {/*  <IntlMessages id="pages.price" /> */}
+                          {/* </p> */}
+                          {/* <p className="mb-3">$8,14</p> */}
                           <p className="text-muted text-small mb-2">
                             <IntlMessages id="pages.ingredients" />
                           </p>
@@ -430,10 +445,10 @@ const ProductDetailPage = ({ match, intl }) => {
                             </p>
                           </div>
                           <Button>Add Ingredient</Button>
-                          {/*<p className="text-muted text-small mb-2">*/}
-                          {/*  <IntlMessages id="pages.is-vegan" />*/}
-                          {/*</p>*/}
-                          {/*<p>No</p>*/}
+                          {/* <p className="text-muted text-small mb-2"> */}
+                          {/*  <IntlMessages id="pages.is-vegan" /> */}
+                          {/* </p> */}
+                          {/* <p>No</p> */}
                         </CardBody>
                       </Card>
                       <Row>
@@ -474,6 +489,14 @@ const ProductDetailPage = ({ match, intl }) => {
           </Card>
         </Colxx>
       </Row>
+
+      <AddNewModal
+        product={product}
+        isEdit={isEdit}
+        modalOpen={modalOpen}
+        toggleModal={() => setModalOpen(!modalOpen)}
+        // categories={categories}
+      />
     </>
   );
 };

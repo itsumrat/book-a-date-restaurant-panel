@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Badge,
   Button,
   Card,
   CardBody,
@@ -41,6 +42,15 @@ const FoodCard = ({ product }) => {
             />
           </NavLink>
           {product.active && (
+            <Badge
+              color={product.statusColor}
+              pill
+              className="position-absolute badge-top-left"
+            >
+              Advertised
+            </Badge>
+          )}
+          {product.active && (
             <UncontrolledDropdown
               direction="left"
               style={{ top: 0, right: '-8px' }}
@@ -76,7 +86,7 @@ const FoodCard = ({ product }) => {
                   type="button"
                   className="btn btn-link"
                 >
-                  Request Submission
+                  Make Advertise
                 </button>
               ) : (
                 <Button>Activated</Button>

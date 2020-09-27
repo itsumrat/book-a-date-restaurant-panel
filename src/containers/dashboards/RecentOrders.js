@@ -27,7 +27,7 @@ const RecentOrders = () => {
               return (
                 <div key={index} className="d-flex flex-row mb-3">
                   <NavLink
-                    to="/app/pages/product/details"
+                    to={`/app/products/details/${order.id}`}
                     className="d-block position-relative"
                   >
                     <img
@@ -47,7 +47,7 @@ const RecentOrders = () => {
                   </NavLink>
 
                   <div className="pl-3 pt-2 pr-2 pb-2">
-                    <NavLink to="/app/pages/product/details">
+                    <NavLink to={`/app/products/details/${order.id}`}>
                       <p
                         style={{ marginBottom: 2 }}
                         className="list-item-heading"

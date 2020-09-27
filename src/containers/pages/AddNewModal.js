@@ -65,7 +65,7 @@ const dropzoneConfig = {
   ),
   headers: { 'My-Awesome-Header': 'header value' },
 };
-const AddNewModal = ({ modalOpen, toggleModal }) => {
+const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
   let myDropzone;
   const clear = () => {
     myDropzone.removeAllFiles(true);
@@ -78,46 +78,55 @@ const AddNewModal = ({ modalOpen, toggleModal }) => {
       backdrop="static"
     >
       <ModalHeader toggle={toggleModal}>
-        <IntlMessages id="pages.add-new-modal-title" />
+        {isEdit ? (
+          <IntlMessages id="pages.update-product" />
+        ) : (
+          <IntlMessages id="pages.add-new-modal-title" />
+        )}
       </ModalHeader>
       <ModalBody>
         <Label>
           <IntlMessages id="pages.product-name" />
         </Label>
-        <Input />
-        {/*<Label className="mt-4">*/}
-        {/*  <IntlMessages id="pages.category" />*/}
-        {/*</Label>*/}
-        {/*<Select*/}
-        {/*  components={{ Input: CustomSelectInput }}*/}
-        {/*  className="react-select"*/}
-        {/*  classNamePrefix="react-select"*/}
-        {/*  name="form-field-name"*/}
-        {/*  options={categories}*/}
-        {/*/>*/}
+        <Input defaultValue={isEdit ? product.title : ''} />
+        {/* <Label className="mt-4"> */}
+        {/*  <IntlMessages id="pages.category" /> */}
+        {/* </Label> */}
+        {/* <Select */}
+        {/*  components={{ Input: CustomSelectInput }} */}
+        {/*  className="react-select" */}
+        {/*  classNamePrefix="react-select" */}
+        {/*  name="form-field-name" */}
+        {/*  options={categories} */}
+        {/* /> */}
         <Label className="mt-4">
           <IntlMessages id="pages.description" />
         </Label>
-        <Input type="textarea" name="text" id="exampleText" />
+        <Input
+          defaultValue={isEdit ? product.description : ''}
+          type="textarea"
+          name="text"
+          id="exampleText"
+        />
         <Label className="mt-4">
           <IntlMessages id="pages.price" />
         </Label>
-        <Input type="number" />
-        {/*<Label className="mt-4">*/}
-        {/*  <IntlMessages id="pages.status" />*/}
-        {/*</Label>*/}
-        {/*<CustomInput*/}
-        {/*  type="radio"*/}
-        {/*  id="exCustomRadio"*/}
-        {/*  name="customRadio"*/}
-        {/*  label="ON HOLD"*/}
-        {/*/>*/}
-        {/*<CustomInput*/}
-        {/*  type="radio"*/}
-        {/*  id="exCustomRadio2"*/}
-        {/*  name="customRadio"*/}
-        {/*  label="PROCESSED"*/}
-        {/*/>*/}
+        <Input defaultValue={isEdit ? product.price : null} type="number" />
+        {/* <Label className="mt-4"> */}
+        {/*  <IntlMessages id="pages.status" /> */}
+        {/* </Label> */}
+        {/* <CustomInput */}
+        {/*  type="radio" */}
+        {/*  id="exCustomRadio" */}
+        {/*  name="customRadio" */}
+        {/*  label="ON HOLD" */}
+        {/* /> */}
+        {/* <CustomInput */}
+        {/*  type="radio" */}
+        {/*  id="exCustomRadio2" */}
+        {/*  name="customRadio" */}
+        {/*  label="PROCESSED" */}
+        {/* /> */}
         <Label className="mt-4">
           <IntlMessages id="pages.photo" />
         </Label>
