@@ -59,19 +59,19 @@ const ImageListView = ({ product, isSelect, collect, onCheckItem }) => {
           </div>
           <CardBody>
             <Row>
-              {/*<Colxx*/}
-              {/*  xxs="2"*/}
-              {/*  onClick={(event) => onCheckItem(event, product.id)}*/}
-              {/*>*/}
-              {/*  <CustomInput*/}
-              {/*    className="item-check mb-0"*/}
-              {/*    type="checkbox"*/}
-              {/*    id={`check_${product.id}`}*/}
-              {/*    checked={isSelect}*/}
-              {/*    onChange={() => {}}*/}
-              {/*    label=""*/}
-              {/*  />*/}
-              {/*</Colxx>*/}
+              <Colxx
+                xxs="2"
+                onClick={(event) => onCheckItem(event, product.id)}
+              >
+                <CustomInput
+                  className="item-check mb-0"
+                  type="checkbox"
+                  id={`check_${product.id}`}
+                  checked={isSelect}
+                  onChange={() => {}}
+                  label=""
+                />
+              </Colxx>
               <Colxx xxs="10" className="mb-3">
                 <CardSubtitle>{product.title}</CardSubtitle>
                 <CardText className="text-muted text-small mb-0 font-weight-light">

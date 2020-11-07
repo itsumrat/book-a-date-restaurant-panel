@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   CustomInput,
   Button,
@@ -14,6 +14,9 @@ import { DropzoneComponent } from 'react-dropzone-component';
 import CustomSelectInput from '../../components/common/CustomSelectInput';
 import IntlMessages from '../../helpers/IntlMessages';
 import 'dropzone/dist/min/dropzone.min.css';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 const ReactDOMServer = require('react-dom/server');
 
@@ -70,6 +73,8 @@ const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
   const clear = () => {
     myDropzone.removeAllFiles(true);
   };
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   return (
     <Modal
       isOpen={modalOpen}
@@ -112,6 +117,17 @@ const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
           <IntlMessages id="pages.price" />
         </Label>
         <Input defaultValue={isEdit ? product.price : null} type="number" />
+        <Label className="mt-4">
+          <IntlMessages id="pages.start-day" />
+        </Label>
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+        />
+        <Label className="mt-4">
+          <IntlMessages id="pages.end-day" />
+        </Label>
+        <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
         {/* <Label className="mt-4"> */}
         {/*  <IntlMessages id="pages.status" /> */}
         {/* </Label> */}

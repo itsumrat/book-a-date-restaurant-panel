@@ -105,44 +105,11 @@ const data = [
         label: 'menu.desserts',
         to: '/app/products/desserts',
       },
-      // {
-      //   icon: 'simple-icon-list',
-      //   label: 'menu.thumb-list',
-      //   to: '/app/products/thumb-list',
-      // },
-    ],
-  },
-  {
-    id: 'all-product',
-    icon: 'iconsminds-safe-box',
-    label: 'all-product.all-product',
-    to: '/app/all-product',
-  },
-  {
-    id: 'deactivated-product',
-    icon: 'iconsminds-repair',
-    label: 'deactivated-product.deactivated-product',
-    to: '/app/deactivated-product',
-    subs: [
       {
-        icon: 'iconsminds-coffee',
-        label: 'menu.drinks',
-        to: '/app/deactivated-product/drinks',
-      },
-      {
-        icon: 'iconsminds-chopsticks',
-        label: 'menu.starters',
-        to: '/app/deactivated-product/starters',
-      },
-      {
-        icon: 'iconsminds-hamburger',
-        label: 'menu.mains',
-        to: '/app/deactivated-product/mains',
-      },
-      {
-        icon: 'iconsminds-ice-cream',
-        label: 'menu.desserts',
-        to: '/app/deactivated-product/desserts',
+        id: 'all-product',
+        icon: 'iconsminds-safe-box',
+        label: 'all-product.all-product',
+        to: '/app/products/all-products',
       },
       // {
       //   icon: 'simple-icon-list',
@@ -151,6 +118,39 @@ const data = [
       // },
     ],
   },
+  // {
+  //   id: 'deactivated-product',
+  //   icon: 'iconsminds-repair',
+  //   label: 'deactivated-product.deactivated-product',
+  //   to: '/app/deactivated-product',
+  //   subs: [
+  //     {
+  //       icon: 'iconsminds-coffee',
+  //       label: 'menu.drinks',
+  //       to: '/app/deactivated-product/drinks',
+  //     },
+  //     {
+  //       icon: 'iconsminds-chopsticks',
+  //       label: 'menu.starters',
+  //       to: '/app/deactivated-product/starters',
+  //     },
+  //     {
+  //       icon: 'iconsminds-hamburger',
+  //       label: 'menu.mains',
+  //       to: '/app/deactivated-product/mains',
+  //     },
+  //     {
+  //       icon: 'iconsminds-ice-cream',
+  //       label: 'menu.desserts',
+  //       to: '/app/deactivated-product/desserts',
+  //     },
+  //     // {
+  //     //   icon: 'simple-icon-list',
+  //     //   label: 'menu.thumb-list',
+  //     //   to: '/app/products/thumb-list',
+  //     // },
+  //   ],
+  // },
   {
     id: 'reporting',
     icon: 'iconsminds-address-book-2',

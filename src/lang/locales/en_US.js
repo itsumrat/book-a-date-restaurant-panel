@@ -283,6 +283,8 @@ module.exports = {
   'open-close-hour.special-days': 'Special Days',
   /* 05.Pages */
   'pages.add-new': 'ADD NEW',
+  'pages.start-day': 'Advertise start day',
+  'pages.end-day': 'Advertise end day',
   'pages.add-new-modal-title': 'Add New Item',
   'pages.display-options': 'Display Options',
   'pages.orderby': 'Order By : ',

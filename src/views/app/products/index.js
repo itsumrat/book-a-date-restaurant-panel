@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Details from './details';
 import ProductDetailPage from './ProductDetailPage';
 import ProductsDetailsAltPages from './Products-details-alt';
+import ProductImageList from '../allProducts/ProductImagelist';
 
 const ProductDrinks = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-default" */ './drinks')
@@ -46,6 +47,10 @@ const Products = ({ match }) => {
         <Route
           path={`${match.url}/details-alt`}
           render={(props) => <ProductsDetailsAltPages {...props} />}
+        />
+        <Route
+          path={`${match.url}/all-products`}
+          render={(props) => <ProductImageList {...props} />}
         />
         {/*<Route*/}
         {/*  exact*/}

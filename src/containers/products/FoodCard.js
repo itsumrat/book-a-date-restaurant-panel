@@ -50,22 +50,22 @@ const FoodCard = ({ product }) => {
               Advertised
             </Badge>
           )}
-          {product.active && (
-            <UncontrolledDropdown
-              direction="left"
-              style={{ top: 0, right: '-8px' }}
-              className="position-absolute badge-top-right"
-            >
-              <DropdownToggle className="m-0" style={{ padding: '5px 10px' }}>
-                :
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>Deactivate</DropdownItem>
-                <DropdownItem>Edit</DropdownItem>
-                <DropdownItem>Delete</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          )}
+          {/*{product.active && (*/}
+          {/*  <UncontrolledDropdown*/}
+          {/*    direction="left"*/}
+          {/*    style={{ top: 0, right: '-8px' }}*/}
+          {/*    className="position-absolute badge-top-right"*/}
+          {/*  >*/}
+          {/*    <DropdownToggle className="m-0" style={{ padding: '5px 10px' }}>*/}
+          {/*      :*/}
+          {/*    </DropdownToggle>*/}
+          {/*    <DropdownMenu>*/}
+          {/*      <DropdownItem>Deactivate</DropdownItem>*/}
+          {/*      <DropdownItem>Edit</DropdownItem>*/}
+          {/*      <DropdownItem>Delete</DropdownItem>*/}
+          {/*    </DropdownMenu>*/}
+          {/*  </UncontrolledDropdown>*/}
+          {/*)}*/}
         </div>
         <CardBody>
           <NavLink to={`/app/products/details/${product.id}`}>
@@ -79,18 +79,18 @@ const FoodCard = ({ product }) => {
                 {`£ ${product.price}`}
               </p>
 
-              {product.active ? (
-                <button
-                  onClick={() => setModalBasic(true)}
-                  style={{ paddingTop: 0, paddingBottom: 0 }}
-                  type="button"
-                  className="btn btn-link"
-                >
-                  Make Advertise
-                </button>
-              ) : (
-                <Button>Activated</Button>
-              )}
+              {/*{product.active ? (*/}
+              {/*  <button*/}
+              {/*    onClick={() => setModalBasic(true)}*/}
+              {/*    style={{ paddingTop: 0, paddingBottom: 0 }}*/}
+              {/*    type="button"*/}
+              {/*    className="btn btn-link"*/}
+              {/*  >*/}
+              {/*    Make Advertise*/}
+              {/*  </button>*/}
+              {/*) : (*/}
+              {/*  <Button>Activated</Button>*/}
+              {/*)}*/}
             </Colxx>
           </Row>
         </CardBody>
