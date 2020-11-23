@@ -125,6 +125,9 @@ const DefaultDashboard = ({ intl, match }) => {
         {/* </Colxx> */}
         <Colxx md="6" className="mb-4">
           <TotalRevenue />
+          <div className="mt-4">
+            <SmallLineCharts itemClass="dashboard-small-chart-analytics" />
+          </div>
         </Colxx>
       </Row>
       <Row>
@@ -211,10 +214,7 @@ const DefaultDashboard = ({ intl, match }) => {
         {/* <Colxx xl="4" lg="6" md="12" className="mb-4"> */}
         {/*  <ProfileStatuses cardClass="dashboard-progress" /> */}
         {/* </Colxx> */}
-        <Colxx xl="4" lg="6" md="12">
-          <SmallLineCharts itemClass="dashboard-small-chart-analytics" />
-        </Colxx>
-        <Colxx xl="8" xxs="12" lg="6" className="mb-4">
+        <Colxx xl="12" xxs="12" lg="6" className="mb-4">
           <OrderStockRadarChart />
         </Colxx>
       </Row>
@@ -224,12 +224,8 @@ const DefaultDashboard = ({ intl, match }) => {
         {/*  <ProductCategoriesPolarArea /> */}
         {/* </Colxx> */}
         <Colxx style={{ height: 500 }} md="6" className="mb-4">
-          <h3> Starters Weekly</h3>
+          <h3> Total Reservations</h3>
           <BarChart shadow data={starterWeeklyBilling} />
-        </Colxx>
-        <Colxx style={{ height: 500 }} md="12" className="mb-4">
-          <h3> Starters Monthly</h3>
-          <BarChart shadow data={starterMonthlyBilling} />
         </Colxx>
       </Row>
       {/* <Row> */}

@@ -38,7 +38,7 @@ const OrderStockRadarChart = ({ controls = true}) => {
             </UncontrolledDropdown>
           </div>
         )}
-        <div className="chart-container">
+        <div style={{ height: 500 }} className="chart-container">
           <RadarChart shadow data={radarChartData} />
         </div>
       </CardBody>

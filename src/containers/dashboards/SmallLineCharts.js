@@ -28,20 +28,20 @@ const SmallLineCharts = ({ itemClass = 'dashboard-small-chart' }) => {
           </CardBody>
         </Card>
       </Colxx>
-      <Colxx xxs="6" className="mb-4">
-        <Card className={itemClass}>
-          <CardBody>
-            <SmallLineChart data={smallChartData3} />
-          </CardBody>
-        </Card>
-      </Colxx>
-      <Colxx xxs="6" className="mb-4">
-        <Card className={itemClass}>
-          <CardBody>
-            <SmallLineChart data={smallChartData4} />
-          </CardBody>
-        </Card>
-      </Colxx>
+      {/*<Colxx xxs="6" className="mb-4">*/}
+      {/*  <Card className={itemClass}>*/}
+      {/*    <CardBody>*/}
+      {/*      <SmallLineChart data={smallChartData3} />*/}
+      {/*    </CardBody>*/}
+      {/*  </Card>*/}
+      {/*</Colxx>*/}
+      {/*<Colxx xxs="6" className="mb-4">*/}
+      {/*  <Card className={itemClass}>*/}
+      {/*    <CardBody>*/}
+      {/*      <SmallLineChart data={smallChartData4} />*/}
+      {/*    </CardBody>*/}
+      {/*  </Card>*/}
+      {/*</Colxx>*/}
     </Row>
   );
 };

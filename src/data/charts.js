@@ -123,7 +123,7 @@ export const radarChartData = {
       pointBackgroundColor: colors.themeColor1,
       borderColor: colors.themeColor1,
       backgroundColor: colors.themeColor1_10,
-      data: [80, 90, 70, 87],
+      data: [180, 190, 170, 187],
     },
     {
       label: 'Starter',
@@ -131,7 +131,7 @@ export const radarChartData = {
       pointBackgroundColor: colors.themeColor2,
       borderColor: colors.themeColor2,
       backgroundColor: colors.themeColor2_10,
-      data: [68, 80, 95, 69],
+      data: [168, 180, 195, 169],
     },
     {
       label: 'Mains',
@@ -139,7 +139,7 @@ export const radarChartData = {
       pointBackgroundColor: colors.themeColor6,
       borderColor: colors.themeColor6,
       backgroundColor: colors.themeColor6_10,
-      data: [68, 90, 75, 95],
+      data: [168, 190, 175, 195],
     },
     {
       label: 'Desserts',
@@ -147,7 +147,7 @@ export const radarChartData = {
       pointBackgroundColor: colors.themeColor3,
       borderColor: colors.themeColor3,
       backgroundColor: colors.themeColor3_10,
-      data: [75, 78, 95, 92],
+      data: [175, 178, 195, 192],
     },
   ],
   labels: ['Drinks', 'Starter', 'Mains', 'Desserts'],
