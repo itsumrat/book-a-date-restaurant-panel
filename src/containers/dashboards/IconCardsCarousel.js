@@ -4,7 +4,7 @@ import IconCard from '../../components/cards/IconCard';
 import data from '../../data/iconCards';
 import GlideComponent from '../../components/carousel/GlideComponent';
 
-const IconCardsCarousel = ({ className = 'icon-cards-row' }) => {
+const IconCardsCarousel = ({ className = 'mt-4 icon-cards-row' }) => {
   return (
     <div className={className}>
       <GlideComponent

@@ -12,7 +12,7 @@ const NewRestaurantReservations = ({ data }) => {
     <Card className="mb-4">
       <CardBody>
         <CardTitle>
-          <IntlMessages id="table.new-restaurant-reservations" />
+          <IntlMessages id="table.confirmed-reservations" />
         </CardTitle>
         <Row>
           <Colxx md="4">

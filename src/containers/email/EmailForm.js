@@ -60,7 +60,7 @@ const EmailForm = () => {
             {/*  <IntlMessages id="dashboards.title" /> */}
             {/* </Label> */}
             <Colxx style={{ marginBottom: 20 }} md={8}>
-              <Input placeholder="To" type="text" name="text" />
+              <Input placeholder="Customer Email" type="text" name="text" />
             </Colxx>
             <hr />
             <Colxx md={8}>
@@ -73,13 +73,19 @@ const EmailForm = () => {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <IntlMessages id="dashboards.sales" />
+                    <IntlMessages id="dashboards.booking-email" />
                   </DropdownItem>
                   <DropdownItem>
-                    <IntlMessages id="dashboards.orders" />
+                    <IntlMessages id="dashboards.confirmation-email" />
                   </DropdownItem>
                   <DropdownItem>
-                    <IntlMessages id="dashboards.refunds" />
+                    <IntlMessages id="dashboards.re-schedule-email" />
+                  </DropdownItem>
+                  <DropdownItem>
+                    <IntlMessages id="dashboards.payment-confirmation-email" />
+                  </DropdownItem>
+                  <DropdownItem>
+                    <IntlMessages id="dashboards.cancellation-email" />
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

@@ -94,7 +94,7 @@ const AddNewTodoModal = ({
           onChange={(val) => setState({ ...state, category: val })}
         />
         <Label className="mt-4">
-          <IntlMessages id="todo.label" />
+          <IntlMessages id="todo.team-members" />
         </Label>
         <Select
           components={{ Input: CustomSelectInput }}
@@ -103,10 +103,10 @@ const AddNewTodoModal = ({
           name="form-field-name"
           options={labels.map((x, i) => {
             return {
-              label: x.label,
-              value: x.label,
+              label: x.customerName,
+              value: x.customerName,
               key: i,
-              color: x.color,
+              color: x.statusColor,
             };
           })}
           value={state.label}

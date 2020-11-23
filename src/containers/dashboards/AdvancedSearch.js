@@ -75,29 +75,31 @@ const AdvancedSearch = ({ messages }) => {
               />
             </FormGroup>
           </Colxx>
-          <FormGroup >
-            <Label>
-              <IntlMessages id="dashboards.term" />
-            </Label>
+          <Colxx lg={3} md={3}>
+            <FormGroup>
+              <Label>
+                <IntlMessages id="dashboards.customer-name" />
+              </Label>
               <Input />
-          </FormGroup>
-          {/*<Colxx lg={2} md={3}>*/}
-          {/*  <FormGroup>*/}
-          {/*    <Label>*/}
-          {/*      <IntlMessages id="dashboards.guest-keyword" />*/}
-          {/*    </Label>*/}
-          {/*    <Input type="text" placeholder={messages['dashboards.keyword']} />*/}
-          {/*  </FormGroup>*/}
-          {/*</Colxx>*/}
-          {/*<Colxx lg={3} md={3} style={{ margin: 'auto' }}>*/}
-          {/*  <FormGroup>*/}
-          {/*    <CustomInput*/}
-          {/*      type="checkbox"*/}
-          {/*      id="exampleCustomCheckbox"*/}
-          {/*      label="Term"*/}
-          {/*    />*/}
-          {/*  </FormGroup>*/}
-          {/*</Colxx>*/}
+            </FormGroup>
+          </Colxx>
+          {/* <Colxx lg={2} md={3}> */}
+          {/*  <FormGroup> */}
+          {/*    <Label> */}
+          {/*      <IntlMessages id="dashboards.guest-keyword" /> */}
+          {/*    </Label> */}
+          {/*    <Input type="text" placeholder={messages['dashboards.keyword']} /> */}
+          {/*  </FormGroup> */}
+          {/* </Colxx> */}
+          {/* <Colxx lg={3} md={3} style={{ margin: 'auto' }}> */}
+          {/*  <FormGroup> */}
+          {/*    <CustomInput */}
+          {/*      type="checkbox" */}
+          {/*      id="exampleCustomCheckbox" */}
+          {/*      label="Term" */}
+          {/*    /> */}
+          {/*  </FormGroup> */}
+          {/* </Colxx> */}
           <Colxx lg={3} md={6}>
             <FormGroup className="text-center">
               <Button color="primary" className="btn-lg mt-3">

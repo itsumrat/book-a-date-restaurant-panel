@@ -24,6 +24,7 @@ import DatePicker from 'react-datepicker';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
 import 'react-datepicker/dist/react-datepicker.css';
+import moment from 'moment';
 
 const FoodCard = ({ product }) => {
   const [modalBasic, setModalBasic] = useState(false);
@@ -50,47 +51,71 @@ const FoodCard = ({ product }) => {
               Advertised
             </Badge>
           )}
-          {/*{product.active && (*/}
-          {/*  <UncontrolledDropdown*/}
-          {/*    direction="left"*/}
-          {/*    style={{ top: 0, right: '-8px' }}*/}
-          {/*    className="position-absolute badge-top-right"*/}
-          {/*  >*/}
-          {/*    <DropdownToggle className="m-0" style={{ padding: '5px 10px' }}>*/}
-          {/*      :*/}
-          {/*    </DropdownToggle>*/}
-          {/*    <DropdownMenu>*/}
-          {/*      <DropdownItem>Deactivate</DropdownItem>*/}
-          {/*      <DropdownItem>Edit</DropdownItem>*/}
-          {/*      <DropdownItem>Delete</DropdownItem>*/}
-          {/*    </DropdownMenu>*/}
-          {/*  </UncontrolledDropdown>*/}
-          {/*)}*/}
+          {/* {product.active && ( */}
+          {/*  <UncontrolledDropdown */}
+          {/*    direction="left" */}
+          {/*    style={{ top: 0, right: '-8px' }} */}
+          {/*    className="position-absolute badge-top-right" */}
+          {/*  > */}
+          {/*    <DropdownToggle className="m-0" style={{ padding: '5px 10px' }}> */}
+          {/*      : */}
+          {/*    </DropdownToggle> */}
+          {/*    <DropdownMenu> */}
+          {/*      <DropdownItem>Deactivate</DropdownItem> */}
+          {/*      <DropdownItem>Edit</DropdownItem> */}
+          {/*      <DropdownItem>Delete</DropdownItem> */}
+          {/*    </DropdownMenu> */}
+          {/*  </UncontrolledDropdown> */}
+          {/* )} */}
         </div>
         <CardBody>
           <NavLink to={`/app/products/details/${product.id}`}>
             <CardTitle className="mb-4"> {product.title} </CardTitle>
           </NavLink>
           <CardSubtitle className="mb-4">{product.description}</CardSubtitle>
-
+          <Row>
+            <Colxx xxs={12}>
+              <span>
+                Advertise start:{' '}
+                {moment(product.advertiseStart).format('ddd, MMM Do YYYY')}
+              </span>
+              <br />
+              <span>
+                Advertise end:{' '}
+                {moment(product.advertiseStart).format('ddd, MMM Do YYYY')}
+              </span>
+            </Colxx>
+            <Colxx className="mt-2" xxs={12}>
+              <span>
+                Advertise start:{' '}
+                {moment(product.advertiseStart).format('h:mm:ss a')}
+              </span>
+              <br />
+              <span>
+                Advertise end:{' '}
+                {moment(product.advertiseStart).format('h:mm:ss a')}
+              </span>
+            </Colxx>
+          </Row>
+          <br />
           <Row>
             <Colxx className="d-inline-flex justify-content-between">
               <p className="text-muted text-small mb-0 font-weight-light">
                 {`£ ${product.price}`}
               </p>
 
-              {/*{product.active ? (*/}
-              {/*  <button*/}
-              {/*    onClick={() => setModalBasic(true)}*/}
-              {/*    style={{ paddingTop: 0, paddingBottom: 0 }}*/}
-              {/*    type="button"*/}
-              {/*    className="btn btn-link"*/}
-              {/*  >*/}
-              {/*    Make Advertise*/}
-              {/*  </button>*/}
-              {/*) : (*/}
-              {/*  <Button>Activated</Button>*/}
-              {/*)}*/}
+              {/* {product.active ? ( */}
+              {/*  <button */}
+              {/*    onClick={() => setModalBasic(true)} */}
+              {/*    style={{ paddingTop: 0, paddingBottom: 0 }} */}
+              {/*    type="button" */}
+              {/*    className="btn btn-link" */}
+              {/*  > */}
+              {/*    Make Advertise */}
+              {/*  </button> */}
+              {/* ) : ( */}
+              {/*  <Button>Activated</Button> */}
+              {/* )} */}
             </Colxx>
           </Row>
         </CardBody>

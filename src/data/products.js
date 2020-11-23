@@ -16,7 +16,7 @@ import salmonfish from '../assets/img/Mains Salmon Fish .jpeg';
 const products = [
   {
     id: 1,
-    active: false,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -33,10 +33,12 @@ const products = [
     sales: 1647,
     price: 3,
     stock: 62,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
   },
   {
     id: 2,
-    active: false,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -52,6 +54,8 @@ const products = [
     productDetails: 'Fresh herbs and Feta cheese',
     sales: 1240,
     price: 3,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 48,
   },
   {
@@ -72,6 +76,8 @@ const products = [
     productDetails: 'Fresh prawns and salmon salad',
     sales: 1080,
     price: 3,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 57,
   },
   {
@@ -92,11 +98,13 @@ const products = [
     productDetails: 'Chocolate cake with berries',
     sales: 1014,
     price: 7,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 41,
   },
   {
     id: 23,
-    active: false,
+    active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
     time: '12:02',
@@ -112,6 +120,8 @@ const products = [
     productDetails: 'Glass of Prosecco',
     sales: 985,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 23,
   },
   {
@@ -132,6 +142,8 @@ const products = [
     productDetails: 'Baked vegetables topped with  parmesan cheese',
     sales: 887,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 21,
   },
   {
@@ -152,6 +164,8 @@ const products = [
     productDetails: 'French Bordeaux Cabernet Sauvignon 2005',
     sales: 985,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 23,
   },
   {
@@ -172,6 +186,8 @@ const products = [
     productDetails: 'New Zealand Sauvignon Blanc 2014',
     sales: 962,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 34,
   },
   {
@@ -192,6 +208,8 @@ const products = [
     productDetails: 'Cheesecake with fresh berries and mint for dessert',
     sales: 921,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 31,
   },
   {
@@ -212,6 +230,8 @@ const products = [
     productDetails: 'Delicious vegan chocolate cake',
     sales: 887,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 21,
   },
   {
@@ -234,6 +254,8 @@ const products = [
       'White chocolate strawberry yogurt cake decorated with fresh fruits and chocolate',
     sales: 865,
     price: 11,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 53,
   },
   {
@@ -254,6 +276,8 @@ const products = [
     productDetails: 'Christmas fruit cake, pudding on top',
     sales: 824,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 55,
   },
   {
@@ -274,6 +298,8 @@ const products = [
     productDetails: 'Wedding cake decorated with donuts and wild berries',
     sales: 714,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 12,
   },
   {
@@ -294,6 +320,8 @@ const products = [
     productDetails: 'Christmas fruit cake, pudding on top',
     sales: 702,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 14,
   },
   {
@@ -316,6 +344,8 @@ const products = [
       'White chocolate strawberry yogurt cake decorated with fresh fruits and chocolate',
     sales: 689,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 78,
   },
   {
@@ -336,6 +366,8 @@ const products = [
     productDetails: 'Delicious vegan chocolate cake',
     sales: 645,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 55,
   },
   {
@@ -356,6 +388,8 @@ const products = [
     productDetails: 'Cheesecake with fresh berries and mint for dessert',
     sales: 632,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 20,
   },
   {
@@ -376,6 +410,8 @@ const products = [
     productDetails: 'Chocolate cake with mascarpone',
     sales: 621,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 6,
   },
   {
@@ -396,6 +432,8 @@ const products = [
     productDetails: 'Chocolate cake with berries',
     sales: 595,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 17,
   },
   {
@@ -416,6 +454,8 @@ const products = [
     productDetails: 'Homemade cheesecake with fresh berries and mint',
     sales: 574,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 16,
   },
   {
@@ -436,6 +476,8 @@ const products = [
     productDetails: 'Cheesecake with chocolate cookies and Cream biscuits',
     sales: 562,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 9,
   },
   {
@@ -456,6 +498,8 @@ const products = [
     productDetails: 'Wedding cake with flowers Macarons and blueberries',
     sales: 524,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 14,
   },
   {
@@ -476,6 +520,8 @@ const products = [
     productDetails: 'French Bordeaux Cabernet Sauvignon 2005',
     sales: 985,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 23,
   },
   {
@@ -496,6 +542,8 @@ const products = [
     productDetails: 'Bottle of White Wine',
     sales: 985,
     price: 12,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 23,
   },
   {
@@ -516,6 +564,8 @@ const products = [
     productDetails: 'New Potatoes and red chilli peppers ',
     sales: 1240,
     price: 3,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 48,
   },
   {
@@ -536,6 +586,8 @@ const products = [
     productDetails: 'Fresh salmon with seasoned seaweed',
     sales: 1240,
     price: 3,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
     stock: 48,
   },
 ];

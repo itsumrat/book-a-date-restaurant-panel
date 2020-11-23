@@ -26,28 +26,30 @@ const RecentOrders = () => {
             {data.slice(0, 6).map((order, index) => {
               return (
                 <div key={index} className="d-flex flex-row mb-3">
-                  <NavLink
-                    to={`/app/products/details/${order.id}`}
+                  <div
+                    // to={`/app/products/details/${order.id}`}
                     className="d-block position-relative"
+                    style={{ minWidth: 150 }}
                   >
                     <img
-                      style={{ minWidth: 100 }}
+                      style={{ minWidth: 150 }}
                       src={order.img}
                       alt={order.title}
                       className="list-thumbnail border-0"
                     />
-                    <Badge
-                      key={index}
-                      className="position-absolute badge-top-right"
-                      color={order.statusColor}
-                      pill
-                    >
-                      {order.status}
-                    </Badge>
-                  </NavLink>
+                    {/*<Badge*/}
+                    {/*  key={index}*/}
+                    {/*  className="position-absolute badge-top-left"*/}
+                    {/*  color={order.statusColor}*/}
+                    {/*  pill*/}
+                    {/*  style={{ left: 0 }}*/}
+                    {/*>*/}
+                    {/*  {order.status}*/}
+                    {/*</Badge>*/}
+                  </div>
 
                   <div className="pl-3 pt-2 pr-2 pb-2">
-                    <NavLink to={`/app/products/details/${order.id}`}>
+                    <div>
                       <p
                         style={{ marginBottom: 2 }}
                         className="list-item-heading"
@@ -68,7 +70,7 @@ const RecentOrders = () => {
                       <div className="text-primary text-small font-weight-medium d-none d-sm-block">
                         {order.createDate}
                       </div>
-                    </NavLink>
+                    </div>
                   </div>
                 </div>
               );

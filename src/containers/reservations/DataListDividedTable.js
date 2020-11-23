@@ -8,6 +8,7 @@ import { CardTitle, Badge } from 'reactstrap';
 import { useTable, usePagination, useSortBy } from 'react-table';
 import classnames from 'classnames';
 
+import Button from 'reactstrap/es/Button';
 import IntlMessages from '../../helpers/IntlMessages';
 import DatatablePagination from '../../components/DatatablePagination';
 import products from '../../data/products';
@@ -432,53 +433,70 @@ const DataListDividedTable = () => {
       {
         Header: 'Date Reservation',
         accessor: 'createDate',
-        cellClass: 'text-muted  w-40',
+        cellClass: 'text-muted ',
         isSorted: false,
         Cell: (props) => <>{props.value}</>,
       },
       {
         Header: 'Time',
         accessor: 'time',
-        cellClass: 'list-item-heading w-40',
+        cellClass: 'list-item-heading',
         Cell: (props) => <>{props.value}</>,
       },
       {
         Header: 'Customer name',
         accessor: 'customerName',
-        cellClass: 'list-item-heading w-40',
+        cellClass: 'list-item-heading',
         Cell: (props) => <>{props.value}</>,
       },
       {
         Header: 'Telephone',
         accessor: 'telephone',
-        cellClass: 'list-item-heading w-40',
+        cellClass: 'list-item-heading',
         Cell: (props) => <>{props.value}</>,
       },
       {
         Header: 'Customer email',
         accessor: 'customerEmail',
-        cellClass: 'list-item-heading w-40',
+        cellClass: 'list-item-heading',
         Cell: (props) => <>{props.value}</>,
       },
-      {
-        Header: 'Product line',
-        accessor: 'category',
-        cellClass: 'list-item-heading w-40',
-        Cell: (props) => (
-          <>{props.value.charAt(0).toUpperCase() + props.value.slice(1)}</>
-        ),
-      },
+      // {
+      //   Header: 'Product line',
+      //   accessor: 'category',
+      //   cellClass: 'list-item-heading',
+      //   Cell: (props) => (
+      //     <>{props.value.charAt(0).toUpperCase() + props.value.slice(1)}</>
+      //   ),
+      // },
       {
         Header: 'Product details',
         accessor: 'productDetails',
         cellClass: 'list-item-heading w-40',
         Cell: (props) => <>{props.value}</>,
       },
+      // {
+      //   Header: 'Status',
+      //   accessor: 'status',
+      //   cellClass: 'text-muted ',
+      //   Cell: (props) => (
+      //     <Badge color="secondary" pill>
+      //       {props.value}
+      //     </Badge>
+      //   ),
+      // },
       {
-        Header: 'Status',
-        accessor: 'status',
-        cellClass: 'text-muted  w-40',
-        Cell: (props) => <Badge color="secondary" pill>{props.value}</Badge>,
+        Header: 'Actions',
+        accessor: '',
+        cellClass: 'text-muted w-30',
+        Cell: (props) => (
+          <div className="d-inline-flex">
+            <Button color="primary">Confirm</Button>
+            <Button className="ml-3" color="secondary">
+              Re-schedule
+            </Button>
+          </div>
+        ),
       },
     ],
     []

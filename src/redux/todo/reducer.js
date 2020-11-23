@@ -10,6 +10,7 @@ import {
   TODO_ADD_ITEM_ERROR,
   TODO_SELECTED_ITEMS_CHANGE,
 } from '../actions';
+import products from '../../data/products';
 
 const INIT_STATE = {
   allTodoItems: null,
@@ -19,18 +20,20 @@ const INIT_STATE = {
   searchKeyword: '',
   orderColumn: null,
   loading: false,
-  labels: [
-    { label: 'EDUCATION', color: 'secondary' },
-    { label: 'NEW FRAMEWORK', color: 'primary' },
-    { label: 'PERSONAL', color: 'info' },
-  ],
+  labels: products,
   orderColumns: [
     { column: 'title', label: 'Title' },
     { column: 'category', label: 'Category' },
     { column: 'status', label: 'Status' },
     { column: 'label', label: 'Label' },
   ],
-  categories: ['Flexbox', 'Sass', 'React'],
+  categories: [
+    'Reports',
+    'Products',
+    'Reservations',
+    'Billings',
+    'Opening/ Closing Hour',
+  ],
   selectedItems: [],
 };
 

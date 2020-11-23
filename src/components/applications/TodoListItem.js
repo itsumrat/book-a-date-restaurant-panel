@@ -31,11 +31,11 @@ const TodoListItem = ({ item, handleCheckChange, isSelected }) => {
             <p className="mb-1 text-muted text-small w-15 w-xs-100">
               {item.createDate}
             </p>
-            <div className="w-15 w-xs-100">
-              <Badge color={item.labelColor} pill>
-                {item.label}
-              </Badge>
-            </div>
+            {/*<div className="w-15 w-xs-100">*/}
+            {/*  <Badge color={item.labelColor} pill>*/}
+            {/*    {item.label}*/}
+            {/*  </Badge>*/}
+            {/*</div>*/}
           </CardBody>
           <div className="custom-control custom-checkbox pl-1 align-self-center mr-4">
             <CustomInput

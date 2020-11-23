@@ -12,54 +12,13 @@ import UserForm from '../../../containers/team/UserForm';
 import SpecialDayForm from '../../../containers/email/SpecialDayForm';
 
 const EmailDefault = ({ intl, match }) => {
-  const [modalBasic, setModalBasic] = useState(false);
-  const [specialDays, setSpecialDays] = useState([
-    {
-      day: 'Valentine Day',
-      status: 'Open',
-      date: new Date(),
-      campaign: 'Morning Shift',
-    },
-    {
-      day: 'Mothers Day',
-      status: 'Open',
-      date: new Date(),
-      campaign: 'Evening Shift',
-    },
-    {
-      day: 'Fathers Day',
-      status: 'Close',
-      date: new Date(),
-      campaign: 'No Shift',
-    },
-    {
-      day: 'Valentine Day',
-      status: 'Open',
-      date: new Date(),
-      campaign: 'Afternoon Shift',
-    },
-    {
-      day: 'Valentine Day',
-      status: 'Open',
-      date: new Date(),
-      campaign: 'Evening Shift',
-    },
-  ]);
+
+
   const onSubmit = (values) => {
     console.log(values);
   };
-  const onSpecialDaySubmit = (values) => {
-    console.log(values)
-    setSpecialDays((state) => {
-      return [...state, values];
-    });
-  }
-  const handleAddSpecialDay = () => {
-    setModalBasic(true)
-  }
-  const closeModal = () => {
-    setModalBasic(false);
-  };
+
+
   return (
     <>
       <Row>
@@ -69,31 +28,15 @@ const EmailDefault = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx md="6" className="mb-4">
+        <Colxx md="12" className="mb-4">
           <EmailForm />
-        </Colxx>
-        <Colxx md="6" className="mb-4">
-          <SpecialDays
-            data={specialDays}
-            handleAddSpecialDay={handleAddSpecialDay}
-          />
         </Colxx>
         <Colxx md="12" className="mb-4">
           <EmailTemplateText onSubmit={onSubmit} />
         </Colxx>
       </Row>
 
-      <Modal isOpen={modalBasic} toggle={() => setModalBasic(!modalBasic)}>
-        <ModalHeader>
-          <IntlMessages id="modal.add-special-day" />
-        </ModalHeader>
-        <ModalBody>
-          <SpecialDayForm
-            onSubmit={onSpecialDaySubmit}
-            closeModal={closeModal}
-          />
-        </ModalBody>
-      </Modal>
+
     </>
   );
 };

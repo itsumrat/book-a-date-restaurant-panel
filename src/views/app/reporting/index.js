@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import BillingReports from './billingReports';
+import ReservationsReports from './ReservationsReports';
 
 const SalesReports = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-default" */ './salesReports')
@@ -37,6 +39,14 @@ const Reporting = ({ match }) => (
       <Route
         path={`${match.url}/booking-reports`}
         render={(props) => <BookingReports {...props} />}
+      />
+      <Route
+        path={`${match.url}/billing-reports`}
+        render={(props) => <BillingReports {...props} />}
+      />
+      <Route
+        path={`${match.url}/reservations-reports`}
+        render={(props) => <ReservationsReports {...props} />}
       />
       <Redirect to="/error" />
     </Switch>

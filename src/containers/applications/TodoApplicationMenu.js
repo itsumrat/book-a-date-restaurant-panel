@@ -114,36 +114,36 @@ const TodoApplicationMenu = ({
               );
             })}
           </ul>
-          <p className="text-muted text-small">
-            <IntlMessages id="todo.labels" />
-          </p>
-          <div>
-            {labels.map((l, index) => {
-              return (
-                <p className="d-sm-inline-block mb-1" key={index}>
-                  <NavLink
-                    to="#"
-                    location={{}}
-                    onClick={() => addFilter('label', l.label)}
-                  >
-                    <Badge
-                      className="mb-1"
-                      color={`${
-                        filter &&
-                        filter.column === 'label' &&
-                        filter.value === l.label
-                          ? l.color
-                          : `outline-${l.color}`
-                      }`}
-                      pill
-                    >
-                      {l.label}
-                    </Badge>
-                  </NavLink>
-                </p>
-              );
-            })}
-          </div>
+          {/*<p className="text-muted text-small">*/}
+          {/*  <IntlMessages id="todo.team-members" />*/}
+          {/*</p>*/}
+          {/*<div>*/}
+          {/*  {labels.map((l, index) => {*/}
+          {/*    return (*/}
+          {/*      <p className="d-sm-inline-block mb-1" key={index}>*/}
+          {/*        <NavLink*/}
+          {/*          to="#"*/}
+          {/*          location={{}}*/}
+          {/*          onClick={() => addFilter('label', l.label)}*/}
+          {/*        >*/}
+          {/*          <Badge*/}
+          {/*            className="mb-1"*/}
+          {/*            color={`${*/}
+          {/*              filter &&*/}
+          {/*              filter.column === 'label' &&*/}
+          {/*              filter.value === l.customerName*/}
+          {/*                ? l.color*/}
+          {/*                : `outline-${l.statusColor}`*/}
+          {/*            }`}*/}
+          {/*            pill*/}
+          {/*          >*/}
+          {/*            {l.customerName}*/}
+          {/*          </Badge>*/}
+          {/*        </NavLink>*/}
+          {/*      </p>*/}
+          {/*    );*/}
+          {/*  })}*/}
+          {/*</div>*/}
         </div>
       </PerfectScrollbar>
     </ApplicationMenu>

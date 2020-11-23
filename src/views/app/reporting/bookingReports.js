@@ -17,7 +17,7 @@ const BookingReports = ({ intl, match }) => {
       <Row>
         <Colxx lg="12" xl="6">
           <Row>
-            <Colxx  md="12" className="mb-4">
+            <Colxx md="12" className="mb-4">
               <ConversionRatesChartCard />
             </Colxx>
           </Row>

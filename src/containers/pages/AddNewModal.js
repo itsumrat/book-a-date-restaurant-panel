@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CustomInput,
   Button,
@@ -9,6 +9,7 @@ import {
   Input,
   Label,
 } from 'reactstrap';
+import DateTimePicker from 'react-datetime-picker';
 import Select from 'react-select';
 import { DropzoneComponent } from 'react-dropzone-component';
 import CustomSelectInput from '../../components/common/CustomSelectInput';
@@ -75,6 +76,12 @@ const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
   };
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  useEffect(() => {
+    if (isEdit) {
+      setStartDate(new Date(product.advertiseStart));
+      setEndDate(new Date(product.advertiseEnd));
+    }
+  }, [isEdit, product]);
   return (
     <Modal
       isOpen={modalOpen}
@@ -120,14 +127,12 @@ const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
         <Label className="mt-4">
           <IntlMessages id="pages.start-day" />
         </Label>
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-        />
+        <DateTimePicker onChange={setStartDate} value={startDate} />
         <Label className="mt-4">
           <IntlMessages id="pages.end-day" />
         </Label>
-        <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
+        <DateTimePicker onChange={setEndDate} value={endDate} />
+        <br />
         {/* <Label className="mt-4"> */}
         {/*  <IntlMessages id="pages.status" /> */}
         {/* </Label> */}

@@ -4,6 +4,7 @@ import { Field, Form, Formik } from 'formik';
 import Row from 'reactstrap/es/Row';
 import CustomInput from 'reactstrap/es/CustomInput';
 import Switch from 'rc-switch/es';
+import Button from 'reactstrap/es/Button';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import { FormikRadioButtonGroup } from '../form-validations/FormikFields';
 
@@ -74,7 +75,7 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
           }) => (
             <Form className="av-tooltip tooltip-label-right">
               <Row>
-                <Colxx lg="6" md="6">
+                <Colxx lg="12" md="12">
                   <FormGroup>
                     <Label>Booking Email</Label>
                     <Field
@@ -88,8 +89,11 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                         {errors.booking_email}
                       </div>
                     )}
+                    <Button color="primary" className=" m-3 float-right">
+                      Save
+                    </Button>
                   </FormGroup>
-                  <FormGroup>
+                  <FormGroup className="mt-5">
                     <Label>Confirmation Email</Label>
                     <Field
                       className="form-control"
@@ -103,8 +107,11 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                           {errors.confirmation_email}
                         </div>
                       )}
+                    <Button color="primary" className=" m-3 float-right">
+                      Save
+                    </Button>
                   </FormGroup>
-                  <FormGroup>
+                  <FormGroup className="mt-5">
                     <Label>Reschedule Email</Label>
                     <Field
                       className="form-control"
@@ -117,8 +124,11 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                         {errors.reschedule_email}
                       </div>
                     )}
+                    <Button color="primary" className=" m-3 float-right">
+                      Save
+                    </Button>
                   </FormGroup>
-                  <FormGroup>
+                  <FormGroup className="mt-5">
                     <Label>Payment Confirmation Email</Label>
                     <Field
                       className="form-control"
@@ -132,8 +142,11 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                           {errors.payment_confirmation_message}
                         </div>
                       )}
+                    <Button color="primary" className=" m-3 float-right">
+                      Save
+                    </Button>
                   </FormGroup>
-                  <FormGroup>
+                  <FormGroup className="mt-5">
                     <Label>Cancellation Email</Label>
                     <Field
                       className="form-control"
@@ -147,92 +160,95 @@ const EmailTemplateTextForm = ({ onSubmit }) => {
                           {errors.reschedule_email}
                         </div>
                       )}
+                    <Button color="primary" className=" m-3 float-right">
+                      Save
+                    </Button>
                   </FormGroup>
                 </Colxx>
-                <Colxx lg="2" md="2">
-                  <FormGroup className="error-l-150">
-                    <Label className="d-block">Recipient</Label>
-                    <FormikRadioButtonGroup
-                      name="recipient"
-                      id="radioGroup"
-                      label="One of these please"
-                      value={values.recipient}
-                      onChange={setFieldValue}
-                      onBlur={setFieldTouched}
-                      options={options}
-                    />
-                    {errors.recipient && touched.recipient ? (
-                      <div className="invalid-feedback d-block">
-                        {errors.recipient}
-                      </div>
-                    ) : null}
-                  </FormGroup>
-                </Colxx>
-                <Colxx lg="3" md="3">
-                  <Row>
-                    <Colxx>
-                      <FormGroup className="error-l-150">
-                        <Label className="d-block">
-                          Message sent to Client
-                        </Label>
-                        <FormikRadioButtonGroup
-                          name="customer"
-                          id="radioClient"
-                          label="One of these please"
-                          value={values.customer}
-                          onChange={setFieldValue}
-                          onBlur={setFieldTouched}
-                          options={clientOptions}
-                        />
-                        {errors.client && touched.client ? (
-                          <div className="invalid-feedback d-block">
-                            {errors.client}
-                          </div>
-                        ) : null}
-                      </FormGroup>
-                    </Colxx>
-                    <Colxx>
-                      <FormGroup className="error-l-150">
-                        <Label>Status</Label>
-                        <Switch
-                          className="custom-switch custom-switch-primary"
-                          checked={sendBooking}
-                          onChange={(primary) => setSendBooking(primary)}
-                        />
-                      </FormGroup>
-                      <FormGroup className="error-l-150">
-                        <Switch
-                          className="custom-switch custom-switch-primary"
-                          checked={sendConfirmationMail}
-                          onChange={(primary) =>
-                            setSendConfirmationMail(primary)
-                          }
-                        />
-                      </FormGroup>
-                      <FormGroup className="error-l-150">
-                        <Switch
-                          className="custom-switch custom-switch-primary"
-                          checked={sendRescheduleMail}
-                          onChange={(primary) => setsendRescheduleMail(primary)}
-                        />
-                      </FormGroup>
-                      <FormGroup className="error-l-150">
-                        <Switch
-                          className="custom-switch custom-switch-primary"
-                          checked={sendPaymentConfirmMail}
-                          onChange={(primary) => setsendPaymentConfirmMail(primary)}
-                        />
-                      </FormGroup>
-                      <FormGroup className="error-l-150">
-                        <Switch
-                          className="custom-switch custom-switch-primary"
-                          checked={sendCancellationMail}
-                          onChange={(primary) => setsendCancellationMail(primary)}
-                        />
-                      </FormGroup>
-                    </Colxx>
-                  </Row>
-                </Colxx>
+                {/* <Colxx lg="2" md="2"> */}
+                {/*  <FormGroup className="error-l-150"> */}
+                {/*    <Label className="d-block">Recipient</Label> */}
+                {/*    <FormikRadioButtonGroup */}
+                {/*      name="recipient" */}
+                {/*      id="radioGroup" */}
+                {/*      label="One of these please" */}
+                {/*      value={values.recipient} */}
+                {/*      onChange={setFieldValue} */}
+                {/*      onBlur={setFieldTouched} */}
+                {/*      options={options} */}
+                {/*    /> */}
+                {/*    {errors.recipient && touched.recipient ? ( */}
+                {/*      <div className="invalid-feedback d-block"> */}
+                {/*        {errors.recipient} */}
+                {/*      </div> */}
+                {/*    ) : null} */}
+                {/*  </FormGroup> */}
+                {/* </Colxx> */}
+                {/* <Colxx lg="3" md="3"> */}
+                {/*  <Row> */}
+                {/*    <Colxx> */}
+                {/*      <FormGroup className="error-l-150"> */}
+                {/*        <Label className="d-block"> */}
+                {/*          Message sent to Client */}
+                {/*        </Label> */}
+                {/*        <FormikRadioButtonGroup */}
+                {/*          name="customer" */}
+                {/*          id="radioClient" */}
+                {/*          label="One of these please" */}
+                {/*          value={values.customer} */}
+                {/*          onChange={setFieldValue} */}
+                {/*          onBlur={setFieldTouched} */}
+                {/*          options={clientOptions} */}
+                {/*        /> */}
+                {/*        {errors.client && touched.client ? ( */}
+                {/*          <div className="invalid-feedback d-block"> */}
+                {/*            {errors.client} */}
+                {/*          </div> */}
+                {/*        ) : null} */}
+                {/*      </FormGroup> */}
+                {/*    </Colxx> */}
+                {/*    <Colxx> */}
+                {/*      <FormGroup className="error-l-150"> */}
+                {/*        <Label>Status</Label> */}
+                {/*        <Switch */}
+                {/*          className="custom-switch custom-switch-primary" */}
+                {/*          checked={sendBooking} */}
+                {/*          onChange={(primary) => setSendBooking(primary)} */}
+                {/*        /> */}
+                {/*      </FormGroup> */}
+                {/*      <FormGroup className="error-l-150"> */}
+                {/*        <Switch */}
+                {/*          className="custom-switch custom-switch-primary" */}
+                {/*          checked={sendConfirmationMail} */}
+                {/*          onChange={(primary) => */}
+                {/*            setSendConfirmationMail(primary) */}
+                {/*          } */}
+                {/*        /> */}
+                {/*      </FormGroup> */}
+                {/*      <FormGroup className="error-l-150"> */}
+                {/*        <Switch */}
+                {/*          className="custom-switch custom-switch-primary" */}
+                {/*          checked={sendRescheduleMail} */}
+                {/*          onChange={(primary) => setsendRescheduleMail(primary)} */}
+                {/*        /> */}
+                {/*      </FormGroup> */}
+                {/*      <FormGroup className="error-l-150"> */}
+                {/*        <Switch */}
+                {/*          className="custom-switch custom-switch-primary" */}
+                {/*          checked={sendPaymentConfirmMail} */}
+                {/*          onChange={(primary) => setsendPaymentConfirmMail(primary)} */}
+                {/*        /> */}
+                {/*      </FormGroup> */}
+                {/*      <FormGroup className="error-l-150"> */}
+                {/*        <Switch */}
+                {/*          className="custom-switch custom-switch-primary" */}
+                {/*          checked={sendCancellationMail} */}
+                {/*          onChange={(primary) => setsendCancellationMail(primary)} */}
+                {/*        /> */}
+                {/*      </FormGroup> */}
+                {/*    </Colxx> */}
+                {/*  </Row> */}
+                {/* </Colxx> */}
               </Row>
             </Form>
           )}

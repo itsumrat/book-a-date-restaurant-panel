@@ -3,27 +3,27 @@
       {
         "title": "Book train tickets",
         "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        "category" : "Sass",
+        "category" : "Reports",
         "createDate" : "22.08.2018",
         "status" : "PENDING",
-        "label": "NEW FRAMEWORK",
+        "label": "Reports",
         "labelColor": "primary",
         "id": 1
       },
       {
         "title": "Complete weekly delivery",
         "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        "category" : "React",
+        "category" : "Products",
         "createDate" : "22.09.2018",
         "status" : "PENDING",
-        "label": "EDUCATION",
+        "label": "Products",
         "labelColor": "secondary",
         "id": 2
       },
       {
         "title": "Take photos of cakes",
         "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        "category" : "Flexbox",
+        "category" : "Reservations",
         "createDate" : "15.09.2018",
         "status" : "COMPLETED",
         "label": "PERSONAL",
@@ -32,4 +32,3 @@
       }
     ]
   }
-  

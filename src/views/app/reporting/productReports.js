@@ -7,6 +7,13 @@ import InboundReservations from '../../../containers/dashboards/InboundReservati
 import SmallLineCharts from '../../../containers/dashboards/SmallLineCharts';
 import TopRatedItems from '../../../containers/dashboards/TopRatedItems';
 import ProductCategoriesDoughnut from '../../../containers/dashboards/ProductCategoriesDoughnut';
+import { BarChart } from '../../../components/charts';
+import {
+  starterDailyBilling,
+  starterMonthlyBilling,
+  starterWeeklyBilling,
+  starterYearlyBilling
+} from './billingReports';
 
 const ProductReports = ({ intl, match }) => {
   return (
@@ -29,6 +36,30 @@ const ProductReports = ({ intl, match }) => {
             <Colxx lg="6" md="12" className="mb-4">
               {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
               <ProductCategoriesDoughnut />
+            </Colxx>
+          </Row>
+          <Row>
+            <Colxx lg="12" xl="12">
+              <Row>
+                <Colxx style={{ height: 500 }} md="6" className="mb-4">
+                  <h3> Starters Daily</h3>
+                  <BarChart shadow data={starterDailyBilling} />
+                </Colxx>
+                <Colxx style={{ height: 500 }} md="6" className="mb-4">
+                  <h3> Starters Weekly</h3>
+                  <BarChart shadow data={starterWeeklyBilling} />
+                </Colxx>
+              </Row>
+              <Row>
+                <Colxx style={{ height: 500 }} md="6" className="mb-4">
+                  <h3> Starters Monthly</h3>
+                  <BarChart shadow data={starterMonthlyBilling} />
+                </Colxx>
+                <Colxx style={{ height: 500 }} md="6" className="mb-4">
+                  <h3> Starters Yearly</h3>
+                  <BarChart shadow data={starterYearlyBilling} />
+                </Colxx>
+              </Row>
             </Colxx>
           </Row>
         </Colxx>

@@ -171,12 +171,7 @@ export const pieChartData = {
 };
 
 export const doughnutChartData = {
-  labels: [
-    'product category 1',
-    'product category 2',
-    'product category 3',
-    'product category 4',
-  ],
+  labels: ['Drinks', 'Starters', 'Mains', 'Desserts'],
   datasets: [
     {
       label: '',

@@ -35,13 +35,18 @@ const data = [
     subs: [
       {
         icon: 'simple-icon-briefcase',
-        label: 'menu.default',
-        to: '/app/reservations/default',
+        label: 'menu.confirmed',
+        to: '/app/reservations/confirmed',
       },
       {
         icon: 'simple-icon-credit-card',
         label: 'menu.data-list',
         to: '/app/reservations/data-list',
+      },
+      {
+        icon: 'iconsminds-over-time-2',
+        label: 'menu.re-schedule',
+        to: '/app/reservations/re-schedule',
       },
       // {
       //   icon: 'simple-icon-picture',
@@ -66,11 +71,11 @@ const data = [
         label: 'menu.default',
         to: '/app/email/default',
       },
-      {
-        icon: 'simple-icon-envelope-open',
-        label: 'menu.mailing',
-        to: '/app/email/mailing',
-      },
+      // {
+      //   icon: 'simple-icon-envelope-open',
+      //   label: 'menu.mailing',
+      //   to: '/app/email/mailing',
+      // },
     ],
   },
   {
@@ -157,25 +162,35 @@ const data = [
     label: 'reporting.reporting',
     to: '/app/reporting',
     subs: [
-      {
-        icon: 'iconsminds-money-bag',
-        label: 'menu.sales-reports',
-        to: '/app/reporting/sales-reports',
-      },
+      // {
+      //   icon: 'iconsminds-money-bag',
+      //   label: 'menu.sales-reports',
+      //   to: '/app/reporting/sales-reports',
+      // },
       {
         icon: 'iconsminds-business-man-woman',
         label: 'menu.customers-reports',
         to: '/app/reporting/customers-reports',
       },
-      {
-        icon: 'simple-icon-feed',
-        label: 'menu.booking-reports',
-        to: '/app/reporting/booking-reports',
-      },
+      // {
+      //   icon: 'simple-icon-feed',
+      //   label: 'menu.booking-reports',
+      //   to: '/app/reporting/booking-reports',
+      // },
       {
         icon: 'simple-icon-doc',
         label: 'menu.product-reports',
         to: '/app/reporting/product-reports',
+      },
+      {
+        icon: 'iconsminds-billing',
+        label: 'menu.billing-reports',
+        to: '/app/reporting/billing-reports',
+      },
+      {
+        icon: 'iconsminds-books',
+        label: 'menu.reservations-reports',
+        to: '/app/reporting/reservations-reports',
       },
     ],
   },
@@ -224,21 +239,21 @@ const data = [
         label: 'menu.todo',
         to: '/app/team/todo',
       },
-      {
-        icon: 'simple-icon-calculator',
-        label: 'menu.survey',
-        to: '/app/team/survey',
-      },
+      // {
+      //   icon: 'simple-icon-calculator',
+      //   label: 'menu.survey',
+      //   to: '/app/team/survey',
+      // },
       {
         icon: 'simple-icon-bubbles',
         label: 'menu.chat',
         to: '/app/team/chat',
       },
-      {
-        icon: 'simple-icon-share',
-        label: 'menu.social',
-        to: '/app/pages/profile/social',
-      },
+      // {
+      //   icon: 'simple-icon-share',
+      //   label: 'menu.social',
+      //   to: '/app/pages/profile/social',
+      // },
       // {
       //   id: 'pages-profile',
       //   label: 'menu.profile',
