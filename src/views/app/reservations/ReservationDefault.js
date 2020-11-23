@@ -22,44 +22,10 @@ const ReservationDefault = ({ intl, match }) => {
           <Separator className="mb-5" />
         </Colxx>
       </Row>
-      <Row>
-        <Colxx lg="12" xl="12">
-          <Row>
-            <Colxx lg="4">
-              <ReservationCard />
-            </Colxx>
-            <Colxx lg="4">
-              <GuestsCard />
-            </Colxx>
-            <Colxx lg="4">
-              <NextDaysCard />
-            </Colxx>
-          </Row>
-        </Colxx>
-      </Row>
-      <br />
-      <Row>
-        <Colxx lg="12" xl="12">
-          <Row>
-            <Colxx lg="4">
-              <ReservationYesterday />
-            </Colxx>
-            <Colxx lg="4">
-              <GuestYesterday />
-            </Colxx>
-            <Colxx lg="4">
-              <LastSevenDays />
-            </Colxx>
-          </Row>
-        </Colxx>
-      </Row>
       <Row className="mt-3">
         <Colxx lg="12">
           {/* <ReservationListTable data={[]} /> */}
           <NewRestaurantReservations />
-        </Colxx>
-        <Colxx lg="12">
-          <LatestReservationsCard />
         </Colxx>
       </Row>
     </>

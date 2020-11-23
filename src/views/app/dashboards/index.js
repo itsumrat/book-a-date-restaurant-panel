@@ -24,6 +24,8 @@ import SpecialDays from '../../../containers/email/SpecialDays';
 import IntlMessages from '../../../helpers/IntlMessages';
 import SpecialDayForm from '../../../containers/email/SpecialDayForm';
 import TotalRevenue from './TotalRevenue';
+import { BarChart } from '../../../components/charts';
+import { starterMonthlyBilling, starterWeeklyBilling } from '../reporting/billingReports';
 
 const DefaultDashboard = ({ intl, match }) => {
   const { messages } = intl;
@@ -99,10 +101,10 @@ const DefaultDashboard = ({ intl, match }) => {
           {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
           <ProductCategoriesDoughnut />
         </Colxx>
-        {/*<Colxx lg="6" md="6" className="mb-4">*/}
-        {/*  /!* <Logs /> *!/*/}
-        {/*  <InboundReservations />*/}
-        {/*</Colxx>*/}
+        {/* <Colxx lg="6" md="6" className="mb-4"> */}
+        {/*  /!* <Logs /> *!/ */}
+        {/*  <InboundReservations /> */}
+        {/* </Colxx> */}
         {/* <Colxx lg="6" md="6" className="mb-4"> */}
         {/*  /!* <Tickets /> *!/ */}
         {/*  <Customers /> */}
@@ -118,9 +120,9 @@ const DefaultDashboard = ({ intl, match }) => {
         <Colxx xl="6" lg="12" className="mb-4">
           <Calendar />
         </Colxx>
-        <Colxx md="6" className="mb-4">
-          <SalesChartCard />
-        </Colxx>
+        {/* <Colxx md="6" className="mb-4"> */}
+        {/*  <SalesChartCard /> */}
+        {/* </Colxx> */}
         <Colxx md="6" className="mb-4">
           <TotalRevenue />
         </Colxx>
@@ -137,9 +139,9 @@ const DefaultDashboard = ({ intl, match }) => {
         {/* <Colxx md="6" lg="4" className="mb-4"> */}
         {/*  <GradientCardContainer /> */}
         {/* </Colxx> */}
-        {/*<Colxx md="6" lg="4" className="mb-4">*/}
-        {/*  <ProductListed />*/}
-        {/*</Colxx>*/}
+        {/* <Colxx md="6" lg="4" className="mb-4"> */}
+        {/*  <ProductListed /> */}
+        {/* </Colxx> */}
       </Row>
       {/* <SortableStaticticsRow messages={messages} /> */}
       <Row>
@@ -221,6 +223,14 @@ const DefaultDashboard = ({ intl, match }) => {
         {/* <Colxx xxs="12" lg="6" className="mb-4"> */}
         {/*  <ProductCategoriesPolarArea /> */}
         {/* </Colxx> */}
+        <Colxx style={{ height: 500 }} md="6" className="mb-4">
+          <h3> Starters Weekly</h3>
+          <BarChart shadow data={starterWeeklyBilling} />
+        </Colxx>
+        <Colxx style={{ height: 500 }} md="12" className="mb-4">
+          <h3> Starters Monthly</h3>
+          <BarChart shadow data={starterMonthlyBilling} />
+        </Colxx>
       </Row>
       {/* <Row> */}
       {/*  <Colxx xxs="12" className="mb-4"> */}

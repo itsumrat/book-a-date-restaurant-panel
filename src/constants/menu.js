@@ -48,6 +48,11 @@ const data = [
         label: 'menu.re-schedule',
         to: '/app/reservations/re-schedule',
       },
+      {
+        icon: 'iconsminds-over-time-2',
+        label: 'menu.reservations-analytics',
+        to: '/app/reservations/analytics',
+      },
       // {
       //   icon: 'simple-icon-picture',
       //   label: 'menu.details',

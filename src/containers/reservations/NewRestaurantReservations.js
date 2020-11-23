@@ -14,14 +14,14 @@ const NewRestaurantReservations = ({ data }) => {
         <CardTitle>
           <IntlMessages id="table.confirmed-reservations" />
         </CardTitle>
-        <Row>
-          <Colxx md="4">
-            <CardTitle>Profile Photo</CardTitle>
-          </Colxx>
-          <Colxx md="8">
-            <CardTitle>Name</CardTitle>
-          </Colxx>
-        </Row>
+        {/*<Row>*/}
+        {/*  <Colxx md="4">*/}
+        {/*    <CardTitle>Profile Photo</CardTitle>*/}
+        {/*  </Colxx>*/}
+        {/*  <Colxx md="8">*/}
+        {/*    <CardTitle>Name</CardTitle>*/}
+        {/*  </Colxx>*/}
+        {/*</Row>*/}
         {orders.map((order, ind) => (
           <div key={ind}>
             <CardBody>

@@ -13,6 +13,9 @@ const ReservationDataList = React.lazy(() =>
 const ReservationReSchedulePage = React.lazy(() =>
   import('./ReservationReSchedule')
 );
+const ReservationsAnalytics = React.lazy(() =>
+  import('./ReservationsAnalytics')
+);
 // const ReservationDetailsAlt = React.lazy(() =>
 //   import(
 //     /* webpackChunkName: "dashboard-ecommerce" */ './Reservation-details-alt'
@@ -42,6 +45,10 @@ const Reservations = ({ match }) => (
       <Route
         path={`${match.url}/re-schedule`}
         render={(props) => <ReservationReSchedulePage {...props} />}
+      />
+      <Route
+        path={`${match.url}/analytics`}
+        render={(props) => <ReservationsAnalytics {...props} />}
       />
 
       <Redirect to="/error" />

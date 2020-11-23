@@ -503,9 +503,9 @@ const DataListDividedTable = () => {
   );
   return (
     <div className="mb-4">
-      <CardTitle>
-        <IntlMessages id="table.divided" />
-      </CardTitle>
+      {/*<CardTitle>*/}
+      {/*  <IntlMessages id="table.divided" />*/}
+      {/*</CardTitle>*/}
       <Table columns={cols} data={products} divided />
     </div>
   );

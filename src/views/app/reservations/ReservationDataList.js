@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
+import { Row } from 'reactstrap';
 import { servicePath } from '../../../constants/defaultValues';
 import ListPageHeading from '../../../containers/pages/ListPageHeading';
 import AddNewModal from '../../../containers/pages/AddNewModal';
 import useMousetrap from '../../../hooks/use-mousetrap';
-import DataListDividedTable  from '../../../containers/reservations/DataListDividedTable';
+import DataListDividedTable from '../../../containers/reservations/DataListDividedTable';
 import ReservationPageListHeading from './ReservationPageListHeading';
-
+import { Colxx } from '../../../components/common/CustomBootstrap';
+import LatestReservationsCard from '../../../containers/reservations/LatestReservationsCard';
 
 const getIndex = (value, arr, prop) => {
   for (let i = 0; i < arr.length; i += 1) {
@@ -155,6 +157,11 @@ const ReservationDataListPages = ({ match }) => {
     <div className="loading" />
   ) : (
     <>
+      <Row className="mb-4">
+        <Colxx lg="12">
+          <LatestReservationsCard />
+        </Colxx>
+      </Row>
       <div className="disable-text-selection">
         <ReservationPageListHeading
           heading="menu.data-list"
@@ -190,17 +197,17 @@ const ReservationDataListPages = ({ match }) => {
           categories={categories}
         />
         <DataListDividedTable />
-        {/*<ListPageListing*/}
-        {/*  items={items}*/}
-        {/*  displayMode={displayMode}*/}
-        {/*  selectedItems={selectedItems}*/}
-        {/*  onCheckItem={onCheckItem}*/}
-        {/*  currentPage={currentPage}*/}
-        {/*  totalPage={totalPage}*/}
-        {/*  onContextMenuClick={onContextMenuClick}*/}
-        {/*  onContextMenu={onContextMenu}*/}
-        {/*  onChangePage={setCurrentPage}*/}
-        {/*/>*/}
+        {/* <ListPageListing */}
+        {/*  items={items} */}
+        {/*  displayMode={displayMode} */}
+        {/*  selectedItems={selectedItems} */}
+        {/*  onCheckItem={onCheckItem} */}
+        {/*  currentPage={currentPage} */}
+        {/*  totalPage={totalPage} */}
+        {/*  onContextMenuClick={onContextMenuClick} */}
+        {/*  onContextMenu={onContextMenu} */}
+        {/*  onChangePage={setCurrentPage} */}
+        {/* /> */}
       </div>
     </>
   );

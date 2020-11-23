@@ -20,7 +20,7 @@ const ConversionRatesChartCard = () => {
         <div className="float-left float-none-xs">
           <div className="d-inline-block">
             <h5 className="d-inline">
-              <IntlMessages id="dashboards.conversion-rates" />
+              <IntlMessages id="dashboards.reservations" />
             </h5>
             <span className="text-muted text-small d-block">
               <IntlMessages id="dashboards.per-session" />

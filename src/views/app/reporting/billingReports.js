@@ -1,6 +1,8 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
 import { Row } from 'reactstrap';
+import Card from 'reactstrap/es/Card';
+import Table from 'reactstrap/es/Table';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import { BarChart } from '../../../components/charts';
@@ -85,7 +87,7 @@ const BillingReports = ({ intl, match }) => {
         </Colxx>
       </Row>
       <Row>
-        <Colxx lg="12" xl="12">
+        <Colxx lg="12" xl="12" className="mb-5">
           <Row>
             <Colxx style={{ height: 500 }} md="6" className="mb-4">
               <h3> Starters Daily</h3>
@@ -106,6 +108,113 @@ const BillingReports = ({ intl, match }) => {
               <BarChart shadow data={starterYearlyBilling} />
             </Colxx>
           </Row>
+        </Colxx>
+
+        <Colxx xxs="12">
+          <Row>
+            <Colxx xxs={12}>
+              <div style={{ textAlign: 'center' }}>
+                <h1>Average Transaction Size(by device)</h1>
+              </div>
+              <Table>
+                <tbody>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">Phone</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£100</Card>
+                    </td>
+                  </tr>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">Laptop</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£200</Card>
+                    </td>
+                  </tr>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">Tablet</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£300</Card>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Colxx>
+          </Row>
+        </Colxx>
+        <Colxx xxs="12">
+          <Row>
+            <Colxx xxs={12}>
+              <div style={{ textAlign: 'center' }}>
+                <h1>Average Transaction Size(by payment type)</h1>
+              </div>
+              <Table>
+                <tbody>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">American Express</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£100</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">10%</Card>
+                    </td>
+                  </tr>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">Master Card</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£200</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">20%</Card>
+                    </td>
+                  </tr>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">Visa</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£300</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">20%</Card>
+                    </td>
+                  </tr>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">debit Card</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£300</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">20%</Card>
+                    </td>
+                  </tr>
+                  <tr className="text-center">
+                    <td>
+                      <Card className="p-2">Credit Card</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">£300</Card>
+                    </td>
+                    <td>
+                      <Card className="p-2">20%</Card>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Colxx>
+          </Row>
+          <Row>2</Row>
         </Colxx>
       </Row>
     </>
