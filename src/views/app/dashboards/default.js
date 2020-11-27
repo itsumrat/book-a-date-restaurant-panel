@@ -57,10 +57,11 @@ const DefaultDashboard = ({ intl, match }) => {
           {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
           <ProductCategoriesDoughnut />
         </Colxx>
-        <Colxx lg="6" md="6" className="mb-4">
-          {/* <Logs /> */}
-          <InboundReservations />
+        <Colxx xl="6" lg="12" className="mb-4">
+          {/* <BestSellers /> */}
+          <BestProductLineSellers />
         </Colxx>
+
         <Colxx lg="6" md="6" className="mb-4">
           {/* <Tickets /> */}
           <Customers />
@@ -70,9 +71,9 @@ const DefaultDashboard = ({ intl, match }) => {
         <Colxx xl="6" lg="12" className="mb-4">
           <Calendar />
         </Colxx>
-        <Colxx xl="6" lg="12" className="mb-4">
-          {/* <BestSellers /> */}
-          <BestProductLineSellers />
+        <Colxx lg="6" md="6" className="mb-4">
+          {/* <Logs /> */}
+          <InboundReservations />
         </Colxx>
       </Row>
       <Row>

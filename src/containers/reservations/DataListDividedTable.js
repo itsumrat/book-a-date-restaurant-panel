@@ -3,15 +3,24 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/display-name */
-import React from 'react';
+import React, { useState } from 'react';
 import { CardTitle, Badge } from 'reactstrap';
+import TimePicker from 'rc-time-picker';
 import { useTable, usePagination, useSortBy } from 'react-table';
 import classnames from 'classnames';
-
+import DatePicker from 'react-datepicker';
 import Button from 'reactstrap/es/Button';
+import Modal from 'reactstrap/es/Modal';
+import ModalBody from 'reactstrap/es/ModalBody';
+import Row from 'reactstrap/es/Row';
+import ModalHeader from 'reactstrap/es/ModalHeader';
 import IntlMessages from '../../helpers/IntlMessages';
 import DatatablePagination from '../../components/DatatablePagination';
 import products from '../../data/products';
+import { Colxx } from '../../components/common/CustomBootstrap';
+import 'react-datepicker/dist/react-datepicker.css';
+import 'rc-time-picker/assets/index.css';
+import moment from 'moment';
 
 const produtcs = [
   {
@@ -428,6 +437,13 @@ function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
 }
 
 const DataListDividedTable = () => {
+  const [oldDate, setOldDate] = useState(new Date());
+  const [newDate, setNewDate] = useState(new Date());
+  const [oldTime, setOldTime] = useState(new Date());
+  const [newTime, setNewTime] = useState(new Date());
+  const [reScVisible, setReScVisible] = useState(false);
+  const [confVisible, setConfVisible] = useState(false);
+
   const cols = React.useMemo(
     () => [
       {
@@ -441,7 +457,7 @@ const DataListDividedTable = () => {
         Header: 'Time',
         accessor: 'time',
         cellClass: 'list-item-heading',
-        Cell: (props) => <>{props.value}</>,
+        Cell: (props) => <>{moment(props.value).format('hh:mm:ss a')}</>,
       },
       {
         Header: 'Customer name',
@@ -491,8 +507,16 @@ const DataListDividedTable = () => {
         cellClass: 'text-muted w-30',
         Cell: (props) => (
           <div className="d-inline-flex">
-            <Button color="primary">Confirm</Button>
-            <Button className="ml-3" color="secondary">
+            <Button onClick={()=>setConfVisible(true)} color="primary">Confirm</Button>
+            <Button
+              onClick={() => {
+                setReScVisible(true);
+                setOldDate(new Date(props.row.values.createDate));
+                setOldTime(new Date(props.row.values.time));
+              }}
+              className="ml-3"
+              color="secondary"
+            >
               Re-schedule
             </Button>
           </div>
@@ -501,12 +525,76 @@ const DataListDividedTable = () => {
     ],
     []
   );
+
   return (
     <div className="mb-4">
-      {/*<CardTitle>*/}
-      {/*  <IntlMessages id="table.divided" />*/}
-      {/*</CardTitle>*/}
+      {/* <CardTitle> */}
+      {/*  <IntlMessages id="table.divided" /> */}
+      {/* </CardTitle> */}
       <Table columns={cols} data={products} divided />
+      <Modal unmountOnClose isOpen={reScVisible}>
+        <ModalHeader>Re-Schedule</ModalHeader>
+        <ModalBody>
+          <Row>
+            <Colxx className="d-inline-flex justify-content-around" xxs={12}>
+              <div>
+                <h3>Date</h3>
+                <div>
+                  <div>
+                    <h3>Old Date</h3>
+                    <DatePicker
+                      selected={oldDate}
+                      onChange={(date) => setOldDate(date)}
+                    />
+                  </div>
+                  <div>
+                    <h3>New Date</h3>
+                    <DatePicker
+                      selected={newDate}
+                      onChange={(date) => setNewDate(date)}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Time</h3>
+                <div>
+                  <div style={{ marginBottom: 15 }}>
+                    <h3>Old Time</h3>
+                    <TimePicker defaultValue={moment(new Date(oldTime))} />
+                  </div>
+                  <div>
+                    <h3>New Time</h3>
+                    <TimePicker
+                      onChange={(time) => setNewTime(time)}
+                      defaultValue={moment()}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Colxx>
+            <Colxx className="d-inline-flex mt-5 justify-content-between">
+              <Button onClick={() => setReScVisible(false)} color="primary">
+                Confirmed
+              </Button>
+              <Button onClick={() => setReScVisible(false)} color="danger">
+                Cancel
+              </Button>
+            </Colxx>
+          </Row>
+        </ModalBody>
+      </Modal>
+      <Modal isOpen={confVisible}>
+        <ModalHeader>Confirm or Reject</ModalHeader>
+        <ModalBody className="d-inline-flex justify-content-around">
+          <Button color="primary" onClick={() => setConfVisible(false)}>
+            Confirm
+          </Button>
+          <Button color="secondary" onClick={() => setConfVisible(false)}>
+            Reject
+          </Button>
+        </ModalBody>
+      </Modal>
     </div>
   );
 };

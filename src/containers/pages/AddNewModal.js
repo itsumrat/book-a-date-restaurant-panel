@@ -127,11 +127,22 @@ const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
         <Label className="mt-4">
           <IntlMessages id="pages.start-day" />
         </Label>
-        <DateTimePicker onChange={setStartDate} value={startDate} />
+        <br />
+        <DateTimePicker
+          calendarIcon={false}
+          onChange={setStartDate}
+          value={startDate}
+        />
+        <br/>
         <Label className="mt-4">
           <IntlMessages id="pages.end-day" />
         </Label>
-        <DateTimePicker onChange={setEndDate} value={endDate} />
+        <br/>
+        <DateTimePicker
+          calendarIcon={false}
+          onChange={setEndDate}
+          value={endDate}
+        />
         <br />
         {/* <Label className="mt-4"> */}
         {/*  <IntlMessages id="pages.status" /> */}

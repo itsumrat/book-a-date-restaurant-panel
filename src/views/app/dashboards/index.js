@@ -1,6 +1,8 @@
 import React, { Suspense, useState } from 'react';
 import { Modal, ModalBody, ModalHeader, Row } from 'reactstrap';
 import { injectIntl } from 'react-intl';
+import Card from 'reactstrap/es/Card';
+import CardBody from 'reactstrap/es/CardBody';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import IconCardsCarousel from '../../../containers/dashboards/IconCardsCarousel';
@@ -25,7 +27,10 @@ import IntlMessages from '../../../helpers/IntlMessages';
 import SpecialDayForm from '../../../containers/email/SpecialDayForm';
 import TotalRevenue from './TotalRevenue';
 import { BarChart } from '../../../components/charts';
-import { starterMonthlyBilling, starterWeeklyBilling } from '../reporting/billingReports';
+import {
+  starterMonthlyBilling,
+  starterWeeklyBilling,
+} from '../reporting/billingReports';
 
 const DefaultDashboard = ({ intl, match }) => {
   const { messages } = intl;
@@ -110,10 +115,7 @@ const DefaultDashboard = ({ intl, match }) => {
         {/*  <Customers /> */}
         {/* </Colxx> */}
         <Colxx md="6" className="mb-4">
-          <SpecialDays
-            data={specialDays}
-            handleAddSpecialDay={handleAddSpecialDay}
-          />
+          <TotalRevenue />
         </Colxx>
       </Row>
       <Row>
@@ -124,8 +126,13 @@ const DefaultDashboard = ({ intl, match }) => {
         {/*  <SalesChartCard /> */}
         {/* </Colxx> */}
         <Colxx md="6" className="mb-4">
-          <TotalRevenue />
-          <div className="mt-4">
+          <Card style={{ height: 500 }} className="mb-4">
+            <CardBody>
+              <h3> Total Reservations</h3>
+              <BarChart shadow data={starterWeeklyBilling} />
+            </CardBody>
+          </Card>
+          <div className="mt-5">
             <SmallLineCharts itemClass="dashboard-small-chart-analytics" />
           </div>
         </Colxx>
@@ -223,9 +230,11 @@ const DefaultDashboard = ({ intl, match }) => {
         {/* <Colxx xxs="12" lg="6" className="mb-4"> */}
         {/*  <ProductCategoriesPolarArea /> */}
         {/* </Colxx> */}
-        <Colxx style={{ height: 500 }} md="6" className="mb-4">
-          <h3> Total Reservations</h3>
-          <BarChart shadow data={starterWeeklyBilling} />
+        <Colxx>
+          <SpecialDays
+            data={specialDays}
+            handleAddSpecialDay={handleAddSpecialDay}
+          />
         </Colxx>
       </Row>
       {/* <Row> */}

@@ -157,11 +157,11 @@ const ReservationDataListPages = ({ match }) => {
     <div className="loading" />
   ) : (
     <>
-      <Row className="mb-4">
-        <Colxx lg="12">
-          <LatestReservationsCard />
-        </Colxx>
-      </Row>
+      {/* <Row className="mb-4"> */}
+      {/*  <Colxx lg="12"> */}
+      {/*    <LatestReservationsCard /> */}
+      {/*  </Colxx> */}
+      {/* </Row> */}
       <div className="disable-text-selection">
         <ReservationPageListHeading
           heading="menu.data-list"

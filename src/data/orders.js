@@ -6,6 +6,9 @@ const orders = [
     address: 'London, United Kingdom',
     date: '02.01.2019',
     statusColor: 'secondary',
+    price: '11',
+    phone: '01749023792',
+    location: 'London, Tarafalgar Square',
     status: 'Confirmed',
   },
   {
@@ -15,6 +18,9 @@ const orders = [
     address: 'London, United Kingdom',
     date: '02.04.2018',
     statusColor: 'primary',
+    price: '11',
+    phone: '01749023792',
+    location: 'London, Tarafalgar Square',
     status: 'Confirmed',
   },
   {
@@ -24,6 +30,9 @@ const orders = [
     address: 'London, United Kingdom',
     date: '02.02.2019',
     statusColor: 'primary',
+    price: '11',
+    phone: '01749023792',
+    location: 'London, Tarafalgar Square',
     status: 'Confirmed',
   },
   {
@@ -33,6 +42,9 @@ const orders = [
     address: 'London, United Kingdom',
     date: '07.03.2019',
     statusColor: 'primary',
+    price: '11',
+    phone: '01749023792',
+    location: 'London, Tarafalgar Square',
     status: 'Confirmed',
   },
   {
@@ -42,6 +54,9 @@ const orders = [
     address: 'London, United Kingdom',
     date: '09.05.2019',
     statusColor: 'secondary',
+    price: '11',
+    phone: '01749023792',
+    location: 'London, Tarafalgar Square',
     status: 'Confirmed',
   },
 ];

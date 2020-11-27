@@ -76,25 +76,25 @@ const FoodCard = ({ product }) => {
           <Row>
             <Colxx xxs={12}>
               <span>
-                Advertise start:{' '}
+                Advertise Date:{' '}
                 {moment(product.advertiseStart).format('ddd, MMM Do YYYY')}
               </span>
-              <br />
-              <span>
-                Advertise end:{' '}
-                {moment(product.advertiseStart).format('ddd, MMM Do YYYY')}
-              </span>
+              {/*<br />*/}
+              {/*<span>*/}
+              {/*  Advertise end:{' '}*/}
+              {/*  {moment(product.advertiseStart).format('ddd, MMM Do YYYY')}*/}
+              {/*</span>*/}
             </Colxx>
             <Colxx className="mt-2" xxs={12}>
               <span>
-                Advertise start:{' '}
+                Advertise Time:{' '}
                 {moment(product.advertiseStart).format('h:mm:ss a')}
               </span>
-              <br />
-              <span>
-                Advertise end:{' '}
-                {moment(product.advertiseStart).format('h:mm:ss a')}
-              </span>
+              {/*<br />*/}
+              {/*<span>*/}
+              {/*  Advertise end:{' '}*/}
+              {/*  {moment(product.advertiseStart).format('h:mm:ss a')}*/}
+              {/*</span>*/}
             </Colxx>
           </Row>
           <br />
