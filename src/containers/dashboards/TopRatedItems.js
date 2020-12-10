@@ -19,7 +19,7 @@ const TopRatedItem = ({ image, order, title, rate, rateCount }) => (
 
 const TopRatedItems = () => {
   return (
-    <Card className="dashboard-top-rated">
+    <Card style={{ height: '100%' }} className="dashboard-top-rated">
       <CardBody>
         <CardTitle>
           <IntlMessages id="dashboards.top-rated-items" />

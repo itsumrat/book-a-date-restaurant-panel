@@ -65,30 +65,30 @@ const data = [
       // },
     ],
   },
-  {
-    id: 'email',
-    icon: 'iconsminds-mail',
-    label: 'email.email',
-    to: '/app/email',
-    subs: [
-      {
-        icon: 'simple-icon-briefcase',
-        label: 'menu.default',
-        to: '/app/email/default',
-      },
-      // {
-      //   icon: 'simple-icon-envelope-open',
-      //   label: 'menu.mailing',
-      //   to: '/app/email/mailing',
-      // },
-    ],
-  },
-  {
-    id: 'advance-search',
-    icon: 'iconsminds-magnifi-glass',
-    label: 'advance-search.advance-search',
-    to: '/app/advance-search',
-  },
+  // {
+  //   id: 'email',
+  //   icon: 'iconsminds-mail',
+  //   label: 'email.email',
+  //   to: '/app/email',
+  //   subs: [
+  //     {
+  //       icon: 'simple-icon-briefcase',
+  //       label: 'menu.default',
+  //       to: '/app/email/default',
+  //     },
+  //     // {
+  //     //   icon: 'simple-icon-envelope-open',
+  //     //   label: 'menu.mailing',
+  //     //   to: '/app/email/mailing',
+  //     // },
+  //   ],
+  // },
+  // {
+  //   id: 'advance-search',
+  //   icon: 'iconsminds-magnifi-glass',
+  //   label: 'advance-search.advance-search',
+  //   to: '/app/advance-search',
+  // },
   {
     id: 'products',
     icon: 'iconsminds-safe-box',
@@ -189,14 +189,14 @@ const data = [
       },
       {
         icon: 'iconsminds-billing',
-        label: 'menu.billing-reports',
-        to: '/app/reporting/billing-reports',
+        label: 'menu.transaction-reports',
+        to: '/app/reporting/transaction-reports',
       },
-      {
-        icon: 'iconsminds-books',
-        label: 'menu.reservations-reports',
-        to: '/app/reporting/reservations-reports',
-      },
+      // {
+      //   icon: 'iconsminds-books',
+      //   label: 'menu.reservations-reports',
+      //   to: '/app/reporting/reservations-reports',
+      // },
     ],
   },
   {
@@ -205,21 +205,21 @@ const data = [
     label: 'billing.billing',
     to: '/app/billing',
     subs: [
-      {
-        icon: 'simple-icon-briefcase',
-        label: 'menu.default',
-        to: '/app/billing/default',
-      },
+      // {
+      //   icon: 'simple-icon-briefcase',
+      //   label: 'menu.default',
+      //   to: '/app/billing/default',
+      // },
       {
         icon: 'simple-icon-bag',
         label: 'menu.invoice',
         to: '/app/billing/invoice',
       },
-      {
-        icon: 'simple-icon-diamond',
-        label: 'menu.prices',
-        to: '/app/billing/prices',
-      },
+      // {
+      //   icon: 'simple-icon-diamond',
+      //   label: 'menu.prices',
+      //   to: '/app/billing/prices',
+      // },
     ],
   },
   // {
@@ -236,8 +236,8 @@ const data = [
     subs: [
       {
         icon: 'simple-icon-briefcase',
-        label: 'menu.default',
-        to: '/app/team/default',
+        label: 'menu.team-members',
+        to: '/app/team/team-members',
       },
       {
         icon: 'simple-icon-check',

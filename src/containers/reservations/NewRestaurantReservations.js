@@ -10,13 +10,13 @@ import { Colxx, Separator } from '../../components/common/CustomBootstrap';
 
 const NewRestaurantReservations = ({ data }) => {
   return (
-    <Card className="mb-4">
-      <CardBody>
-        <CardTitle>
-          <IntlMessages id="table.confirmed-reservations" />
-        </CardTitle>
-        <Row>
-          <Colxx xxs={12}>
+    <Row>
+      <Colxx xxs={12}>
+        <Card className="overflow-auto d-flex mb-4">
+          <CardBody>
+            <CardTitle>
+              <IntlMessages id="table.confirmed-reservations" />
+            </CardTitle>
             <Table>
               <thead>
                 <tr>
@@ -57,10 +57,10 @@ const NewRestaurantReservations = ({ data }) => {
                 })}
               </tbody>
             </Table>
-          </Colxx>
-        </Row>
-      </CardBody>
-    </Card>
+          </CardBody>
+        </Card>
+      </Colxx>
+    </Row>
   );
 };
 

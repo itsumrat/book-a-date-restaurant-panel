@@ -1,6 +1,7 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
-import { Row } from 'reactstrap';
+import { Card, Row } from 'reactstrap';
+import CardBody from 'reactstrap/es/CardBody';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import InboundReservations from '../../../containers/dashboards/InboundReservations';
@@ -12,8 +13,8 @@ import {
   starterDailyBilling,
   starterMonthlyBilling,
   starterWeeklyBilling,
-  starterYearlyBilling
-} from './billingReports';
+  starterYearlyBilling,
+} from './transactionReports';
 
 const ProductReports = ({ intl, match }) => {
   return (
@@ -30,34 +31,50 @@ const ProductReports = ({ intl, match }) => {
             <Colxx md="4" className="mb-4">
               <InboundReservations />
             </Colxx>
-            <Colxx lg="8" xl="4" className="mb-4">
+            <Colxx md="8" className="mb-4">
               <TopRatedItems />
             </Colxx>
-            <Colxx lg="6" md="12" className="mb-4">
+            <Colxx md="12" className="mb-4">
               {/* <ProductCategoriesPolarArea chartClass="dashboard-donut-chart" /> */}
               <ProductCategoriesDoughnut />
             </Colxx>
           </Row>
           <Row>
             <Colxx lg="12" xl="12">
-              <Row>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Daily</h3>
-                  <BarChart shadow data={starterDailyBilling} />
+              <Row className="mb-2">
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Products Daily</h3>
+                      <BarChart shadow data={starterYearlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Weekly</h3>
-                  <BarChart shadow data={starterWeeklyBilling} />
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Products Weekly</h3>
+                      <BarChart shadow data={starterYearlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
               </Row>
-              <Row>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Monthly</h3>
-                  <BarChart shadow data={starterMonthlyBilling} />
+              <Row className="mb-2">
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Products Monthly</h3>
+                      <BarChart shadow data={starterYearlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Yearly</h3>
-                  <BarChart shadow data={starterYearlyBilling} />
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Products Yearly</h3>
+                      <BarChart shadow data={starterYearlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
               </Row>
             </Colxx>

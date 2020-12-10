@@ -54,14 +54,14 @@ const App = ({ match }) => {
               path={`${match.url}/reservations`}
               render={(props) => <Reservations {...props} />}
             />
-            <Route
-              path={`${match.url}/email`}
-              render={(props) => <Email {...props} />}
-            />
-            <Route
-              path={`${match.url}/advance-search`}
-              render={(props) => <Search {...props} />}
-            />
+            {/*<Route*/}
+            {/*  path={`${match.url}/email`}*/}
+            {/*  render={(props) => <Email {...props} />}*/}
+            {/*/>*/}
+            {/*<Route*/}
+            {/*  path={`${match.url}/advance-search`}*/}
+            {/*  render={(props) => <Search {...props} />}*/}
+            {/*/>*/}
             <Route
               path={`${match.url}/products`}
               render={(props) => <Products {...props} />}

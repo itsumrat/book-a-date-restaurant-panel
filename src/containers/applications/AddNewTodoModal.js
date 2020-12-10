@@ -11,6 +11,9 @@ import {
   Label,
 } from 'reactstrap';
 import Select from 'react-select';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
 import CustomSelectInput from '../../components/common/CustomSelectInput';
 import IntlMessages from '../../helpers/IntlMessages';
 
@@ -22,6 +25,7 @@ const initialState = {
   label: {},
   category: {},
   status: 'PENDING',
+  deadline: new Date(),
 };
 
 const AddNewTodoModal = ({
@@ -34,15 +38,16 @@ const AddNewTodoModal = ({
   const [state, setState] = useState(initialState);
 
   const addNetItem = () => {
-    const newItem = {
+    const newTodo = {
       title: state.title,
       detail: state.detail,
       label: state.label.value,
       labelColor: state.label.color,
       category: state.category.value,
       status: state.status,
+      deadline: state.deadline,
     };
-    addTodoItemAction(newItem);
+    addTodoItemAction(newTodo);
     toggleModal();
     setState(initialState);
   };
@@ -141,6 +146,13 @@ const AddNewTodoModal = ({
               status: event.target.value !== 'on' ? 'COMPLETED' : 'PENDING',
             })
           }
+        />
+        <Label className="mt-4">
+          <IntlMessages id="todo.deadline" />
+        </Label>
+        <DatePicker
+          selected={state.deadline}
+          onChange={(deadline) => setState({ ...state, deadline })}
         />
       </ModalBody>
       <ModalFooter>

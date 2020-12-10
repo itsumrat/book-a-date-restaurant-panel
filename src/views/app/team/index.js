@@ -24,9 +24,10 @@ const Team = ({ intl, match }) => {
   return (
     <Suspense fallback={<div className="loading" />}>
       <Switch>
-        <Redirect exact from={`${match.url}/`} to={`${match.url}/default`} />
+        <Redirect exact from={`${match.url}/`} to={`${match.url}/team-members`} />
         <Route
-          path={`${match.url}/default`}
+          exact
+          path={`${match.url}/team-members`}
           render={(props) => <TeamDefault {...props} />}
         />
         <Route

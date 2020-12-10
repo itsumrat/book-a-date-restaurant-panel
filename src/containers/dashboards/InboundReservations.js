@@ -12,7 +12,7 @@ const InboundReservations = () => {
       <Card>
         <CardBody>
           <CardTitle>
-            <IntlMessages id="dashboards.inbound-reservations" />
+            <IntlMessages id="dashboards.products-sold" />
           </CardTitle>
           <div className="dashboard-logs">
             <PerfectScrollbar

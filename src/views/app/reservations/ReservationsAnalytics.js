@@ -12,6 +12,14 @@ import GuestYesterday from '../../../containers/reservations/GuestYesterday';
 import LastSevenDays from '../../../containers/reservations/LastSevendays';
 import { BarChart } from '../../../components/charts';
 import { ThemeColors } from '../../../helpers/ThemeColors';
+import {
+  starterDailyBilling,
+  starterMonthlyBilling,
+  starterWeeklyBilling,
+  starterYearlyBilling
+} from '../reporting/transactionReports';
+import ConversionRatesChartCard from '../../../containers/dashboards/ConversionRatesChartCard';
+import SalesChartCard from '../../../containers/dashboards/SalesChartCard';
 
 const colors = ThemeColors();
 export const dailyReservations = {
@@ -69,37 +77,6 @@ const ReservationsAnalytics = ({ match }) => {
         </div>
       </Colxx>
       <Colxx xxs="12">
-        <Row>
-          <Colxx lg="12" xl="12">
-            <Row>
-              <Colxx lg="4">
-                <ReservationYesterday />
-              </Colxx>
-              <Colxx lg="4">
-                <GuestsCard />
-              </Colxx>
-              <Colxx lg="4">
-                <NextDaysCard />
-              </Colxx>
-            </Row>
-          </Colxx>
-        </Row>
-        <br />
-        <Row>
-          <Colxx lg="12" xl="12">
-            <Row>
-              <Colxx lg="4">
-                <ReservationYesterday />
-              </Colxx>
-              <Colxx lg="4">
-                <GuestYesterday />
-              </Colxx>
-              <Colxx lg="4">
-                <LastSevenDays />
-              </Colxx>
-            </Row>
-          </Colxx>
-        </Row>
         <br />
         <Row>
           <Colxx lg="12" xl="12">
@@ -126,7 +103,7 @@ const ReservationsAnalytics = ({ match }) => {
                 />
               </Colxx>
             </Row>
-            <br/>
+            <br />
             <Row>
               <Colxx lg="4">
                 <ReservationCard
@@ -187,6 +164,60 @@ const ReservationsAnalytics = ({ match }) => {
                 <BarChart shadow data={reservationByDevice} />
               </CardBody>
             </Card>
+          </Colxx>
+        </Row>
+      </Colxx>
+      <Colxx xxs="12">
+        <Row>
+          <Colxx lg="12" xl="12">
+            <Row className="mb-2">
+              <Colxx md="6" className="mb-4">
+                <Card>
+                  <CardBody style={{ height: 500 }}>
+                    <h3> Reservations Daily</h3>
+                    <BarChart shadow data={dailyReservations} />
+                  </CardBody>
+                </Card>
+              </Colxx>
+              <Colxx md="6" className="mb-4">
+                <Card>
+                  <CardBody style={{ height: 500 }}>
+                    <h3> Reservations Weekly</h3>
+                    <BarChart shadow data={starterWeeklyBilling} />
+                  </CardBody>
+                </Card>
+              </Colxx>
+            </Row>
+            <Row className="mb-2">
+              <Colxx md="6" className="mb-4">
+                <Card>
+                  <CardBody style={{ height: 500 }}>
+                    <h3> Reservations Monthly</h3>
+                    <BarChart shadow data={starterMonthlyBilling} />
+                  </CardBody>
+                </Card>
+              </Colxx>
+              <Colxx md="6" className="mb-4">
+                <Card>
+                  <CardBody style={{ height: 500 }}>
+                    <h3> Reservations Yearly</h3>
+                    <BarChart shadow data={starterYearlyBilling} />
+                  </CardBody>
+                </Card>
+              </Colxx>
+            </Row>
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx lg="12" xl="12">
+            <Row>
+              <Colxx md="12" className="mt-4 mb-4">
+                <ConversionRatesChartCard />
+              </Colxx>
+              <Colxx md="12" className="mb-4">
+                <SalesChartCard />
+              </Colxx>
+            </Row>
           </Colxx>
         </Row>
       </Colxx>

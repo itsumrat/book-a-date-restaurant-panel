@@ -181,6 +181,7 @@ export const scatterChartOptions = {
 
 export const barChartOptions = {
   legend: {
+    display: false,
     position: 'bottom',
     labels: {
       padding: 30,

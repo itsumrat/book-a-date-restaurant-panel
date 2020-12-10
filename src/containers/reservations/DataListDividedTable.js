@@ -449,7 +449,7 @@ const DataListDividedTable = () => {
       {
         Header: 'Date Reservation',
         accessor: 'createDate',
-        cellClass: 'text-muted ',
+        cellClass: 'list-item-heading font-weight-bold ',
         isSorted: false,
         Cell: (props) => <>{props.value}</>,
       },

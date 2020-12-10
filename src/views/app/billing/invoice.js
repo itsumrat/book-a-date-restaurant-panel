@@ -1,15 +1,26 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { Row, Card, CardBody, Table } from 'reactstrap';
-import Breadcrumb from '../../../containers/navs/Breadcrumb';
-import {
-  Separator,
-  Colxx,
-} from '../../../components/common/CustomBootstrap';
-import IntlMessages from '../../../helpers/IntlMessages';
 import { injectIntl } from 'react-intl';
+import moment from 'moment';
+import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import { Separator, Colxx } from '../../../components/common/CustomBootstrap';
+import IntlMessages from '../../../helpers/IntlMessages';
+import products from '../../../data/products';
 
 const BillingInvoice = ({ match }) => {
+  const tax = products
+    .slice(0, 10)
+    .map((p) => p.tax)
+    .reduce((a, c) => a + c);
+  const shipping = products
+    .slice(0, 10)
+    .map((p) => p.shipping)
+    .reduce((a, c) => a + c);
+  const subtotal = products
+    .slice(0, 10)
+    .map((p) => p.price)
+    .reduce((a, c) => a + c);
   return (
     <>
       <Row>
@@ -37,91 +48,91 @@ const BillingInvoice = ({ match }) => {
       </Row>
 
       <Row className="invoice-react">
-        <Colxx xxs="12" className="mb-4">
+        <Colxx xxs="12" md={8} className="m-auto mb-4">
           <Card className="mb-5 invoice-contents">
             <CardBody className="d-flex flex-column justify-content-between">
               <div className="d-flex flex-column">
-                <div className="d-flex flex-row justify-content-between pt-2 pb-2">
-                  <div className="d-flex align-self-center">
-                    <img
-                      src="https://coloredstrategies.com/mailing/gogo.png"
-                      alt="Logo"
-                    />
+                {/*<div className="d-flex flex-row justify-content-between pt-2 pb-2">*/}
+                {/*  <div className="d-flex align-self-center">*/}
+                {/*    <img*/}
+                {/*      src="https://coloredstrategies.com/mailing/gogo.png"*/}
+                {/*      alt="Logo"*/}
+                {/*//     />*/}
+                {/*//   </div>*/}
+                {/*  <div className="d-flex w-30 text-right align-self-center">*/}
+                {/*    <p className="text-small text-semi-muted mb-0">*/}
+                {/*      ColoredStrategies Inc 35 Little Russell St. Bloomsburg*/}
+                {/*      London,UK*/}
+                {/*      <br />*/}
+                {/*      784 451 12 47*/}
+                {/*    </p>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
+                <div className="d-flex justify-content-between">
+                  <div>
+                    <p>{moment().format('llll')}</p>
                   </div>
-                  <div className="d-flex w-30 text-right align-self-center">
-                    <p className="text-small text-semi-muted mb-0">
-                      ColoredStrategies Inc 35 Little Russell St. Bloomsburg
-                      London,UK
-                      <br />
-                      784 451 12 47
-                    </p>
+                  <div className="flex-column">
+                    <p>{moment().format('llll')}</p>
+                    <p className="text-muted">Invoice no: #0001</p>
                   </div>
                 </div>
                 <div className="border-bottom pt-4 mb-5" />
 
-                <div className="d-flex flex-row justify-content-between mb-5">
-                  <div className="d-flex flex-column w-70 mr-2 p-4 text-semi-muted bg-semi-muted">
-                    <p className="mb-0">Latashia Nagy</p>
-                    <p className="mb-0">
-                      100-148 Warwick Trfy, Kansas City, USA
-                    </p>
-                  </div>
-                  <div className="d-flex w-30 flex-column text-right p-4 text-semi-muted bg-semi-muted">
-                    <p className="mb-0">Invoice #: 741</p>
-                    <p className="mb-0">02.02.2019</p>
-                  </div>
+                {/*<div className="d-flex flex-row justify-content-between mb-5">*/}
+                {/*  <div className="d-flex flex-column w-70 mr-2 p-4 text-semi-muted bg-semi-muted">*/}
+                {/*    <p className="mb-0">Latashia Nagy</p>*/}
+                {/*    <p className="mb-0">*/}
+                {/*      100-148 Warwick Trfy, Kansas City, USA*/}
+                {/*    </p>*/}
+                {/*  </div>*/}
+                {/*  <div className="d-flex w-30 flex-column text-right p-4 text-semi-muted bg-semi-muted">*/}
+                {/*    <p className="mb-0">Invoice #: 741</p>*/}
+                {/*    <p className="mb-0">02.02.2019</p>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
+                <Row className="mb-3">
+                  <Colxx xxs={6} sm={6} md={6} className="p-2">
+                    <h3>Reservations Completed</h3>
+                    <div className="d-flex justify-content-between mb-4">
+                      <p>Count</p>
+                      <p>Price</p>
+                    </div>
+                    <div className="d-flex justify-content-between">
+                      <p>100</p>
+                      <p>£ 200</p>
+                    </div>
+                  </Colxx>
+                </Row>
+                <div>
+                  <h4>Products</h4>
                 </div>
-
                 <Table borderless>
                   <thead>
-                  <tr>
-                    <th className="text-muted text-extra-small mb-2">
-                      ITEM NAME
-                    </th>
-                    <th className="text-muted text-extra-small mb-2">
-                      COUNT
-                    </th>
-                    <th className="text-right text-muted text-extra-small mb-2">
-                      PRICE
-                    </th>
-                  </tr>
+                    <tr>
+                      <th className="text-muted text-extra-small mb-2">
+                        ITEM NAME
+                      </th>
+                      <th className="text-muted text-extra-small mb-2">
+                        COUNT
+                      </th>
+                      <th className="text-right text-muted text-extra-small mb-2">
+                        PRICE
+                      </th>
+                      <th className="text-right text-muted text-extra-small mb-2">
+                        Bookadate %
+                      </th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Marble Cake</td>
-                    <td>3 pcs</td>
-                    <td className="text-right">$ 14.82</td>
-                  </tr>
-                  <tr>
-                    <td>Chocolate Cake</td>
-                    <td>2 pcs</td>
-                    <td className="text-right">$ 8.97</td>
-                  </tr>
-                  <tr>
-                    <td>Fat Rascal</td>
-                    <td>2 pcs</td>
-                    <td className="text-right">$ 18.24</td>
-                  </tr>
-                  <tr>
-                    <td>Cremeschnitte</td>
-                    <td>2 pcs</td>
-                    <td className="text-right">$ 4.24</td>
-                  </tr>
-                  <tr>
-                    <td>Cheesecake</td>
-                    <td>3 pcs</td>
-                    <td className="text-right">$ 6.27</td>
-                  </tr>
-                  <tr>
-                    <td>Magdalena</td>
-                    <td>2 pcs</td>
-                    <td className="text-right">$ 10.97</td>
-                  </tr>
-                  <tr>
-                    <td>Genoise</td>
-                    <td>2 pcs</td>
-                    <td className="text-right">$ 21.24</td>
-                  </tr>
+                    {products.slice(0, 10).map((product) => (
+                      <tr key={product.id}>
+                        <td>{product.title}</td>
+                        <td>{product.sales} pcs</td>
+                        <td className="text-right">£ {product.price}</td>
+                        <td className="text-right"> 1</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </Table>
               </div>
@@ -129,22 +140,24 @@ const BillingInvoice = ({ match }) => {
                 <div className="border-bottom pt-3 mb-5" />
                 <Table borderless className="d-flex justify-content-end">
                   <tbody>
-                  <tr>
-                    <td className="text-semi-muted">Subtotal :</td>
-                    <td className="text-right">$ 61.82</td>
-                  </tr>
-                  <tr>
-                    <td className="text-semi-muted">Tax :</td>
-                    <td className="text-right">$ 61.82</td>
-                  </tr>
-                  <tr>
-                    <td className="text-semi-muted">Shipping :</td>
-                    <td className="text-right">$ 3.21</td>
-                  </tr>
-                  <tr className="font-weight-bold">
-                    <td className="text-semi-muted">Total :</td>
-                    <td className="text-right">$ 68.14</td>
-                  </tr>
+                    <tr>
+                      <td className="text-semi-muted">Subtotal :</td>
+                      <td className="text-right">£ {subtotal}</td>
+                    </tr>
+                    <tr>
+                      <td className="text-semi-muted">Tax :</td>
+                      <td className="text-right">£ {tax}</td>
+                    </tr>
+                    <tr>
+                      <td className="text-semi-muted">Shipping :</td>
+                      <td className="text-right">£ {shipping}</td>
+                    </tr>
+                    <tr className="font-weight-bold">
+                      <td className="text-semi-muted">Total :</td>
+                      <td className="text-right">
+                        £ {subtotal + tax + shipping}
+                      </td>
+                    </tr>
                   </tbody>
                 </Table>
                 <div className="border-bottom pt-3 mb-5" />
@@ -174,7 +187,7 @@ const BillingInvoice = ({ match }) => {
               __html: `<div className="invoice-contents" style="background-color:#ffffff; height:1200px; max-width:830px; font-family: Helvetica,Arial,sans-serif !important; position: relative;">
                                 <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="width:100%; background-color:#ffffff;border-collapse:separate !important; border-spacing:0;color:#242128; margin:0;padding:30px; padding-top: 20px;"
                                     heigth="auto">
-        
+
                                     <tbody>
                                         <tr>
                                             <td align="left" valign="center" style="padding-bottom:35px; padding-top:15px; border-top:0;width:100% !important;">
@@ -196,7 +209,7 @@ const BillingInvoice = ({ match }) => {
                                                                     Latashia Nagy<br>100-148 Warwick Trfy, Kansas City, USA
                                                                 </p>
                                                             </td>
-        
+
                                                             <td style="text-align: right; padding-top:0px; padding-bottom:0; vertical-align:middle; padding:30px; background-color: #f9f9f9; border-radius: 3px; border-left: 5px solid white;">
                                                                 <p style="color:#8f8f8f; font-size: 14px; padding: 0; line-height: 1.6; margin:0; ">
                                                                     Invoice #: 741<br>
@@ -231,7 +244,7 @@ const BillingInvoice = ({ match }) => {
                                                                     pcs</p>
                                                             </td>
                                                             <td style="padding-top:0px; padding-bottom:0; text-align: right; padding-top:10px; padding-bottom:10px;">
-                                                                <p style="font-size: 13px; line-height: 1; color:#303030; margin-bottom:0; margin-top:0; vertical-align:top; white-space:nowrap;">$
+                                                                <p style="font-size: 13px; line-height: 1; color:#303030; margin-bottom:0; margin-top:0; vertical-align:top; white-space:nowrap;">£
                                                                     14.82</p>
                                                             </td>
                                                         </tr>
@@ -316,14 +329,14 @@ const BillingInvoice = ({ match }) => {
                                                                     21.24</p>
                                                             </td>
                                                         </tr>
-                                                        
+
                                                     </tbody>
                                                 </table>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
-        
+
                                 <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="position:absolute; bottom:0; width:100%; background-color:#ffffff;border-collapse:separate !important; border-spacing:0;color:#242128; margin:0;padding:30px; padding-top: 20px;"
                                     heigth="auto">
                                     <tr>
@@ -381,7 +394,7 @@ const BillingInvoice = ({ match }) => {
                                     </tr>
                                 </table>
                             </div>
-                    
+
                     `,
             }}
           />

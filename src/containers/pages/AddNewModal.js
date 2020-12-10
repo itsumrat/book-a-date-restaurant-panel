@@ -133,17 +133,21 @@ const AddNewModal = ({ isEdit, product, modalOpen, toggleModal }) => {
           onChange={setStartDate}
           value={startDate}
         />
-        <br/>
+        <br />
         <Label className="mt-4">
           <IntlMessages id="pages.end-day" />
         </Label>
-        <br/>
+        <br />
         <DateTimePicker
           calendarIcon={false}
           onChange={setEndDate}
           value={endDate}
         />
         <br />
+        <Label className="mt-4">
+          <IntlMessages id="pages.stock_quantity" />
+        </Label>
+        <Input defaultValue={isEdit ? product.stock : null} type="number" />
         {/* <Label className="mt-4"> */}
         {/*  <IntlMessages id="pages.status" /> */}
         {/* </Label> */}

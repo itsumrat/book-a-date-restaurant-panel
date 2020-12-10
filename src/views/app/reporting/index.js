@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import BillingReports from './billingReports';
+import TransactionReports from './transactionReports';
 import ReservationsReports from './ReservationsReports';
 
 const SalesReports = React.lazy(() =>
@@ -41,8 +41,8 @@ const Reporting = ({ match }) => (
         render={(props) => <BookingReports {...props} />}
       />
       <Route
-        path={`${match.url}/billing-reports`}
-        render={(props) => <BillingReports {...props} />}
+        path={`${match.url}/transaction-reports`}
+        render={(props) => <TransactionReports {...props} />}
       />
       <Route
         path={`${match.url}/reservations-reports`}

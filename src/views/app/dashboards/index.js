@@ -30,7 +30,7 @@ import { BarChart } from '../../../components/charts';
 import {
   starterMonthlyBilling,
   starterWeeklyBilling,
-} from '../reporting/billingReports';
+} from '../reporting/transactionReports';
 
 const DefaultDashboard = ({ intl, match }) => {
   const { messages } = intl;
@@ -118,25 +118,29 @@ const DefaultDashboard = ({ intl, match }) => {
           <TotalRevenue />
         </Colxx>
       </Row>
-      <Row>
-        <Colxx xl="6" lg="12" className="mb-4">
-          <Calendar />
-        </Colxx>
-        {/* <Colxx md="6" className="mb-4"> */}
-        {/*  <SalesChartCard /> */}
-        {/* </Colxx> */}
-        <Colxx md="6" className="mb-4">
-          <Card style={{ height: 500 }} className="mb-4">
-            <CardBody>
-              <h3> Total Reservations</h3>
-              <BarChart shadow data={starterWeeklyBilling} />
-            </CardBody>
-          </Card>
-          <div className="mt-5">
-            <SmallLineCharts itemClass="dashboard-small-chart-analytics" />
-          </div>
-        </Colxx>
-      </Row>
+
+      {/* <Row> */}
+      {/* <Colxx xl="6" lg="12" className="mb-4"> */}
+      {/*  <Calendar /> */}
+      {/* </Colxx> */}
+      {/* <Colxx md="6" className="mb-4"> */}
+      {/*  <SalesChartCard /> */}
+      {/* </Colxx> */}
+      {/* </Row> */}
+
+      {/* <Row> */}
+      {/*  <Colxx md="12" className="mb-4"> */}
+      {/*    <Card style={{ height: 500 }} className="mb-4"> */}
+      {/*      <CardBody> */}
+      {/*        <h3> Total Reservations</h3> */}
+      {/*        <BarChart shadow data={starterWeeklyBilling} /> */}
+      {/*      </CardBody> */}
+      {/*    </Card> */}
+      {/*    <div className="mt-5"> */}
+      {/*      <SmallLineCharts itemClass="dashboard-small-chart-analytics" /> */}
+      {/*    </div> */}
+      {/*  </Colxx> */}
+      {/* </Row> */}
       <Row>
         {/* <Colxx sm="12" lg="4" className="mb-4"> */}
         {/*  <ProfileStatuses /> */}
@@ -154,14 +158,14 @@ const DefaultDashboard = ({ intl, match }) => {
         {/* </Colxx> */}
       </Row>
       {/* <SortableStaticticsRow messages={messages} /> */}
-      <Row>
-        <Colxx sm="12" md="6" className="mb-4">
-          <WebsiteVisitsChartCard />
-        </Colxx>
-        <Colxx sm="12" md="6" className="mb-4">
-          <ConversionRatesChartCard />
-        </Colxx>
-      </Row>
+      {/* <Row> */}
+      {/*  <Colxx sm="12" md="6" className="mb-4"> */}
+      {/*    <WebsiteVisitsChartCard /> */}
+      {/*  </Colxx> */}
+      {/*  <Colxx sm="12" md="6" className="mb-4"> */}
+      {/*    <ConversionRatesChartCard /> */}
+      {/*  </Colxx> */}
+      {/* </Row> */}
       {/* <Row> */}
       {/* <Colxx lg="12" md="6" xl="4"> */}
       {/* <Row> */}
@@ -214,18 +218,21 @@ const DefaultDashboard = ({ intl, match }) => {
       {/*    <ConversionRatesChartCard /> */}
       {/*  </Colxx> */}
       {/* </Row> */}
-      <Row>
-        {/* <Colxx xl="4" lg="6" md="12" className="mb-4"> */}
-        {/*  <ProductCategoriesDoughnut /> */}
-        {/* </Colxx> */}
-        {/* <Colxx xl="4" lg="6" md="12" className="mb-4"> */}
-        {/*  <ProfileStatuses cardClass="dashboard-progress" /> */}
-        {/* </Colxx> */}
-        <Colxx xl="12" xxs="12" lg="6" className="mb-4">
-          <OrderStockRadarChart />
-        </Colxx>
-      </Row>
+
+      {/* <Row> */}
+      {/* <Colxx xl="4" lg="6" md="12" className="mb-4"> */}
+      {/*  <ProductCategoriesDoughnut /> */}
+      {/* </Colxx> */}
+      {/* <Colxx xl="4" lg="6" md="12" className="mb-4"> */}
+      {/*  <ProfileStatuses cardClass="dashboard-progress" /> */}
+      {/* </Colxx> */}
+      {/*  <Colxx xl="12" xxs="12" lg="6" className="mb-4"> */}
+      {/*    <OrderStockRadarChart /> */}
+      {/*  </Colxx> */}
+      {/* </Row> */}
+
       {/* <SortableStaticticsRow messages={messages} /> */}
+
       <Row>
         {/* <Colxx xxs="12" lg="6" className="mb-4"> */}
         {/*  <ProductCategoriesPolarArea /> */}

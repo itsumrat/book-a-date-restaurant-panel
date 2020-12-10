@@ -77,7 +77,7 @@ export const starterYearlyBilling = {
   ],
 };
 
-const BillingReports = ({ intl, match }) => {
+const TransactionReports = ({ intl, match }) => {
   return (
     <>
       <Row>
@@ -197,4 +197,4 @@ const BillingReports = ({ intl, match }) => {
     </>
   );
 };
-export default injectIntl(BillingReports);
+export default injectIntl(TransactionReports);

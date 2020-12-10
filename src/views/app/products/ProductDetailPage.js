@@ -209,63 +209,63 @@ const ProductDetailPage = ({ match, intl }) => {
                           {/* <p>No</p> */}
                         </CardBody>
                       </Card>
-                      <Row>
-                        <Colxx xxs="12" className="mb-4">
-                          <RadialProgressCard
-                            className="mb-4"
-                            title={messages['pages.order-status']}
-                            percent={85}
-                            isSortable={false}
-                          />
-                        </Colxx>
-                        <Colxx xxs="12" className="mb-4">
-                          <RadialProgressCard
-                            className="mb-4"
-                            title={messages['pages.order-status']}
-                            percent={40}
-                            isSortable={false}
-                          />
-                        </Colxx>
-                      </Row>
-                      <Row>
-                       <Colxx xxs="12">
-                         <Card >
-                           <CardBody>
-                             <p className="font-weight-bold">Sales</p>
-                             <Table borderless>
-                               <thead>
-                               <tr>
-                                 <th scope="col">#</th>
-                                 <th scope="col">First</th>
-                                 <th scope="col">Last</th>
-                                 <th scope="col">Date</th>
-                               </tr>
-                               </thead>
-                               <tbody>
-                               <tr>
-                                 <th scope="row">1</th>
-                                 <td>Mark</td>
-                                 <td>Otto</td>
-                                 <td>10/9/2020</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">2</th>
-                                 <td>Jacob</td>
-                                 <td>Thornton</td>
-                                 <td>10/9/2020</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">3</th>
-                                 <td>Larry the Bird</td>
-                                 <td>Thornton</td>
-                                 <td>10/9/2020</td>
-                               </tr>
-                               </tbody>
-                             </Table>
-                           </CardBody>
-                         </Card>
-                       </Colxx>
-                      </Row>
+                      {/*<Row>*/}
+                      {/*  <Colxx xxs="12" className="mb-4">*/}
+                      {/*    <RadialProgressCard*/}
+                      {/*      className="mb-4"*/}
+                      {/*      title={messages['pages.order-status']}*/}
+                      {/*      percent={85}*/}
+                      {/*      isSortable={false}*/}
+                      {/*    />*/}
+                      {/*  </Colxx>*/}
+                      {/*  <Colxx xxs="12" className="mb-4">*/}
+                      {/*    <RadialProgressCard*/}
+                      {/*      className="mb-4"*/}
+                      {/*      title={messages['pages.order-status']}*/}
+                      {/*      percent={40}*/}
+                      {/*      isSortable={false}*/}
+                      {/*    />*/}
+                      {/*  </Colxx>*/}
+                      {/*</Row>*/}
+                      {/*<Row>*/}
+                      {/*  <Colxx xxs="12">*/}
+                      {/*    <Card>*/}
+                      {/*      <CardBody>*/}
+                      {/*        <p className="font-weight-bold">Sales</p>*/}
+                      {/*        <Table borderless>*/}
+                      {/*          <thead>*/}
+                      {/*            <tr>*/}
+                      {/*              <th scope="col">#</th>*/}
+                      {/*              <th scope="col">First</th>*/}
+                      {/*              <th scope="col">Last</th>*/}
+                      {/*              <th scope="col">Date</th>*/}
+                      {/*            </tr>*/}
+                      {/*          </thead>*/}
+                      {/*          <tbody>*/}
+                      {/*            <tr>*/}
+                      {/*              <th scope="row">1</th>*/}
+                      {/*              <td>Mark</td>*/}
+                      {/*              <td>Otto</td>*/}
+                      {/*              <td>10/9/2020</td>*/}
+                      {/*            </tr>*/}
+                      {/*            <tr>*/}
+                      {/*              <th scope="row">2</th>*/}
+                      {/*              <td>Jacob</td>*/}
+                      {/*              <td>Thornton</td>*/}
+                      {/*              <td>10/9/2020</td>*/}
+                      {/*            </tr>*/}
+                      {/*            <tr>*/}
+                      {/*              <th scope="row">3</th>*/}
+                      {/*              <td>Larry the Bird</td>*/}
+                      {/*              <td>Thornton</td>*/}
+                      {/*              <td>10/9/2020</td>*/}
+                      {/*            </tr>*/}
+                      {/*          </tbody>*/}
+                      {/*        </Table>*/}
+                      {/*      </CardBody>*/}
+                      {/*    </Card>*/}
+                      {/*  </Colxx>*/}
+                      {/*</Row>*/}
                     </Colxx>
 
                     <Colxx xxs="12" lg="8">
@@ -274,7 +274,7 @@ const ProductDetailPage = ({ match, intl }) => {
                         className="mb-4"
                         controls={false}
                       />
-                      {/*<NewComments className="mb-4" displayRate />*/}
+                      {/* <NewComments className="mb-4" displayRate /> */}
                     </Colxx>
                   </Row>
                 </TabPane>

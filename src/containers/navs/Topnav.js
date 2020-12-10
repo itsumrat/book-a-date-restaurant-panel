@@ -36,6 +36,7 @@ import TopnavNotifications from './Topnav.Notifications';
 import TopnavDarkSwitch from './Topnav.DarkSwitch';
 
 import { getDirection, setDirection } from '../../helpers/Utils';
+import logo from '../../assets/img/bookadatelogo.png';
 
 const TopNav = ({
   intl,
@@ -275,15 +276,18 @@ const TopNav = ({
         {/*  </a> */}
         {/* </div> */}
       </div>
-      <a className="navbar-logo" href="/">
+       <a className="navbar-logo" href="/">
         <span className="logo d-none d-xs-block" />
         <span className="logo-mobile d-block d-xs-none" />
-      </a>
+       </a>
+      {/*<NavLink to="/" className="navbar-logo">*/}
+      {/*  <img style={{ height: 50, marginRight: 20 }} src={logo} alt="" />*/}
+      {/*</NavLink>*/}
 
       <div className="navbar-right">
         {isDarkSwitchActive && <TopnavDarkSwitch />}
         <div className="header-icons d-inline-block align-middle">
-          {/*<TopnavEasyAccess />*/}
+          {/* <TopnavEasyAccess /> */}
           <TopnavNotifications />
           <button
             className="header-icon btn btn-empty d-none d-sm-inline-block"
@@ -308,10 +312,10 @@ const TopNav = ({
             </DropdownToggle>
             <DropdownMenu className="mt-3" right>
               <DropdownItem>Account</DropdownItem>
-              {/*<DropdownItem>Features</DropdownItem>*/}
-              {/*<DropdownItem>History</DropdownItem>*/}
-              {/*<DropdownItem>Support</DropdownItem>*/}
-              {/*<DropdownItem divider />*/}
+              {/* <DropdownItem>Features</DropdownItem> */}
+              {/* <DropdownItem>History</DropdownItem> */}
+              {/* <DropdownItem>Support</DropdownItem> */}
+              {/* <DropdownItem divider /> */}
               <DropdownItem onClick={() => handleLogout()}>
                 Sign out
               </DropdownItem>

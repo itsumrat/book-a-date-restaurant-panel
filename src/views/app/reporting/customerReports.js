@@ -11,7 +11,9 @@ import {
   starterMonthlyBilling,
   starterWeeklyBilling,
   starterYearlyBilling
-} from './billingReports';
+} from './transactionReports';
+import Card from 'reactstrap/es/Card';
+import CardBody from 'reactstrap/es/CardBody';
 
 const CustomerReports = ({ intl, match }) => {
   return (
@@ -34,24 +36,40 @@ const CustomerReports = ({ intl, match }) => {
           </Row>
           <Row>
             <Colxx lg="12" xl="12">
-              <Row>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Daily</h3>
-                  <BarChart shadow data={starterDailyBilling} />
+              <Row className="mb-2">
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Customers Daily</h3>
+                      <BarChart shadow data={starterYearlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Weekly</h3>
-                  <BarChart shadow data={starterWeeklyBilling} />
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Customers Weekly</h3>
+                      <BarChart shadow data={starterWeeklyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
               </Row>
-              <Row>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Monthly</h3>
-                  <BarChart shadow data={starterMonthlyBilling} />
+              <Row className="mb-2">
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Customers Monthly</h3>
+                      <BarChart shadow data={starterMonthlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
-                <Colxx style={{ height: 500 }} md="6" className="mb-4">
-                  <h3> Starters Yearly</h3>
-                  <BarChart shadow data={starterYearlyBilling} />
+                <Colxx md="6" className="mb-4">
+                  <Card>
+                    <CardBody style={{ height: 500 }}>
+                      <h3> Customers Yearly</h3>
+                      <BarChart shadow data={starterYearlyBilling} />
+                    </CardBody>
+                  </Card>
                 </Colxx>
               </Row>
             </Colxx>

@@ -16,6 +16,8 @@ import salmonfish from '../assets/img/Mains Salmon Fish .jpeg';
 const products = [
   {
     id: 1,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -38,6 +40,8 @@ const products = [
   },
   {
     id: 2,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -60,6 +64,8 @@ const products = [
   },
   {
     id: 3,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -82,6 +88,8 @@ const products = [
   },
   {
     id: 4,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -104,6 +112,8 @@ const products = [
   },
   {
     id: 23,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -126,6 +136,8 @@ const products = [
   },
   {
     id: 81,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -148,6 +160,8 @@ const products = [
   },
   {
     id: 5,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -170,6 +184,8 @@ const products = [
   },
   {
     id: 6,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -192,6 +208,8 @@ const products = [
   },
   {
     id: 7,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -214,6 +232,8 @@ const products = [
   },
   {
     id: 8,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -236,6 +256,8 @@ const products = [
   },
   {
     id: 9,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -260,6 +282,8 @@ const products = [
   },
   {
     id: 10,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -282,6 +306,8 @@ const products = [
   },
   {
     id: 11,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -304,6 +330,8 @@ const products = [
   },
   {
     id: 12,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -326,6 +354,8 @@ const products = [
   },
   {
     id: 13,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -350,6 +380,8 @@ const products = [
   },
   {
     id: 14,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -372,6 +404,8 @@ const products = [
   },
   {
     id: 15,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -394,6 +428,8 @@ const products = [
   },
   {
     id: 16,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -416,6 +452,8 @@ const products = [
   },
   {
     id: 17,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -438,6 +476,8 @@ const products = [
   },
   {
     id: 18,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -460,6 +500,8 @@ const products = [
   },
   {
     id: 19,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -482,6 +524,8 @@ const products = [
   },
   {
     id: 20,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -504,6 +548,8 @@ const products = [
   },
   {
     id: 21,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -526,6 +572,8 @@ const products = [
   },
   {
     id: 22,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -548,6 +596,8 @@ const products = [
   },
   {
     id: 82,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
@@ -570,6 +620,8 @@ const products = [
   },
   {
     id: 83,
+    tax: 1,
+    shipping: 1.5,
     active: true,
     customerName: 'Paul Molive',
     customerEmail: 'dummyemail@email.com',
