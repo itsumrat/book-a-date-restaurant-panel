@@ -143,7 +143,7 @@ module.exports = {
   'menu.deactivated-product': 'Deactivated Products',
   'menu.drinks': 'Drinks',
   'menu.mains': 'Mains',
-  'menu.starters': 'Starters',
+  'menu.starters': 'Three Course Fine Dining',
   'menu.desserts': 'Desserts',
   'menu.reporting': 'Reporting',
   'menu.sales-reports': 'Sales Reports',
@@ -255,7 +255,7 @@ module.exports = {
   'dashboards.type': 'Type',
   'dashboards.keyword': 'Keyword',
   'dashboards.search': 'Search',
-  'dashboards.top-rated-items': 'Top Rated Items',
+  'dashboards.top-rated-items': 'Activate Products',
 
   // Email
   'email.email': 'Email',

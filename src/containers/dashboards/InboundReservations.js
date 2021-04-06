@@ -19,7 +19,14 @@ const InboundReservations = () => {
               options={{ suppressScrollX: true, wheelPropagation: false }}
             >
               <table className="table table-sm table-borderless">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
                 <tbody>
+
                   {data.map((product, index) => {
                     return (
                       <tr key={index}>
@@ -34,9 +41,11 @@ const InboundReservations = () => {
                             Product {product.productLine}
                           </span>
                         </td>
-                        {/* <td className="text-right"> */}
-                        {/*  <span className="text-muted">{log.time}</span> */}
-                        {/* </td> */}
+                        <td className="">
+                          <span className="text-muted">
+                            {new Date().toLocaleString()}
+                          </span>
+                        </td>
                       </tr>
                     );
                   })}

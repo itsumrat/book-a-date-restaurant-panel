@@ -15,7 +15,7 @@ import { areaChartData } from '../../data/charts';
 
 const WebsiteVisitsChartCard = ({ className = '', controls = true }) => {
   return (
-    <Card className={`${className} dashboard-filled-line-chart`}>
+    <Card className={`${className} dashboard-filled-line-chart`} style={{height: 375}}>
       <CardBody>
         <div className="float-left float-none-xs">
           <div className="d-inline-block">

@@ -5,15 +5,17 @@ import Rating from '../../components/common/Rating';
 import data from '../../data/topRatedItems';
 import GlideComponent from '../../components/carousel/GlideComponent';
 
-const TopRatedItem = ({ image, order, title, rate, rateCount }) => (
+const TopRatedItem = ({ image, order, title, rate, rateCount, sales }) => (
   <div>
     <img src={image} alt={title} className="mb-4" />
     <h6 className="mb-1">
       <span className="mr-2">{order}.</span>
       {title}
     </h6>
-    <Rating total={5} rating={rate} interactive={false} />
-    <p className="text-small text-muted mb-0 d-inline-block">({rateCount})</p>
+    {/*<Rating total={5} rating={rate} interactive={false} />*/}
+    <p className="text-small text-muted mb-0 d-inline-block">
+      Number of sales {sales}
+    </p>
   </div>
 );
 

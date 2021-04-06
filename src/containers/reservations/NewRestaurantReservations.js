@@ -34,7 +34,7 @@ const NewRestaurantReservations = ({ data }) => {
                     <tr key={i}>
                       <td>
                         <img
-                          style={{ minWidth: '100%', height: 150 }}
+                          style={{ minWidth: '100%', height: 100 }}
                           alt="Thumbnail"
                           src={order.img}
                           className="list-thumbnail responsive border-0 card-img-left"
