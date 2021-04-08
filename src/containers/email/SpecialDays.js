@@ -25,7 +25,7 @@ const SpecialDays = ({ data, handleAddSpecialDay }) => {
           </Colxx>
         </Row>
       </CardTitle>
-      <CardBody>
+      <CardBody style={{ overflowY: 'auto' }}>
         <Table responsive>
           <thead>
             <tr>
@@ -40,7 +40,7 @@ const SpecialDays = ({ data, handleAddSpecialDay }) => {
             {data.map((d, i) => (
               <tr key={i}>
                 <th scope="row">{i}</th>
-                <td>{d.status}</td>
+                <td>{new Date(d.date) > new Date() ? 'Open': 'Close'}</td>
                 <td>{d.day}</td>
                 <td>{moment(new Date(d.date)).format('LLLL')}</td>
                 <td>{d.campaign}</td>
