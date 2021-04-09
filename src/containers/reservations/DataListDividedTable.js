@@ -507,7 +507,9 @@ const DataListDividedTable = () => {
         cellClass: 'text-muted w-30',
         Cell: (props) => (
           <div className="d-inline-flex">
-            <Button onClick={()=>setConfVisible(true)} color="primary">Confirm</Button>
+            <Button onClick={() => setConfVisible(true)} color="primary">
+              Confirm
+            </Button>
             <Button
               onClick={() => {
                 setReScVisible(true);
@@ -533,7 +535,15 @@ const DataListDividedTable = () => {
       {/* </CardTitle> */}
       <Table columns={cols} data={products} divided />
       <Modal unmountOnClose isOpen={reScVisible}>
-        <ModalHeader>Re-Schedule</ModalHeader>
+        <div className="d-flex justify-content-between p-3">
+          <h5>Re-Schedule</h5>
+          <span
+            onClick={() => setReScVisible(false)}
+            style={{ cursor: 'pointer' }}
+          >
+            <i className="simple-icon-close" />
+          </span>
+        </div>
         <ModalBody>
           <Row>
             <Colxx className="d-inline-flex justify-content-around" xxs={12}>
@@ -585,7 +595,15 @@ const DataListDividedTable = () => {
         </ModalBody>
       </Modal>
       <Modal isOpen={confVisible}>
-        <ModalHeader>Confirm or Reject</ModalHeader>
+        <div className="d-flex justify-content-between p-3">
+          <h5>Confirm or Reject</h5>
+          <span
+            onClick={() => setConfVisible(false)}
+            style={{ cursor: 'pointer' }}
+          >
+            <i className="simple-icon-close" />
+          </span>
+        </div>
         <ModalBody className="d-inline-flex justify-content-around">
           <Button color="primary" onClick={() => setConfVisible(false)}>
             Confirm
