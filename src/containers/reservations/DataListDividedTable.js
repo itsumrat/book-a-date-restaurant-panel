@@ -457,7 +457,7 @@ const DataListDividedTable = () => {
         Header: 'Time',
         accessor: 'time',
         cellClass: 'list-item-heading',
-        Cell: (props) => <>{moment(props.value).format('hh:mm:ss a')}</>,
+        Cell: (props) => <>{moment(props.value).format('hh:mm a')}</>,
       },
       {
         Header: 'Customer name',
