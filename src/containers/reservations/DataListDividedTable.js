@@ -456,11 +456,11 @@ const DataListDividedTable = () => {
       {
         Header: 'Time',
         accessor: 'time',
-        cellClass: 'list-item-heading',
+        cellClass: 'list-item-heading w-15',
         Cell: (props) => <>{moment(props.value).format('hh:mm a')}</>,
       },
       {
-        Header: 'Customer name',
+        Header: 'Name',
         accessor: 'customerName',
         cellClass: 'list-item-heading',
         Cell: (props) => <>{props.value}</>,

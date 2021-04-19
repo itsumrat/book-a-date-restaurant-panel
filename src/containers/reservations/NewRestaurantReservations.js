@@ -20,8 +20,10 @@ const NewRestaurantReservations = ({ data }) => {
             <Table>
               <thead>
                 <tr>
-                  <th />
-                  <th />
+                  <th>Photo</th>
+                  <th>Name</th>
+                  <th>Telephone</th>
+                  <th>Email</th>
                   <th>Time For Booking</th>
                   <th>Date For Booking</th>
                   <th>Price</th>
@@ -34,21 +36,22 @@ const NewRestaurantReservations = ({ data }) => {
                     <tr key={i}>
                       <td>
                         <img
-                          style={{ minWidth: '100%', height: 100 }}
+                          style={{ width: '100%', height: '50px' }}
                           alt="Thumbnail"
                           src={order.img}
                           className="list-thumbnail responsive border-0 card-img-left"
                         />
                       </td>
                       <td>
-                        <CardTitle>{order.name}</CardTitle>
-                        <p>{order.phone}</p>
-                        <CardTitle>{order.email}</CardTitle>
+                        <h3>{order.name}</h3>
                       </td>
                       <td>
-                        {' '}
-                        {moment(new Date(order.date)).format('h:mm:ss a')}
+                        <span>{order.phone}</span>
                       </td>
+                      <td>
+                        <span>{order.email}</span>
+                      </td>
+                      <td> {moment(new Date(order.date)).format('h:mm a')}</td>
                       <td>{moment().format('dd, MMM Do YY')}</td>
                       <td>£ {order.price}</td>
                       <td>{order.location}</td>
