@@ -25,14 +25,7 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
           }}
           onSubmit={onSubmit}
         >
-          {({
-            values,
-            handleChange,
-            errors,
-            touched,
-            isValidating,
-            setFieldValue,
-          }) => (
+          {({ values, handleChange, errors, touched, setFieldValue }) => (
             <Form className="av-tooltip tooltip-label-right">
               <FormGroup>
                 <Label>Status</Label>
@@ -82,7 +75,7 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
               </FormGroup>
 
               <FormGroup>
-                <Label>Shift</Label>
+                <Label>Campaign</Label>
                 <Field
                   className="form-control"
                   required
@@ -94,12 +87,22 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
                   }
                 >
                   <option value="" disabled="disabled">
-                    Select shift
+                    Select Campaign
                   </option>
-                  <option value="NO_shift">No Shift</option>
-                  <option value="morning shift">Morning Shift</option>
-                  <option value="evening shift">Evening Shift</option>
-                  <option value="night shift">Night Shift</option>
+                  <option value="10%-drink-offer">10% drink offer</option>
+                  <option value="25%-drink-offer">25% drink offer</option>
+                  <option value="3-course-dinner">3 course dinner</option>
+                  <option value="3-course-dinner">5 course dinner</option>
+                  <option value="3-course-dinner">10 course dinner</option>
+                  <option value="25%-Signature-dinner-package">
+                    25% Signature dinner package
+                  </option>
+                  <option value="Complimentary-drinks">
+                    Complimentary drinks
+                  </option>
+                  <option value="2-4-1-Cocktail-discounts ">
+                    2-4-1 Cocktail discounts{' '}
+                  </option>
                 </Field>
                 {errors.shift && touched.shift && (
                   <div className="invalid-feedback d-block">{errors.shift}</div>
@@ -110,11 +113,7 @@ const SpecialDayForm = ({ onSubmit, closeModal }) => {
                 <Button className="mr-3" color="primary" type="submit">
                   Submit
                 </Button>
-                <Button
-                  className="mr-3"
-                  onClick={closeModal}
-                  color="danger"
-                >
+                <Button className="mr-3" onClick={closeModal} color="danger">
                   Cancel
                 </Button>
               </Row>

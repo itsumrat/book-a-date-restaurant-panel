@@ -1,39 +1,21 @@
 import React, { Suspense, useState } from 'react';
 import { Modal, ModalBody, ModalHeader, Row } from 'reactstrap';
 import { injectIntl } from 'react-intl';
-import Card from 'reactstrap/es/Card';
-import CardBody from 'reactstrap/es/CardBody';
+
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
 import IconCardsCarousel from '../../../containers/dashboards/IconCardsCarousel';
-import SalesChartCard from '../../../containers/dashboards/SalesChartCard';
+
 import RecentOrders from '../../../containers/dashboards/RecentOrders';
 import ProductCategoriesDoughnut from '../../../containers/dashboards/ProductCategoriesDoughnut';
-import InboundReservations from '../../../containers/dashboards/InboundReservations';
-import Customers from '../../../containers/dashboards/Customers';
-import Calendar from '../../../containers/dashboards/Calendar';
+
 import BestProductLineSellers from '../../../containers/dashboards/BestProductLineSellers';
-import ProductListed from '../../../containers/dashboards/ProductListed';
-import SortableStaticticsRow from '../../../containers/dashboards/SortableStaticticsRow';
-import WebsiteVisitsChartCard from '../../../containers/dashboards/WebsiteVisitsChartCard';
-import ConversionRatesChartCard from '../../../containers/dashboards/ConversionRatesChartCard';
-import GradientWithRadialProgressCard from '../../../components/cards/GradientWithRadialProgressCard';
-import SmallLineCharts from '../../../containers/dashboards/SmallLineCharts';
-import TopRatedItems from '../../../containers/dashboards/TopRatedItems';
-import OrderStockRadarChart from '../../../containers/dashboards/OrderStockRadarChart';
-import ProductCategoriesPolarArea from '../../../containers/dashboards/ProductCategoriesPolarArea';
+
 import SpecialDays from '../../../containers/email/SpecialDays';
 import IntlMessages from '../../../helpers/IntlMessages';
 import SpecialDayForm from '../../../containers/email/SpecialDayForm';
 import TotalRevenue from './TotalRevenue';
-import { BarChart } from '../../../components/charts';
-import {
-  starterMonthlyBilling,
-  starterWeeklyBilling,
-} from '../reporting/transactionReports';
-
 const DefaultDashboard = ({ intl, match }) => {
-  const { messages } = intl;
   const [modalBasic, setModalBasic] = useState(false);
   const [specialDays, setSpecialDays] = useState([
     {
@@ -127,7 +109,7 @@ const DefaultDashboard = ({ intl, match }) => {
       campaign: 'Evening Shift',
     },
     {
-      day: "Mothering Sunday",
+      day: 'Mothering Sunday',
       status: 'Open',
       date: new Date('Fri Mar 14 2021'),
       campaign: 'Evening Shift',
