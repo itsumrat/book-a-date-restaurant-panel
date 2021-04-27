@@ -41,7 +41,7 @@ const CustomerReports = ({ intl, match }) => {
                   <Card>
                     <CardBody style={{ height: 500 }}>
                       <h3> Customers Daily</h3>
-                      <BarChart shadow data={starterYearlyBilling} />
+                      <BarChart shadow data={starterDailyBilling} />
                     </CardBody>
                   </Card>
                 </Colxx>

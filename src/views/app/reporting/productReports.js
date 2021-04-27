@@ -46,7 +46,7 @@ const ProductReports = ({ intl, match }) => {
                   <Card>
                     <CardBody style={{ height: 500 }}>
                       <h3> Products Daily</h3>
-                      <BarChart shadow data={starterYearlyBilling} />
+                      <BarChart shadow data={starterDailyBilling} />
                     </CardBody>
                   </Card>
                 </Colxx>
@@ -54,7 +54,7 @@ const ProductReports = ({ intl, match }) => {
                   <Card>
                     <CardBody style={{ height: 500 }}>
                       <h3> Products Weekly</h3>
-                      <BarChart shadow data={starterYearlyBilling} />
+                      <BarChart shadow data={starterWeeklyBilling} />
                     </CardBody>
                   </Card>
                 </Colxx>
@@ -64,7 +64,7 @@ const ProductReports = ({ intl, match }) => {
                   <Card>
                     <CardBody style={{ height: 500 }}>
                       <h3> Products Monthly</h3>
-                      <BarChart shadow data={starterYearlyBilling} />
+                      <BarChart shadow data={starterMonthlyBilling} />
                     </CardBody>
                   </Card>
                 </Colxx>

@@ -22,7 +22,7 @@ const InboundReservations = () => {
                 <thead>
                   <tr>
                     <th>Product</th>
-                    <th>Date</th>
+                    <th>Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -43,7 +43,7 @@ const InboundReservations = () => {
                         </td>
                         <td className="">
                           <span className="text-muted">
-                            {new Date().toLocaleString()}
+                            {Math.floor(Math.random() * (250 - 90) + 90)}
                           </span>
                         </td>
                       </tr>

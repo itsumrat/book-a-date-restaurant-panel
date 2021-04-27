@@ -30,48 +30,66 @@ export const starterDailyBilling = {
     },
   ],
 };
+
 export const starterWeeklyBilling = {
-  labels: [
-    'Week 1',
-    'Week 2',
-    'Week 3',
-    'Week 4',
-    'Week 5',
-    'Week 6',
-    'Week 7',
-    'Week 8',
-  ],
+  labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
   datasets: [
     {
       label: 'Starters',
       borderColor: colors.themeColor2,
       backgroundColor: colors.themeColor2_10,
-      data: [425, 450, 490, 520, 457, 654, 432, 532, 756],
+      data: [425, 450, 490, 520],
       borderWidth: 2,
     },
   ],
 };
 export const starterMonthlyBilling = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+  labels: [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ],
   datasets: [
     {
       label: 'Starters',
       borderColor: colors.themeColor4,
       backgroundColor: colors.themeColor4_10,
-      data: [364, 504, 605, 400, 345, 320],
+      data: [
+        2000,
+        4000,
+        4000,
+        5000,
+        6000,
+        7000,
+        9000,
+        9000,
+        12000,
+        12000,
+        14000,
+        16000,
+      ],
       borderWidth: 2,
     },
   ],
 };
 
 export const starterYearlyBilling = {
-  labels: ['YR 1', 'YR 2', 'YR 3', 'YR 4', 'YR 5', 'YR 6'],
+  labels: ['YR 1', 'YR 2', 'YR 3', 'YR 4'],
   datasets: [
     {
       label: 'Starters',
       borderColor: colors.themeColor3,
       backgroundColor: colors.themeColor3_10,
-      data: [753, 357, 358, 400, 785, 320],
+      data: [18000, 20000, 24000, 28000],
       borderWidth: 2,
     },
   ],
