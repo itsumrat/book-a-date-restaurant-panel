@@ -114,25 +114,25 @@ const ReservationsAnalytics = ({ match }) => {
               </Colxx>
               <Colxx lg="4">
                 <ReservationCard
-                  header="Total reservations with Starters"
-                  title="Starters Reservations"
+                  header="Total reservations with Dining"
+                  title="Dining Reservations"
                   value="80"
                 />
               </Colxx>
               <Colxx lg="4">
                 <ReservationCard
-                  header="Total reservations with Main"
-                  title="Main Reservations"
+                  header="Total reservations with Ticket"
+                  title="Ticket Reservations"
                   value="40"
                 />
               </Colxx>
-              <Colxx lg="4" className="mt-3">
+              {/* <Colxx lg="4" className="mt-3">
                 <ReservationCard
                   header="Total reservations with Desserts"
                   title="Desserts Reservations"
                   value="100"
                 />
-              </Colxx>
+              </Colxx> */}
             </Row>
           </Colxx>
         </Row>

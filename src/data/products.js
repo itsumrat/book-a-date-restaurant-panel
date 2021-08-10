@@ -3,12 +3,13 @@ import product9 from '../assets/img/product 9.jpg';
 import starter1 from '../assets/img/Starter1.jpg';
 import starter2 from '../assets/img/Starter2.jpg';
 import starter3 from '../assets/img/Starter3.jpg';
-import bottle_of_red_wine from '../assets/img/product1.jpg';
-import bottle_of_white_wine from '../assets/img/product2.jpg';
-import drinks3 from '../assets/img/drink3.jpeg';
-import salad from '../assets/img/Salad Starter.jpeg';
-import mushroom from '../assets/img/Mushroom starter.jpeg';
-import prawns from '../assets/img/Prawns Starter .jpeg';
+import bottle_of_red_wine from '../assets/img/Champagne for Two.jpeg';
+import bottle_of_white_wine from '../assets/img/white wine.jpeg';
+import drinks3 from '../assets/img/white wine.jpeg';
+import product1 from '../assets/img/Product 1.jpeg';
+import product2 from '../assets/img/Product 2.jpeg';
+import product3 from '../assets/img/Product3.png';
+import ticket1 from '../assets/img/tickets 1 .png';
 import eggplant from '../assets/img/Mains Eggplant .jpeg';
 import potatoesandpasta from '../assets/img/Mains Potatoes and Pasta .jpeg';
 import salmonfish from '../assets/img/Mains Salmon Fish .jpeg';
@@ -23,9 +24,9 @@ const products = [
     customerEmail: 'dummyemail@email.com',
     time: '01 Jan 1970 01:40:10 GMT',
     telephone: '024322448',
-    title: 'Three Course Fine Dining ',
+    title: 'Free Sushi ',
     productLine: 1,
-    img: salad,
+    img: product1,
     category: 'starter',
     createDate: '02.04.2018',
     status: 'Reservations Confirmed',
@@ -47,10 +48,10 @@ const products = [
     customerEmail: 'dummyemail@email.com',
     time: '01 Jan 1970 01:40:10 GMT',
     telephone: '024322448',
-    title: 'Three Course Fine Dining',
+    title: '241 Burgers',
     productLine: 2,
     category: 'starter',
-    img: mushroom,
+    img: product2,
     createDate: '01.04.2018',
     status: 'Reservations Pending',
     statusColor: 'orange',
@@ -71,9 +72,9 @@ const products = [
     customerEmail: 'dummyemail@email.com',
     time: '01 Jan 1970 01:40:10 GMT',
     telephone: '024322448',
-    title: 'Three Course Fine Dining',
+    title: ' Mini Toffee Doughnuts ',
     productLine: 3,
-    img: prawns,
+    img: product3,
     category: 'starter',
     createDate: '25.03.2018',
     status: 'Reservations Pending',
@@ -641,6 +642,30 @@ const products = [
     advertiseStart: new Date('02/11/2020'),
     advertiseEnd: new Date('12/11/2020'),
     stock: 48,
+  },
+  {
+    id: 4,
+    tax: 1,
+    shipping: 1.5,
+    active: true,
+    customerName: 'Paul',
+    customerEmail: 'dummyemail@email.com',
+    time: '01 Jan 1970 01:40:10 GMT',
+    telephone: '024322448',
+    title: 'Tickets',
+    productLine: 4,
+    img: ticket1,
+    category: 'tickets',
+    createDate: '21.03.2018',
+    status: 'Reservations Pending',
+    statusColor: 'orange',
+    description: 'Chocolate cake with berries',
+    productDetails: 'Chocolate cake with berries',
+    sales: 1014,
+    price: 7,
+    advertiseStart: new Date('02/11/2020'),
+    advertiseEnd: new Date('12/11/2020'),
+    stock: 41,
   },
 ];
 

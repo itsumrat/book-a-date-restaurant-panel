@@ -54,14 +54,14 @@ const App = ({ match }) => {
               path={`${match.url}/reservations`}
               render={(props) => <Reservations {...props} />}
             />
-            {/*<Route*/}
-            {/*  path={`${match.url}/email`}*/}
-            {/*  render={(props) => <Email {...props} />}*/}
-            {/*/>*/}
-            {/*<Route*/}
-            {/*  path={`${match.url}/advance-search`}*/}
-            {/*  render={(props) => <Search {...props} />}*/}
-            {/*/>*/}
+            {/* <Route */}
+            {/*  path={`${match.url}/email`} */}
+            {/*  render={(props) => <Email {...props} />} */}
+            {/* /> */}
+            {/* <Route */}
+            {/*  path={`${match.url}/advance-search`} */}
+            {/*  render={(props) => <Search {...props} />} */}
+            {/* /> */}
             <Route
               path={`${match.url}/products`}
               render={(props) => <Products {...props} />}
@@ -82,10 +82,10 @@ const App = ({ match }) => {
               path={`${match.url}/billing`}
               render={(props) => <Billing {...props} />}
             />
-            {/*<Route*/}
-            {/*  path={`${match.url}/guest-communication`}*/}
-            {/*  render={(props) => <GuestCommunication {...props} />}*/}
-            {/*/>*/}
+            {/* <Route */}
+            {/*  path={`${match.url}/guest-communication`} */}
+            {/*  render={(props) => <GuestCommunication {...props} />} */}
+            {/* /> */}
             <Route
               path={`${match.url}/team`}
               render={(props) => <Team {...props} />}
@@ -98,23 +98,23 @@ const App = ({ match }) => {
               path={`${match.url}/settings`}
               render={(props) => <Settings {...props} />}
             />
-            {/*<Route*/}
-            {/*  path={`${match.url}/review`}*/}
-            {/*  render={(props) => <Review {...props} />}*/}
-            {/*/>*/}
+            {/* <Route */}
+            {/*  path={`${match.url}/review`} */}
+            {/*  render={(props) => <Review {...props} />} */}
+            {/* /> */}
             <Route
               path={`${match.url}/open-close-hour`}
               render={(props) => <OpenAndClosingHour {...props} />}
             />
-            {/*<Route*/}
-            {/*  path={`${match.url}/blog`}*/}
-            {/*  render={(props) => <Blog {...props} />}*/}
-            {/*/>*/}
-            {/*<Route*/}
-            {/*  exact*/}
-            {/*  path={`${match.url}/blog/:name`}*/}
-            {/*  render={(props) => <BlogDetailsPage {...props} />}*/}
-            {/*/>*/}
+            {/* <Route */}
+            {/*  path={`${match.url}/blog`} */}
+            {/*  render={(props) => <Blog {...props} />} */}
+            {/* /> */}
+            {/* <Route */}
+            {/*  exact */}
+            {/*  path={`${match.url}/blog/:name`} */}
+            {/*  render={(props) => <BlogDetailsPage {...props} />} */}
+            {/* /> */}
             <Route
               path={`${match.url}/applications`}
               render={(props) => <Applications {...props} />}
@@ -131,14 +131,14 @@ const App = ({ match }) => {
               path={`${match.url}/ui`}
               render={(props) => <Ui {...props} />}
             />
-            {/*<Route*/}
-            {/*  path={`${match.url}/menu`}*/}
-            {/*  render={(props) => <Menu {...props} />}*/}
-            {/*/>*/}
-            {/*<Route*/}
-            {/*  path={`${match.url}/blank-page`}*/}
-            {/*  render={(props) => <BlankPage {...props} />}*/}
-            {/*/>*/}
+            {/* <Route */}
+            {/*  path={`${match.url}/menu`} */}
+            {/*  render={(props) => <Menu {...props} />} */}
+            {/* /> */}
+            {/* <Route */}
+            {/*  path={`${match.url}/blank-page`} */}
+            {/*  render={(props) => <BlankPage {...props} />} */}
+            {/* /> */}
             <Redirect to="/error" />
           </Switch>
         </Suspense>

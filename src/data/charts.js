@@ -171,7 +171,7 @@ export const pieChartData = {
 };
 
 export const doughnutChartData = {
-  labels: ['Drinks', 'Starters', 'Mains', 'Desserts'],
+  labels: ['Drinks', 'Dining', 'Ticket'],
   datasets: [
     {
       label: '',
@@ -188,7 +188,7 @@ export const doughnutChartData = {
         colors.themeColor4_10,
       ],
       borderWidth: 2,
-      data: [15, 25, 20, 21],
+      data: [15, 25, 20],
     },
   ],
 };

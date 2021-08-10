@@ -28,11 +28,11 @@ const Products = ({ match }) => {
           render={(props) => <ProductDrinks {...props} />}
         />
         <Route
-          path={`${match.url}/starters`}
+          path={`${match.url}/dining`}
           render={(props) => <ProductStarters {...props} />}
         />
         <Route
-          path={`${match.url}/desserts`}
+          path={`${match.url}/tickets`}
           render={(props) => <ProductDesserts {...props} />}
         />
         <Route

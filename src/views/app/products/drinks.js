@@ -17,7 +17,9 @@ import IntlMessages from '../../../helpers/IntlMessages';
 
 const Drinks = ({ intl, match }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const drinks = products.filter((pro) => pro.category === 'drinks' && pro.active===true);
+  const drinks = products.filter(
+    (pro) => pro.category === 'drinks' && pro.active === true
+  );
   return (
     <Row>
       <Colxx>

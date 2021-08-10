@@ -102,19 +102,19 @@ const data = [
       },
       {
         icon: 'iconsminds-chopsticks',
-        label: 'menu.starters',
-        to: '/app/products/starters',
+        label: 'menu.dining',
+        to: '/app/products/dining',
       },
       {
         icon: 'iconsminds-hamburger',
-        label: 'menu.mains',
-        to: '/app/products/mains',
+        label: 'menu.tickets',
+        to: '/app/products/tickets',
       },
-      {
-        icon: 'iconsminds-ice-cream',
-        label: 'menu.desserts',
-        to: '/app/products/desserts',
-      },
+      // {
+      //   icon: 'iconsminds-ice-cream',
+      //   label: 'menu.desserts',
+      //   to: '/app/products/desserts',
+      // },
       {
         id: 'all-product',
         icon: 'iconsminds-safe-box',

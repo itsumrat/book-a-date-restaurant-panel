@@ -10,7 +10,9 @@ import AddNewModal from '../../../containers/pages/AddNewModal';
 
 const Desserts = ({ intl, match }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const desserts = products.filter((pro) => pro.category === 'desserts' && pro.active===true);
+  const tickets = products.filter(
+    (pro) => pro.category === 'tickets' && pro.active === true
+  );
   return (
     <>
       <Row>
@@ -38,7 +40,7 @@ const Desserts = ({ intl, match }) => {
         toggleModal={() => setModalOpen(!modalOpen)}
         // categories={categories}
       />
-      <FoodCards products={desserts} />
+      <FoodCards products={tickets} />
     </>
   );
 };

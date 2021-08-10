@@ -553,6 +553,7 @@ const DataListDividedTable = () => {
                   <div>
                     <h3>Old Date</h3>
                     <DatePicker
+                      disabled
                       selected={oldDate}
                       onChange={(date) => setOldDate(date)}
                     />
@@ -571,13 +572,16 @@ const DataListDividedTable = () => {
                 <div>
                   <div style={{ marginBottom: 15 }}>
                     <h3>Old Time</h3>
-                    <TimePicker defaultValue={moment(new Date(oldTime))} />
+                    <TimePicker
+                      disabled
+                      defaultValue={moment(new Date(oldTime))}
+                    />
                   </div>
                   <div>
                     <h3>New Time</h3>
                     <TimePicker
                       onChange={(time) => setNewTime(time)}
-                      defaultValue={moment()}
+                      defaultValue={moment(new Date(newTime))}
                     />
                   </div>
                 </div>
