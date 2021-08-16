@@ -3,9 +3,9 @@ import product9 from '../assets/img/product 9.jpg';
 import starter1 from '../assets/img/Starter1.jpg';
 import starter2 from '../assets/img/Starter2.jpg';
 import starter3 from '../assets/img/Starter3.jpg';
-import bottle_of_red_wine from '../assets/img/Champagne for Two.jpeg';
+import bottle_of_red_wine from '../assets/img/B022-pornstar-martini_650x.jpeg';
 import bottle_of_white_wine from '../assets/img/white wine.jpeg';
-import drinks3 from '../assets/img/white wine.jpeg';
+import drinks3 from '../assets/img/Vintage-cut-Champagne-flutes-set-of-two.jpeg';
 import product1 from '../assets/img/Product 1.jpeg';
 import product2 from '../assets/img/Product 2.jpeg';
 import product3 from '../assets/img/Product3.png';
@@ -120,15 +120,15 @@ const products = [
     customerEmail: 'dummyemail@email.com',
     time: '01 Jan 1970 01:40:10 GMT',
     telephone: '024322448',
-    title: 'Glass of Prosecco ',
+    title: 'Glass of Champagne ',
     productLine: 5,
     category: 'drinks',
     img: drinks3,
     createDate: '02.06.2018',
     status: 'Reservations Confirmed',
     statusColor: 'green',
-    description: 'Glass of Prosecco',
-    productDetails: 'Glass of Prosecco',
+    description: 'Glass of Champagne',
+    productDetails: 'Glass of Champagne',
     sales: 985,
     price: 12,
     advertiseStart: new Date('02/11/2020'),
@@ -168,15 +168,15 @@ const products = [
     customerEmail: 'dummyemail@email.com',
     time: '01 Jan 1970 01:40:10 GMT',
     telephone: '024322448',
-    title: 'Bottle of Red wine',
+    title: 'Pornstar Martini',
     productLine: 5,
     category: 'Cupcakes',
     img: bottle_of_red_wine,
     createDate: '02.06.2018',
     status: 'Reservations Confirmed',
     statusColor: 'green',
-    description: 'French Bordeaux Cabernet Sauvignon 2005',
-    productDetails: 'French Bordeaux Cabernet Sauvignon 2005',
+    description: 'Passion fruit pornstar martini cocktail',
+    productDetails: 'Passion fruit pornstar martini cocktail',
     sales: 985,
     price: 12,
     advertiseStart: new Date('02/11/2020'),
@@ -556,15 +556,15 @@ const products = [
     customerEmail: 'dummyemail@email.com',
     time: '01 Jan 1970 01:40:10 GMT',
     telephone: '024322448',
-    title: 'Bottle of Red Wine',
+    title: 'Pornstar Martini',
     productLine: 5,
     category: 'drinks',
     img: bottle_of_red_wine,
     createDate: '02.06.2018',
     status: 'Reservations Confirmed',
     statusColor: 'primary',
-    description: 'French Bordeaux Cabernet Sauvignon 2005',
-    productDetails: 'French Bordeaux Cabernet Sauvignon 2005',
+    description: 'Passion fruit pornstar martini cocktail',
+    productDetails: 'Passion fruit pornstar martini cocktail',
     sales: 985,
     price: 12,
     advertiseStart: new Date('02/11/2020'),
